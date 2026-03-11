@@ -8,6 +8,7 @@ interface ToggleItem {
 
 const SIDEBAR_ITEMS: ToggleItem[] = [
   { key: 'photo',        label: 'Photo' },
+  { key: 'title',        label: 'Title' },
   { key: 'position',     label: 'Position' },
   { key: 'location',     label: 'Location' },
   { key: 'email',        label: 'Email' },

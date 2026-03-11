@@ -23,7 +23,7 @@ export interface Styling {
 }
 
 export type VisibilityKey =
-  | 'photo' | 'position' | 'location' | 'email' | 'webpage'
+  | 'photo' | 'title' | 'position' | 'location' | 'email' | 'webpage'
   | 'github' | 'linkedin' | 'technologies'
   | 'aboutMe' | 'experience' | 'education' | 'courses';
 
@@ -48,7 +48,7 @@ const defaultStyling: Styling = {
 };
 
 const defaultVisibility: Visibility = {
-  photo: true, position: true, location: true, email: true, webpage: true,
+  photo: true, title: true, position: true, location: true, email: true, webpage: true,
   github: true, linkedin: true, technologies: true,
   aboutMe: true, experience: true, education: true, courses: true,
 };
@@ -65,7 +65,7 @@ export const useSettingsStore = create<SettingsStore>()(
     }),
     {
       name: 'cv-settings',
-      version: 2,
+      version: 3,
       migrate: (_state, _version) => ({
         styling: defaultStyling,
         visibility: defaultVisibility,

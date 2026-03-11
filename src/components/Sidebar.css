@@ -3,7 +3,7 @@
   min-width: 200px;
   background: var(--color-primary);
   color: #e8edf3;
-  padding: 1rem;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 0;

@@ -37,9 +37,11 @@ export default function Sidebar() {
       <h1 className="sidebar__name">
         <EditableText value={name} onChange={setName} dark />
       </h1>
-      <p className="sidebar__title">
-        <EditableText value={title} onChange={setTitle} dark />
-      </p>
+      {visibility.title && (
+        <p className="sidebar__title">
+          <EditableText value={title} onChange={setTitle} dark />
+        </p>
+      )}
 
       <div className="sidebar__divider" />
 

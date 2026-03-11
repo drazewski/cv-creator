@@ -16,8 +16,7 @@
   overflow: hidden;
   transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   background: #f7f9fc;
-  border: 1px solid #dde3ec;
-  border-right: none;
+  border: none;
   border-radius: 10px 0 0 10px;
   box-shadow: -4px 0 24px rgba(0, 0, 0, 0.1);
 }
