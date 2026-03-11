@@ -35,8 +35,24 @@
 .ed-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 0.5rem;
   padding: 0.35rem 0;
+  cursor: grab;
+  border-radius: 4px;
+  transition: background 0.1s;
+}
+
+.ed-item--drag-over {
+  background: #edf2f8;
+  outline: 1px dashed #4a90d9;
+  outline-offset: -1px;
+}
+
+.ed-item__grip {
+  color: #b0bac6;
+  font-size: 11px;
+  flex-shrink: 0;
+  cursor: grab;
 }
 
 .ed-item__label {

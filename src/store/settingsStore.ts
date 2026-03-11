@@ -15,25 +15,27 @@ export interface Styling {
   primaryColor: string;
   accentColor: string;
   font: FontKey;
-  fontSizeSidebar: number;    // px
-  fontSizeTitle: number;      // px
-  fontSizeBody: number;       // px
+  fontSizeSidebar: number;
+  fontSizeTitle: number;
+  fontSizeBody: number;
   lineHeightSidebar: number;
   lineHeightBody: number;
 }
 
-export type VisibilityKey =
-  | 'photo' | 'title' | 'position' | 'location' | 'email' | 'webpage'
-  | 'github' | 'linkedin' | 'technologies'
-  | 'aboutMe' | 'experience' | 'education' | 'courses';
-
+export type SidebarKey = 'photo' | 'name' | 'title' | 'position' | 'location' | 'email' | 'webpage' | 'github' | 'linkedin' | 'technologies';
+export type MainKey = 'aboutMe' | 'experience' | 'education' | 'courses';
+export type VisibilityKey = SidebarKey | MainKey;
 export type Visibility = Record<VisibilityKey, boolean>;
 
 interface SettingsStore {
   styling: Styling;
   visibility: Visibility;
+  sidebarOrder: SidebarKey[];
+  mainOrder: MainKey[];
   setStyling: <K extends keyof Styling>(key: K, value: Styling[K]) => void;
   setVisibility: (key: VisibilityKey, value: boolean) => void;
+  reorderSidebar: (from: number, to: number) => void;
+  reorderMain: (from: number, to: number) => void;
 }
 
 const defaultStyling: Styling = {
@@ -48,27 +50,45 @@ const defaultStyling: Styling = {
 };
 
 const defaultVisibility: Visibility = {
-  photo: true, title: true, position: true, location: true, email: true, webpage: true,
+  photo: true, name: true, title: true, position: true, location: true, email: true, webpage: true,
   github: true, linkedin: true, technologies: true,
   aboutMe: true, experience: true, education: true, courses: true,
 };
+
+const defaultSidebarOrder: SidebarKey[] = ['photo', 'name', 'title', 'position', 'location', 'email', 'webpage', 'github', 'linkedin', 'technologies'];
+const defaultMainOrder: MainKey[] = ['aboutMe', 'experience', 'education', 'courses'];
+
+function reorder<T>(arr: T[], from: number, to: number): T[] {
+  const next = [...arr];
+  const [item] = next.splice(from, 1);
+  next.splice(to, 0, item);
+  return next;
+}
 
 export const useSettingsStore = create<SettingsStore>()(
   persist(
     (set) => ({
       styling: defaultStyling,
       visibility: defaultVisibility,
+      sidebarOrder: defaultSidebarOrder,
+      mainOrder: defaultMainOrder,
       setStyling: (key, value) =>
         set((s) => ({ styling: { ...s.styling, [key]: value } })),
       setVisibility: (key, value) =>
         set((s) => ({ visibility: { ...s.visibility, [key]: value } })),
+      reorderSidebar: (from, to) =>
+        set((s) => ({ sidebarOrder: reorder(s.sidebarOrder, from, to) })),
+      reorderMain: (from, to) =>
+        set((s) => ({ mainOrder: reorder(s.mainOrder, from, to) })),
     }),
     {
       name: 'cv-settings',
-      version: 3,
+      version: 5,
       migrate: (_state, _version) => ({
         styling: defaultStyling,
         visibility: defaultVisibility,
+        sidebarOrder: defaultSidebarOrder,
+        mainOrder: defaultMainOrder,
       }),
     }
   )

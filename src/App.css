@@ -5,6 +5,21 @@
   flex-direction: column;
   align-items: center;
   background: #c8cdd4;
+  overflow-x: hidden; /* prevent horizontal scroll from scaled CV on mobile */
+}
+
+/* ── Responsive scaler ──────────────────────────────────────── */
+.cv-scaler {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.cv-scaler__inner {
+  width: 794px;
+  flex-shrink: 0;
+  transform-origin: top center;
 }
 
 /* ── A4 paper ───────────────────────────────────────────────── */
@@ -21,7 +36,6 @@
 
 /* ── Toolbar ────────────────────────────────────────────────── */
 .cv-toolbar {
-  width: 794px;
   display: flex;
   justify-content: flex-end;
   padding: 0.6rem 0;

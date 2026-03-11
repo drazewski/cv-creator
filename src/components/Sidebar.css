@@ -57,6 +57,12 @@
   gap: 0.5rem;
   font-size: var(--font-size-sidebar, 13px);
   line-height: var(--line-height-sidebar, 1.4);
+  padding-right: 0.5rem;
+}
+
+/* gap between consecutive standalone contact items */
+.sidebar__contact-item-wrapper + .sidebar__contact-item-wrapper {
+  margin-top: 0.75rem;
 }
 
 .sidebar__contact-icon {
