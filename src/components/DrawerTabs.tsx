@@ -1,27 +1,24 @@
 import { useState, useRef, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faUser, faTableCells, faPalette, faListCheck,
+  faPalette, faListCheck,
 } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import StylingDrawer from './StylingDrawer';
 import ElementsDrawer from './ElementsDrawer';
 import './DrawerTabs.css';
 
-type TabId = 'account' | 'layouts' | 'styling' | 'elements';
+type TabId = 'styling' | 'elements';
 
 interface TabDef {
   id: TabId;
   label: string;
   icon: IconDefinition;
-  enabled: boolean;
 }
 
 const TABS: TabDef[] = [
-  { id: 'account',  label: 'Account',  icon: faUser,       enabled: false },
-  { id: 'layouts',  label: 'Layouts',  icon: faTableCells, enabled: false },
-  { id: 'styling',  label: 'Styling',  icon: faPalette,    enabled: true  },
-  { id: 'elements', label: 'Elements', icon: faListCheck,  enabled: true  },
+  { id: 'styling',  label: 'Styling',  icon: faPalette   },
+  { id: 'elements', label: 'Elements', icon: faListCheck  },
 ];
 
 export default function DrawerTabs() {
@@ -42,7 +39,6 @@ export default function DrawerTabs() {
   }, [open]);
 
   const handleClick = (tab: TabDef) => {
-    if (!tab.enabled) return;
     setOpen((prev) => (prev === tab.id ? null : tab.id));
   };
 
@@ -61,12 +57,11 @@ export default function DrawerTabs() {
             key={tab.id}
             type="button"
             className={[
-              'drawer-tab',
-              tab.enabled ? 'drawer-tab--enabled' : 'drawer-tab--disabled',
+              'drawer-tab drawer-tab--enabled',
               open === tab.id ? 'drawer-tab--active' : '',
             ].filter(Boolean).join(' ')}
             onClick={() => handleClick(tab)}
-            title={tab.enabled ? tab.label : `${tab.label} (coming soon)`}
+            title={tab.label}
           >
             <FontAwesomeIcon icon={tab.icon} className="drawer-tab__icon" />
             <span className="drawer-tab__label">{tab.label}</span>

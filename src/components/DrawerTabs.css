@@ -90,11 +90,6 @@
 }
 
 /* Disabled tab */
-.drawer-tab--disabled {
-  color: #b0bac6;
-  cursor: default;
-  background: #f0f2f5;
-}
 
 @media print {
   .drawer-root {
