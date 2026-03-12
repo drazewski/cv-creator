@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Update with real domain when live
+Sitemap: https://myceevee.com/sitemap.xml

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Page background -->
+  <rect width="64" height="64" rx="10" fill="#1e2a3a"/>
+  <!-- CV page outline -->
+  <rect x="14" y="10" width="36" height="44" rx="3" fill="#fff" opacity="0.95"/>
+  <!-- Accent sidebar strip -->
+  <rect x="14" y="10" width="11" height="44" rx="3" fill="#4a90d9"/>
+  <rect x="22" y="10" width="3" height="44" fill="#4a90d9"/>
+  <!-- Header lines (name area) -->
+  <rect x="28" y="16" width="16" height="2.5" rx="1" fill="#1e2a3a" opacity="0.7"/>
+  <rect x="28" y="21" width="10" height="1.5" rx="1" fill="#1e2a3a" opacity="0.4"/>
+  <!-- Body lines -->
+  <rect x="28" y="28" width="14" height="1.5" rx="1" fill="#1e2a3a" opacity="0.35"/>
+  <rect x="28" y="31.5" width="12" height="1.5" rx="1" fill="#1e2a3a" opacity="0.25"/>
+  <rect x="28" y="35" width="14" height="1.5" rx="1" fill="#1e2a3a" opacity="0.35"/>
+  <rect x="28" y="38.5" width="10" height="1.5" rx="1" fill="#1e2a3a" opacity="0.25"/>
+  <!-- Sidebar dots (contact icons) -->
+  <circle cx="19" cy="28" r="1.5" fill="#fff" opacity="0.7"/>
+  <circle cx="19" cy="33" r="1.5" fill="#fff" opacity="0.7"/>
+  <circle cx="19" cy="38" r="1.5" fill="#fff" opacity="0.7"/>
+</svg>
