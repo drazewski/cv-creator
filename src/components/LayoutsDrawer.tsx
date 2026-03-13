@@ -1,4 +1,5 @@
 import { useSettingsStore, LayoutId } from '../store/settingsStore';
+import LanguageSelector from './LanguageSelector';
 import './LayoutsDrawer.css';
 
 interface LayoutCard {
@@ -98,6 +99,8 @@ export default function LayoutsDrawer() {
           </button>
         ))}
       </div>
+      <div className="layouts-drawer__divider" />
+      <LanguageSelector />
     </div>
   );
 }

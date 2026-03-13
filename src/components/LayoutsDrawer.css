@@ -73,3 +73,9 @@
   color: #888;
   line-height: 1.4;
 }
+
+.layouts-drawer__divider {
+  height: 1px;
+  background: #e8edf2;
+  margin: 8px 0;
+}

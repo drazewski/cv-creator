@@ -3,8 +3,10 @@ import { persist } from 'zustand/middleware';
 import {
   cvData as defaultData,
   CvData,
+  CvLanguage,
   Contact,
   SectionTitles,
+  SECTION_TITLE_DEFAULTS,
   CustomSection,
   ExperienceEntry,
   EducationEntry,
@@ -13,6 +15,7 @@ import {
 
 interface CvStore {
   data: CvData;
+  cvLanguage: CvLanguage;
 
   setName: (value: string) => void;
   setTitle: (value: string) => void;
@@ -21,6 +24,7 @@ interface CvStore {
   setContact: (field: keyof Contact, value: string) => void;
 
   setSectionTitle: (section: keyof SectionTitles, value: string) => void;
+  setCvLanguage: (lang: CvLanguage) => void;
 
   setAboutMeItem: (index: number, value: string) => void;
   addAboutMeItem: () => void;
@@ -81,6 +85,7 @@ export const useCvStore = create<CvStore>()(
   persist(
     (set) => ({
       data: defaultData,
+      cvLanguage: 'en' as CvLanguage,
 
       setName: (value) => set((s) => ({ data: { ...s.data, name: value } })),
       setTitle: (value) => set((s) => ({ data: { ...s.data, title: value } })),
@@ -91,6 +96,12 @@ export const useCvStore = create<CvStore>()(
 
       setSectionTitle: (section, value) =>
         set((s) => ({ data: { ...s.data, sectionTitles: { ...s.data.sectionTitles, [section]: value } } })),
+
+      setCvLanguage: (lang) =>
+        set((s) => ({
+          cvLanguage: lang,
+          data: { ...s.data, sectionTitles: SECTION_TITLE_DEFAULTS[lang] },
+        })),
 
       setAboutMeItem: (index, value) =>
         set((s) => ({ data: { ...s.data, aboutMe: updateAt(s.data.aboutMe, index, () => value) } })),
@@ -178,7 +189,7 @@ export const useCvStore = create<CvStore>()(
           },
         })),
 
-      resetData: () => set({ data: defaultData }),
+      resetData: () => set({ data: defaultData, cvLanguage: 'en' as CvLanguage }),
     }),
     {
       name: 'cv-data',

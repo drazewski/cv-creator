@@ -35,6 +35,18 @@ export interface SectionTitles {
   courses: string;
 }
 
+export type CvLanguage = 'en' | 'pl' | 'de' | 'es' | 'fr' | 'it' | 'pt';
+
+export const SECTION_TITLE_DEFAULTS: Record<CvLanguage, SectionTitles> = {
+  en: { technologies: 'Technologies',    aboutMe: 'About Me',     experience: 'Experience',          education: 'Education',      courses: 'Courses & Certifications' },
+  pl: { technologies: 'Technologie',     aboutMe: 'O mnie',       experience: 'Doświadczenie',       education: 'Wykształcenie',  courses: 'Kursy i certyfikaty'      },
+  de: { technologies: 'Technologien',    aboutMe: 'Über mich',    experience: 'Berufserfahrung',     education: 'Ausbildung',     courses: 'Kurse & Zertifikate'      },
+  es: { technologies: 'Tecnologías',     aboutMe: 'Sobre mí',     experience: 'Experiencia',         education: 'Educación',      courses: 'Cursos y certificaciones' },
+  fr: { technologies: 'Technologies',    aboutMe: 'À propos',     experience: 'Expérience',          education: 'Formation',      courses: 'Cours et certifications'  },
+  it: { technologies: 'Tecnologie',      aboutMe: 'Chi sono',     experience: 'Esperienza',          education: 'Formazione',     courses: 'Corsi e certificazioni'   },
+  pt: { technologies: 'Tecnologias',     aboutMe: 'Sobre mim',    experience: 'Experiência',         education: 'Educação',       courses: 'Cursos e certificações'   },
+};
+
 export interface CustomSection {
   id: string;
   title: string;
