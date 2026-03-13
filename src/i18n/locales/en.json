@@ -1,0 +1,100 @@
+{
+  "app": {
+    "reset": "Reset",
+    "preview": "Preview",
+    "editMode": "Edit mode",
+    "exportPdf": "Export PDF"
+  },
+  "uiLanguage": {
+    "label": "UI language"
+  },
+  "drawerTabs": {
+    "layouts": "Layouts",
+    "elements": "Elements",
+    "styling": "Styling"
+  },
+  "layouts": {
+    "hint": "Choose a layout for your CV.",
+    "classicLabel": "Classic",
+    "classicDescription": "Two-column with dark sidebar. European style.",
+    "usSingleLabel": "US Resume",
+    "usSingleDescription": "Single column, ATS-friendly. US & Canada style."
+  },
+  "cvLanguage": {
+    "label": "CV language",
+    "confirmMessage": "This will reset section titles to {{language}} defaults. Continue?"
+  },
+  "elements": {
+    "header": "Header",
+    "contact": "Contact",
+    "mainContent": "Main content",
+    "sidebar": "Sidebar",
+    "photo": "Photo",
+    "name": "Name",
+    "title": "Title",
+    "position": "Position",
+    "location": "Location",
+    "email": "Email",
+    "website": "Website",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "technologies": "Technologies"
+  },
+  "styling": {
+    "colors": "Colors",
+    "primary": "Primary",
+    "accent": "Accent",
+    "font": "Font",
+    "typeface": "Typeface",
+    "sizes": "Sizes",
+    "name": "Name",
+    "titleTagline": "Title / tagline",
+    "contactItems": "Contact items",
+    "sectionTitles": "Section titles",
+    "bodyText": "Body text",
+    "photoSize": "Photo size",
+    "sidebarText": "Sidebar text",
+    "spacing": "Spacing",
+    "headerSpacing": "Header spacing",
+    "bodySpacing": "Body spacing",
+    "sidebarSpacing": "Sidebar spacing",
+    "options": "Options",
+    "contactIcons": "Contact icons"
+  },
+  "resetModal": {
+    "close": "Close",
+    "title": "Reset",
+    "subtitle": "Choose what you want to reset. This cannot be undone.",
+    "layoutStyling": "Layout & styling",
+    "layoutStylingDescription": "Restore colors, fonts, sizes, element order and visibility to defaults. Your CV content is kept.",
+    "resetLayout": "Reset layout",
+    "cvData": "CV data",
+    "cvDataDescription": "Replace all CV content (name, experience, education...) with placeholder data. Layout settings are kept.",
+    "resetData": "Reset data",
+    "everything": "Everything",
+    "everythingDescription": "Full reset — both layout and CV content are restored to their original defaults.",
+    "resetAll": "Reset all"
+  },
+  "actions": {
+    "add": "Add",
+    "addSection": "Add section",
+    "addPoint": "Add point",
+    "addBullet": "Add bullet",
+    "addExperience": "Add experience",
+    "addEducation": "Add education",
+    "addCourse": "Add course",
+    "apply": "Apply",
+    "cancel": "Cancel",
+    "close": "Close",
+    "remove": "Remove",
+    "removeEntry": "Remove entry",
+    "removeSection": "Remove section",
+    "uploadPhoto": "Upload photo",
+    "changePhoto": "Change photo",
+    "removePhoto": "Remove photo"
+  },
+  "editable": {
+    "placeholder": "Edit...",
+    "customSectionPlaceholder": "Your text here."
+  }
+}

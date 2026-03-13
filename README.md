@@ -47,6 +47,10 @@ Edit your CV directly on the page — click any text to change it. No forms, no 
 - Scales to fit any screen width
 - Defaults to the single-column US Resume layout on mobile for easier editing
 
+### Internationalization
+- UI translations are supported in **English, Polish, German, Spanish, French, Italian, and Portuguese**
+- CV section title defaults can also be switched between those languages
+
 ### Privacy first
 - Zero backend — all data lives in your browser's localStorage
 - No cookies for tracking (GDPR-compliant cookie consent included)

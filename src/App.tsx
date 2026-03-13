@@ -1,12 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilePdf, faRotateLeft, faEye, faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import './App.css';
 import Sidebar from './components/Sidebar';
 import MainContent from './components/MainContent';
 import USLayout from './components/USLayout';
 import DrawerTabs from './components/DrawerTabs';
 import ResetModal from './components/ResetModal';
+import UILanguageSelector from './components/UILanguageSelector';
 import { useSettingsStore, FONTS } from './store/settingsStore';
 import { useCvStore } from './store/cvStore';
 import { Analytics } from './lib/analytics';
@@ -14,6 +16,7 @@ import { Analytics } from './lib/analytics';
 const CV_WIDTH = 794;
 
 export default function App() {
+  const { t } = useTranslation();
   const { styling, resetLayout, layoutId } = useSettingsStore();
   const { resetData } = useCvStore();
   const scalerRef = useRef<HTMLDivElement>(null);
@@ -32,20 +35,20 @@ export default function App() {
   }, []);
 
   const cvVars = {
-    '--color-primary':         styling.primaryColor,
-    '--color-accent':          styling.accentColor,
-    '--font-size-sidebar':     `${styling.fontSizeSidebar}px`,
-    '--font-size-title':       `${styling.fontSizeTitle}px`,
-    '--font-size-body':        `${styling.fontSizeBody}px`,
-    '--line-height-sidebar':   styling.lineHeightSidebar,
-    '--line-height-body':      styling.lineHeightBody,
-    '--font-size-us-name':     `${styling.fontSizeUSName}px`,
-    '--font-size-us-title':    `${styling.fontSizeUSTitle}px`,
-    '--font-size-us-contact':  `${styling.fontSizeUSContact}px`,
+    '--color-primary': styling.primaryColor,
+    '--color-accent': styling.accentColor,
+    '--font-size-sidebar': `${styling.fontSizeSidebar}px`,
+    '--font-size-title': `${styling.fontSizeTitle}px`,
+    '--font-size-body': `${styling.fontSizeBody}px`,
+    '--line-height-sidebar': styling.lineHeightSidebar,
+    '--line-height-body': styling.lineHeightBody,
+    '--font-size-us-name': `${styling.fontSizeUSName}px`,
+    '--font-size-us-title': `${styling.fontSizeUSTitle}px`,
+    '--font-size-us-contact': `${styling.fontSizeUSContact}px`,
     '--line-height-us-header': styling.lineHeightUSHeader,
-    '--photo-size-classic':    `${styling.photoSizeClassic}px`,
-    '--photo-size-us':         `${styling.photoSizeUS}px`,
-    fontFamily:                FONTS[styling.font].css,
+    '--photo-size-classic': `${styling.photoSizeClassic}px`,
+    '--photo-size-us': `${styling.photoSizeUS}px`,
+    fontFamily: FONTS[styling.font].css,
   } as React.CSSProperties;
 
   return (
@@ -56,21 +59,22 @@ export default function App() {
             My<span className="cv-toolbar__logo-c">C</span><span className="cv-toolbar__logo-ee">ee</span><span className="cv-toolbar__logo-v">V</span><span className="cv-toolbar__logo-ee">ee</span>
           </a>
           <div className="cv-toolbar__actions">
-            <button className="cv-toolbar__reset" onClick={() => setShowReset(true)} title="Reset">
+            <UILanguageSelector />
+            <button className="cv-toolbar__reset" onClick={() => setShowReset(true)} title={t('app.reset')}>
               <FontAwesomeIcon icon={faRotateLeft} />
-              <span className="cv-toolbar__btn-label"> Reset</span>
+              <span className="cv-toolbar__btn-label"> {t('app.reset')}</span>
             </button>
             <button
               className={`cv-toolbar__preview${preview ? ' cv-toolbar__preview--active' : ''}`}
               onClick={() => setPreview((p) => !p)}
-              title={preview ? 'Edit mode' : 'Preview'}
+              title={preview ? t('app.editMode') : t('app.preview')}
             >
               <FontAwesomeIcon icon={preview ? faPenToSquare : faEye} />
-              <span className="cv-toolbar__btn-label">{preview ? ' Edit mode' : ' Preview'}</span>
+              <span className="cv-toolbar__btn-label">{preview ? ` ${t('app.editMode')}` : ` ${t('app.preview')}`}</span>
             </button>
-            <button className="cv-toolbar__export" onClick={() => { Analytics.cvExported(); window.print(); }} title="Export PDF">
+            <button className="cv-toolbar__export" onClick={() => { Analytics.cvExported(); window.print(); }} title={t('app.exportPdf')}>
               <FontAwesomeIcon icon={faFilePdf} />
-              <span className="cv-toolbar__btn-label"> Export PDF</span>
+              <span className="cv-toolbar__btn-label"> {t('app.exportPdf')}</span>
             </button>
           </div>
         </div>

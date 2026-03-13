@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { useCvStore } from '../store/cvStore';
@@ -17,6 +18,7 @@ const SECTION_MAP: Record<MainKey, React.ComponentType> = {
 };
 
 export default function MainContent() {
+  const { t } = useTranslation();
   const { visibility, mainOrder } = useSettingsStore();
   const { data: { mainCustom }, addCustomSection, removeCustomSection, setCustomSectionField } = useCvStore();
 
@@ -28,14 +30,14 @@ export default function MainContent() {
         return <Section key={key} />;
       })}
 
-      {mainCustom.map((sec) => (
+      {mainCustom.map((section) => (
         <CustomSection
-          key={sec.id}
-          title={sec.title}
-          content={sec.content}
-          onChangeTitle={(v) => setCustomSectionField('mainCustom', sec.id, 'title', v)}
-          onChangeContent={(v) => setCustomSectionField('mainCustom', sec.id, 'content', v)}
-          onRemove={() => removeCustomSection('mainCustom', sec.id)}
+          key={section.id}
+          title={section.title}
+          content={section.content}
+          onChangeTitle={(value) => setCustomSectionField('mainCustom', section.id, 'title', value)}
+          onChangeContent={(value) => setCustomSectionField('mainCustom', section.id, 'content', value)}
+          onRemove={() => removeCustomSection('mainCustom', section.id)}
         />
       ))}
 
@@ -44,7 +46,7 @@ export default function MainContent() {
         className="btn-add"
         onClick={() => addCustomSection('mainCustom')}
       >
-        <FontAwesomeIcon icon={faPlus} /> Add section
+        <FontAwesomeIcon icon={faPlus} /> {t('actions.addSection')}
       </button>
     </main>
   );

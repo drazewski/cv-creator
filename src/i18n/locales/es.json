@@ -1,0 +1,100 @@
+{
+  "app": {
+    "reset": "Restablecer",
+    "preview": "Vista previa",
+    "editMode": "Modo edición",
+    "exportPdf": "Exportar PDF"
+  },
+  "uiLanguage": {
+    "label": "Idioma de la interfaz"
+  },
+  "drawerTabs": {
+    "layouts": "Diseños",
+    "elements": "Elementos",
+    "styling": "Estilo"
+  },
+  "layouts": {
+    "hint": "Elige un diseño para tu CV.",
+    "classicLabel": "Clásico",
+    "classicDescription": "Dos columnas con barra lateral oscura. Estilo europeo.",
+    "usSingleLabel": "CV EE. UU.",
+    "usSingleDescription": "Una sola columna, compatible con ATS. Estilo de EE. UU. y Canadá."
+  },
+  "cvLanguage": {
+    "label": "Idioma del CV",
+    "confirmMessage": "Esto restablecerá los títulos de sección al idioma {{language}}. ¿Continuar?"
+  },
+  "elements": {
+    "header": "Encabezado",
+    "contact": "Contacto",
+    "mainContent": "Contenido principal",
+    "sidebar": "Barra lateral",
+    "photo": "Foto",
+    "name": "Nombre",
+    "title": "Título",
+    "position": "Puesto",
+    "location": "Ubicación",
+    "email": "Correo",
+    "website": "Sitio web",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "technologies": "Tecnologías"
+  },
+  "styling": {
+    "colors": "Colores",
+    "primary": "Principal",
+    "accent": "Acento",
+    "font": "Fuente",
+    "typeface": "Tipografía",
+    "sizes": "Tamaños",
+    "name": "Nombre",
+    "titleTagline": "Título / eslogan",
+    "contactItems": "Elementos de contacto",
+    "sectionTitles": "Títulos de sección",
+    "bodyText": "Texto principal",
+    "photoSize": "Tamaño de la foto",
+    "sidebarText": "Texto de la barra lateral",
+    "spacing": "Espaciado",
+    "headerSpacing": "Espaciado del encabezado",
+    "bodySpacing": "Espaciado del contenido",
+    "sidebarSpacing": "Espaciado de la barra lateral",
+    "options": "Opciones",
+    "contactIcons": "Iconos de contacto"
+  },
+  "resetModal": {
+    "close": "Cerrar",
+    "title": "Restablecer",
+    "subtitle": "Elige lo que quieres restablecer. Esta acción no se puede deshacer.",
+    "layoutStyling": "Diseño y estilo",
+    "layoutStylingDescription": "Restaura colores, fuentes, tamaños, orden de elementos y visibilidad a los valores predeterminados. El contenido del CV se conserva.",
+    "resetLayout": "Restablecer diseño",
+    "cvData": "Datos del CV",
+    "cvDataDescription": "Sustituye todo el contenido del CV (nombre, experiencia, educación...) por datos de ejemplo. La configuración del diseño se conserva.",
+    "resetData": "Restablecer datos",
+    "everything": "Todo",
+    "everythingDescription": "Restablecimiento completo: tanto el diseño como el contenido del CV vuelven a sus valores originales.",
+    "resetAll": "Restablecer todo"
+  },
+  "actions": {
+    "add": "Añadir",
+    "addSection": "Añadir sección",
+    "addPoint": "Añadir punto",
+    "addBullet": "Añadir viñeta",
+    "addExperience": "Añadir experiencia",
+    "addEducation": "Añadir formación",
+    "addCourse": "Añadir curso",
+    "apply": "Aplicar",
+    "cancel": "Cancelar",
+    "close": "Cerrar",
+    "remove": "Eliminar",
+    "removeEntry": "Eliminar entrada",
+    "removeSection": "Eliminar sección",
+    "uploadPhoto": "Subir foto",
+    "changePhoto": "Cambiar foto",
+    "removePhoto": "Eliminar foto"
+  },
+  "editable": {
+    "placeholder": "Editar...",
+    "customSectionPlaceholder": "Tu texto aquí."
+  }
+}

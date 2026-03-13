@@ -1,0 +1,100 @@
+{
+  "app": {
+    "reset": "Redefinir",
+    "preview": "Pré-visualização",
+    "editMode": "Modo de edição",
+    "exportPdf": "Exportar PDF"
+  },
+  "uiLanguage": {
+    "label": "Idioma da interface"
+  },
+  "drawerTabs": {
+    "layouts": "Layouts",
+    "elements": "Elementos",
+    "styling": "Estilo"
+  },
+  "layouts": {
+    "hint": "Escolha um layout para o seu CV.",
+    "classicLabel": "Clássico",
+    "classicDescription": "Duas colunas com barra lateral escura. Estilo europeu.",
+    "usSingleLabel": "CV EUA",
+    "usSingleDescription": "Coluna única, compatível com ATS. Estilo dos EUA e Canadá."
+  },
+  "cvLanguage": {
+    "label": "Idioma do CV",
+    "confirmMessage": "Isto vai repor os títulos padrão das secções para {{language}}. Continuar?"
+  },
+  "elements": {
+    "header": "Cabeçalho",
+    "contact": "Contacto",
+    "mainContent": "Conteúdo principal",
+    "sidebar": "Barra lateral",
+    "photo": "Foto",
+    "name": "Nome",
+    "title": "Título",
+    "position": "Cargo",
+    "location": "Localização",
+    "email": "Email",
+    "website": "Website",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "technologies": "Tecnologias"
+  },
+  "styling": {
+    "colors": "Cores",
+    "primary": "Principal",
+    "accent": "Destaque",
+    "font": "Fonte",
+    "typeface": "Tipografia",
+    "sizes": "Tamanhos",
+    "name": "Nome",
+    "titleTagline": "Título / slogan",
+    "contactItems": "Itens de contacto",
+    "sectionTitles": "Títulos das secções",
+    "bodyText": "Texto principal",
+    "photoSize": "Tamanho da foto",
+    "sidebarText": "Texto da barra lateral",
+    "spacing": "Espaçamento",
+    "headerSpacing": "Espaçamento do cabeçalho",
+    "bodySpacing": "Espaçamento do conteúdo",
+    "sidebarSpacing": "Espaçamento da barra lateral",
+    "options": "Opções",
+    "contactIcons": "Ícones de contacto"
+  },
+  "resetModal": {
+    "close": "Fechar",
+    "title": "Redefinir",
+    "subtitle": "Escolha o que pretende redefinir. Esta ação não pode ser desfeita.",
+    "layoutStyling": "Layout e estilo",
+    "layoutStylingDescription": "Reponha cores, fontes, tamanhos, ordem dos elementos e visibilidade para os valores predefinidos. O conteúdo do CV é mantido.",
+    "resetLayout": "Redefinir layout",
+    "cvData": "Dados do CV",
+    "cvDataDescription": "Substitua todo o conteúdo do CV (nome, experiência, educação...) por dados de exemplo. As definições de layout são mantidas.",
+    "resetData": "Redefinir dados",
+    "everything": "Tudo",
+    "everythingDescription": "Redefinição completa — o layout e o conteúdo do CV regressam aos valores originais.",
+    "resetAll": "Redefinir tudo"
+  },
+  "actions": {
+    "add": "Adicionar",
+    "addSection": "Adicionar secção",
+    "addPoint": "Adicionar ponto",
+    "addBullet": "Adicionar marcador",
+    "addExperience": "Adicionar experiência",
+    "addEducation": "Adicionar educação",
+    "addCourse": "Adicionar curso",
+    "apply": "Aplicar",
+    "cancel": "Cancelar",
+    "close": "Fechar",
+    "remove": "Remover",
+    "removeEntry": "Remover entrada",
+    "removeSection": "Remover secção",
+    "uploadPhoto": "Carregar foto",
+    "changePhoto": "Alterar foto",
+    "removePhoto": "Remover foto"
+  },
+  "editable": {
+    "placeholder": "Editar...",
+    "customSectionPlaceholder": "O seu texto aqui."
+  }
+}

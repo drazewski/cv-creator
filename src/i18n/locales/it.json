@@ -1,0 +1,100 @@
+{
+  "app": {
+    "reset": "Reimposta",
+    "preview": "Anteprima",
+    "editMode": "Modalità modifica",
+    "exportPdf": "Esporta PDF"
+  },
+  "uiLanguage": {
+    "label": "Lingua dell'interfaccia"
+  },
+  "drawerTabs": {
+    "layouts": "Layout",
+    "elements": "Elementi",
+    "styling": "Stile"
+  },
+  "layouts": {
+    "hint": "Scegli un layout per il tuo CV.",
+    "classicLabel": "Classico",
+    "classicDescription": "Due colonne con barra laterale scura. Stile europeo.",
+    "usSingleLabel": "CV USA",
+    "usSingleDescription": "Colonna singola, compatibile con ATS. Stile USA e Canada."
+  },
+  "cvLanguage": {
+    "label": "Lingua del CV",
+    "confirmMessage": "Questo ripristinerà i titoli predefiniti delle sezioni in {{language}}. Continuare?"
+  },
+  "elements": {
+    "header": "Intestazione",
+    "contact": "Contatti",
+    "mainContent": "Contenuto principale",
+    "sidebar": "Barra laterale",
+    "photo": "Foto",
+    "name": "Nome",
+    "title": "Titolo",
+    "position": "Posizione",
+    "location": "Località",
+    "email": "Email",
+    "website": "Sito web",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "technologies": "Tecnologie"
+  },
+  "styling": {
+    "colors": "Colori",
+    "primary": "Principale",
+    "accent": "Accento",
+    "font": "Carattere",
+    "typeface": "Tipo di carattere",
+    "sizes": "Dimensioni",
+    "name": "Nome",
+    "titleTagline": "Titolo / slogan",
+    "contactItems": "Elementi di contatto",
+    "sectionTitles": "Titoli delle sezioni",
+    "bodyText": "Testo principale",
+    "photoSize": "Dimensione foto",
+    "sidebarText": "Testo barra laterale",
+    "spacing": "Spaziatura",
+    "headerSpacing": "Spaziatura intestazione",
+    "bodySpacing": "Spaziatura contenuto",
+    "sidebarSpacing": "Spaziatura barra laterale",
+    "options": "Opzioni",
+    "contactIcons": "Icone contatto"
+  },
+  "resetModal": {
+    "close": "Chiudi",
+    "title": "Reimposta",
+    "subtitle": "Scegli cosa vuoi reimpostare. Questa azione non può essere annullata.",
+    "layoutStyling": "Layout e stile",
+    "layoutStylingDescription": "Ripristina colori, font, dimensioni, ordine degli elementi e visibilità ai valori predefiniti. Il contenuto del CV viene mantenuto.",
+    "resetLayout": "Reimposta layout",
+    "cvData": "Dati del CV",
+    "cvDataDescription": "Sostituisci tutto il contenuto del CV (nome, esperienza, istruzione...) con dati segnaposto. Le impostazioni del layout vengono mantenute.",
+    "resetData": "Reimposta dati",
+    "everything": "Tutto",
+    "everythingDescription": "Reimpostazione completa: layout e contenuto del CV tornano ai valori originali.",
+    "resetAll": "Reimposta tutto"
+  },
+  "actions": {
+    "add": "Aggiungi",
+    "addSection": "Aggiungi sezione",
+    "addPoint": "Aggiungi punto",
+    "addBullet": "Aggiungi punto elenco",
+    "addExperience": "Aggiungi esperienza",
+    "addEducation": "Aggiungi istruzione",
+    "addCourse": "Aggiungi corso",
+    "apply": "Applica",
+    "cancel": "Annulla",
+    "close": "Chiudi",
+    "remove": "Rimuovi",
+    "removeEntry": "Rimuovi voce",
+    "removeSection": "Rimuovi sezione",
+    "uploadPhoto": "Carica foto",
+    "changePhoto": "Cambia foto",
+    "removePhoto": "Rimuovi foto"
+  },
+  "editable": {
+    "placeholder": "Modifica...",
+    "customSectionPlaceholder": "Inserisci qui il testo."
+  }
+}

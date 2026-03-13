@@ -1,6 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
+import './i18n';
 import App from './App';
 import { initCookieConsent } from './lib/cookieconsent';
 import { initAnalytics, enableAnalytics, disableAnalytics } from './lib/analytics';

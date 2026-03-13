@@ -85,6 +85,41 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.cv-toolbar__language {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border: 1px solid #c8cdd4;
+  border-radius: 6px;
+  padding: 0.45rem 0.7rem;
+  background: #fff;
+  color: #3a4a5a;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.cv-toolbar__language-icon {
+  color: #4a90d9;
+}
+
+.cv-toolbar__language-label {
+  white-space: nowrap;
+}
+
+.cv-toolbar__language-select {
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  min-width: 3.1rem;
+  width: 3.1rem;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
 .cv-toolbar__reset {
@@ -180,10 +215,27 @@
     display: none;
   }
 
+  .cv-toolbar__logo {
+    font-size: 1.5rem;
+  }
+
   .cv-toolbar__reset,
   .cv-toolbar__preview,
   .cv-toolbar__export {
     padding: 0.45rem 0.65rem;
+  }
+
+  .cv-toolbar__language {
+    padding: 0.45rem 0.5rem;
+  }
+
+  .cv-toolbar__language-icon {
+    display: none;
+  }
+
+  .cv-toolbar__language-select {
+    min-width: 2.6rem;
+    width: 2.6rem;
   }
 }
 

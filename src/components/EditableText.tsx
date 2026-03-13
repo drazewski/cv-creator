@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { useFitText } from '../hooks/useFitText';
@@ -20,7 +21,7 @@ interface EditableTextProps {
 export default function EditableText({
   value,
   onChange,
-  placeholder = 'Edit...',
+  placeholder,
   multiline = false,
   dark = false,
   href,
@@ -29,10 +30,12 @@ export default function EditableText({
   fitLine = false,
   onRemove,
 }: EditableTextProps) {
+  const { t } = useTranslation();
   const [editing, setEditing] = useState(false);
   const [draft, setDraft] = useState(value);
   const inputRef = useRef<HTMLInputElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const resolvedPlaceholder = placeholder ?? t('editable.placeholder');
   const displayValue = stripProtocol ? value.replace(/^https?:\/\//, '') : value;
   const { ref: fitRef, fontSize: fitFontSize } = useFitText(displayValue, fitLine && !editing);
 
@@ -40,11 +43,11 @@ export default function EditableText({
 
   useEffect(() => {
     if (!editing) return;
-    const el = multiline ? textareaRef.current : inputRef.current;
-    if (el) {
-      el.focus();
-      const len = el.value.length;
-      el.setSelectionRange(len, len);
+    const element = multiline ? textareaRef.current : inputRef.current;
+    if (element) {
+      element.focus();
+      const length = element.value.length;
+      element.setSelectionRange(length, length);
     }
   }, [editing, multiline]);
 
@@ -61,37 +64,37 @@ export default function EditableText({
     if (e.key === 'Escape') cancel();
   };
 
-  const inputCls = `editable-text__input${multiline ? ' editable-text__input--multiline' : ''}${dark ? ' editable-text__input--dark' : ''}`;
+  const inputClassName = `editable-text__input${multiline ? ' editable-text__input--multiline' : ''}${dark ? ' editable-text__input--dark' : ''}`;
 
   if (editing) {
     return multiline ? (
       <textarea
         ref={textareaRef}
-        className={inputCls}
+        className={inputClassName}
         value={draft}
         onChange={(e) => setDraft(e.target.value)}
         onKeyDown={handleKeyDown}
         onBlur={confirm}
-        placeholder={placeholder}
+        placeholder={resolvedPlaceholder}
         rows={2}
       />
     ) : (
       <input
         ref={inputRef}
         type="text"
-        className={inputCls}
+        className={inputClassName}
         value={draft}
         onChange={(e) => setDraft(e.target.value)}
         onKeyDown={handleKeyDown}
         onBlur={confirm}
-        placeholder={placeholder}
+        placeholder={resolvedPlaceholder}
       />
     );
   }
 
-  const valueContent = displayValue || <em className="editable-text__empty">{placeholder}</em>;
+  const valueContent = displayValue || <em className="editable-text__empty">{resolvedPlaceholder}</em>;
 
-  const wrapperCls = [
+  const wrapperClassName = [
     'editable-text',
     dark ? 'editable-text--dark' : '',
     fitLine ? 'editable-text--fit-line' : '',
@@ -105,7 +108,7 @@ export default function EditableText({
   };
 
   return (
-    <span ref={fitLine ? fitRef : undefined} className={wrapperCls} style={fitLine && fitFontSize ? { fontSize: fitFontSize } : undefined}>
+    <span ref={fitLine ? fitRef : undefined} className={wrapperClassName} style={fitLine && fitFontSize ? { fontSize: fitFontSize } : undefined}>
       {href ? (
         <a
           href={href}
@@ -124,7 +127,7 @@ export default function EditableText({
           <button
             type="button"
             className="editable-text__btn editable-text__btn--remove"
-            title="Remove"
+            title={t('actions.remove')}
             onClick={(e) => { e.stopPropagation(); onRemove(); }}
           >
             <FontAwesomeIcon icon={faXmark} />

@@ -1,0 +1,100 @@
+{
+  "app": {
+    "reset": "Zurücksetzen",
+    "preview": "Vorschau",
+    "editMode": "Bearbeitungsmodus",
+    "exportPdf": "PDF exportieren"
+  },
+  "uiLanguage": {
+    "label": "Sprache der Oberfläche"
+  },
+  "drawerTabs": {
+    "layouts": "Layouts",
+    "elements": "Elemente",
+    "styling": "Stil"
+  },
+  "layouts": {
+    "hint": "Wähle ein Layout für deinen Lebenslauf.",
+    "classicLabel": "Klassisch",
+    "classicDescription": "Zweispaltig mit dunkler Seitenleiste. Europäischer Stil.",
+    "usSingleLabel": "US-Lebenslauf",
+    "usSingleDescription": "Einspaltig, ATS-freundlich. Stil für USA und Kanada."
+  },
+  "cvLanguage": {
+    "label": "CV-Sprache",
+    "confirmMessage": "Dadurch werden die Standardtitel der Abschnitte auf {{language}} zurückgesetzt. Fortfahren?"
+  },
+  "elements": {
+    "header": "Kopfbereich",
+    "contact": "Kontakt",
+    "mainContent": "Hauptinhalt",
+    "sidebar": "Seitenleiste",
+    "photo": "Foto",
+    "name": "Name",
+    "title": "Titel",
+    "position": "Position",
+    "location": "Ort",
+    "email": "E-Mail",
+    "website": "Website",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "technologies": "Technologien"
+  },
+  "styling": {
+    "colors": "Farben",
+    "primary": "Primär",
+    "accent": "Akzent",
+    "font": "Schrift",
+    "typeface": "Schriftart",
+    "sizes": "Größen",
+    "name": "Name",
+    "titleTagline": "Titel / Unterzeile",
+    "contactItems": "Kontaktelemente",
+    "sectionTitles": "Abschnittstitel",
+    "bodyText": "Fließtext",
+    "photoSize": "Fotogröße",
+    "sidebarText": "Seitenleisten-Text",
+    "spacing": "Abstände",
+    "headerSpacing": "Kopfbereich-Abstand",
+    "bodySpacing": "Textabstand",
+    "sidebarSpacing": "Seitenleisten-Abstand",
+    "options": "Optionen",
+    "contactIcons": "Kontakt-Icons"
+  },
+  "resetModal": {
+    "close": "Schließen",
+    "title": "Zurücksetzen",
+    "subtitle": "Wähle aus, was du zurücksetzen möchtest. Dies kann nicht rückgängig gemacht werden.",
+    "layoutStyling": "Layout & Stil",
+    "layoutStylingDescription": "Farben, Schriftarten, Größen, Reihenfolge und Sichtbarkeit der Elemente auf die Standardwerte zurücksetzen. Der Inhalt deines CV bleibt erhalten.",
+    "resetLayout": "Layout zurücksetzen",
+    "cvData": "CV-Daten",
+    "cvDataDescription": "Den gesamten CV-Inhalt (Name, Erfahrung, Ausbildung...) durch Platzhalterdaten ersetzen. Die Layouteinstellungen bleiben erhalten.",
+    "resetData": "Daten zurücksetzen",
+    "everything": "Alles",
+    "everythingDescription": "Vollständiges Zurücksetzen — Layout und CV-Inhalt werden auf die ursprünglichen Standardwerte zurückgesetzt.",
+    "resetAll": "Alles zurücksetzen"
+  },
+  "actions": {
+    "add": "Hinzufügen",
+    "addSection": "Abschnitt hinzufügen",
+    "addPoint": "Punkt hinzufügen",
+    "addBullet": "Stichpunkt hinzufügen",
+    "addExperience": "Erfahrung hinzufügen",
+    "addEducation": "Ausbildung hinzufügen",
+    "addCourse": "Kurs hinzufügen",
+    "apply": "Anwenden",
+    "cancel": "Abbrechen",
+    "close": "Schließen",
+    "remove": "Entfernen",
+    "removeEntry": "Eintrag entfernen",
+    "removeSection": "Abschnitt entfernen",
+    "uploadPhoto": "Foto hochladen",
+    "changePhoto": "Foto ändern",
+    "removePhoto": "Foto entfernen"
+  },
+  "editable": {
+    "placeholder": "Bearbeiten...",
+    "customSectionPlaceholder": "Dein Text hier."
+  }
+}

@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCamera, faXmark } from '@fortawesome/free-solid-svg-icons';
 import './PhotoUpload.css';
@@ -11,6 +12,7 @@ interface PhotoUploadProps {
 }
 
 export default function PhotoUpload({ photo, name, onUpload, onRemove }: PhotoUploadProps) {
+  const { t } = useTranslation();
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -27,7 +29,7 @@ export default function PhotoUpload({ photo, name, onUpload, onRemove }: PhotoUp
       <button
         type="button"
         className="photo-upload__trigger"
-        title={photo ? 'Change photo' : 'Upload photo'}
+        title={photo ? t('actions.changePhoto') : t('actions.uploadPhoto')}
         onClick={() => inputRef.current?.click()}
       >
         {photo ? (
@@ -46,7 +48,7 @@ export default function PhotoUpload({ photo, name, onUpload, onRemove }: PhotoUp
         <button
           type="button"
           className="photo-upload__remove"
-          title="Remove photo"
+          title={t('actions.removePhoto')}
           onClick={onRemove}
         >
           <FontAwesomeIcon icon={faXmark} />

@@ -1,0 +1,100 @@
+{
+  "app": {
+    "reset": "Resetuj",
+    "preview": "Podgląd",
+    "editMode": "Tryb edycji",
+    "exportPdf": "Eksport PDF"
+  },
+  "uiLanguage": {
+    "label": "Język interfejsu"
+  },
+  "drawerTabs": {
+    "layouts": "Układy",
+    "elements": "Elementy",
+    "styling": "Styl"
+  },
+  "layouts": {
+    "hint": "Wybierz układ swojego CV.",
+    "classicLabel": "Klasyczny",
+    "classicDescription": "Dwie kolumny z ciemnym paskiem bocznym. Europejski styl.",
+    "usSingleLabel": "CV USA",
+    "usSingleDescription": "Jedna kolumna, przyjazne ATS. Styl USA i Kanada."
+  },
+  "cvLanguage": {
+    "label": "Język CV",
+    "confirmMessage": "To zresetuje domyślne tytuły sekcji do języka {{language}}. Kontynuować?"
+  },
+  "elements": {
+    "header": "Nagłówek",
+    "contact": "Kontakt",
+    "mainContent": "Treść główna",
+    "sidebar": "Pasek boczny",
+    "photo": "Zdjęcie",
+    "name": "Imię i nazwisko",
+    "title": "Tytuł",
+    "position": "Stanowisko",
+    "location": "Lokalizacja",
+    "email": "E-mail",
+    "website": "Strona WWW",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "technologies": "Technologie"
+  },
+  "styling": {
+    "colors": "Kolory",
+    "primary": "Główny",
+    "accent": "Akcent",
+    "font": "Czcionka",
+    "typeface": "Krój pisma",
+    "sizes": "Rozmiary",
+    "name": "Imię i nazwisko",
+    "titleTagline": "Tytuł / slogan",
+    "contactItems": "Elementy kontaktowe",
+    "sectionTitles": "Tytuły sekcji",
+    "bodyText": "Tekst główny",
+    "photoSize": "Rozmiar zdjęcia",
+    "sidebarText": "Tekst paska bocznego",
+    "spacing": "Odstępy",
+    "headerSpacing": "Odstępy nagłówka",
+    "bodySpacing": "Odstępy treści",
+    "sidebarSpacing": "Odstępy paska bocznego",
+    "options": "Opcje",
+    "contactIcons": "Ikony kontaktowe"
+  },
+  "resetModal": {
+    "close": "Zamknij",
+    "title": "Resetuj",
+    "subtitle": "Wybierz, co chcesz zresetować. Tej operacji nie można cofnąć.",
+    "layoutStyling": "Układ i styl",
+    "layoutStylingDescription": "Przywróć domyślne kolory, czcionki, rozmiary, kolejność elementów i widoczność. Treść CV zostanie zachowana.",
+    "resetLayout": "Resetuj układ",
+    "cvData": "Dane CV",
+    "cvDataDescription": "Zastąp całą treść CV (imię, doświadczenie, edukacja...) danymi przykładowymi. Ustawienia układu zostaną zachowane.",
+    "resetData": "Resetuj dane",
+    "everything": "Wszystko",
+    "everythingDescription": "Pełny reset — układ i treść CV wrócą do pierwotnych ustawień domyślnych.",
+    "resetAll": "Resetuj wszystko"
+  },
+  "actions": {
+    "add": "Dodaj",
+    "addSection": "Dodaj sekcję",
+    "addPoint": "Dodaj punkt",
+    "addBullet": "Dodaj wypunktowanie",
+    "addExperience": "Dodaj doświadczenie",
+    "addEducation": "Dodaj edukację",
+    "addCourse": "Dodaj kurs",
+    "apply": "Zastosuj",
+    "cancel": "Anuluj",
+    "close": "Zamknij",
+    "remove": "Usuń",
+    "removeEntry": "Usuń wpis",
+    "removeSection": "Usuń sekcję",
+    "uploadPhoto": "Prześlij zdjęcie",
+    "changePhoto": "Zmień zdjęcie",
+    "removePhoto": "Usuń zdjęcie"
+  },
+  "editable": {
+    "placeholder": "Edytuj...",
+    "customSectionPlaceholder": "Tutaj wpisz treść."
+  }
+}

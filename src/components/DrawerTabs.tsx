@@ -1,9 +1,8 @@
-import { useState, useRef, useEffect } from 'react';
+import { useRef, useState, useMemo, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faPalette, faListCheck, faTableCells,
-} from '@fortawesome/free-solid-svg-icons';
+import { faPalette, faListCheck, faTableCells } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { useTranslation } from 'react-i18next';
 import StylingDrawer from './StylingDrawer';
 import ElementsDrawer from './ElementsDrawer';
 import LayoutsDrawer from './LayoutsDrawer';
@@ -17,15 +16,16 @@ interface TabDef {
   icon: IconDefinition;
 }
 
-const TABS: TabDef[] = [
-  { id: 'layouts',  label: 'Layouts',  icon: faTableCells },
-  { id: 'elements', label: 'Elements', icon: faListCheck   },
-  { id: 'styling',  label: 'Styling',  icon: faPalette    },
-];
-
 export default function DrawerTabs() {
+  const { t } = useTranslation();
   const [open, setOpen] = useState<TabId | null>(null);
   const rootRef = useRef<HTMLDivElement>(null);
+
+  const tabs = useMemo<TabDef[]>(() => [
+    { id: 'layouts', label: t('drawerTabs.layouts'), icon: faTableCells },
+    { id: 'elements', label: t('drawerTabs.elements'), icon: faListCheck },
+    { id: 'styling', label: t('drawerTabs.styling'), icon: faPalette },
+  ], [t]);
 
   useEffect(() => {
     if (!open) return;
@@ -48,14 +48,14 @@ export default function DrawerTabs() {
     <div className="drawer-root" ref={rootRef}>
       <div className={`drawer-panel ${open ? 'drawer-panel--open' : ''}`}>
         <div className="drawer-panel__inner">
-          {open === 'styling'  && <StylingDrawer />}
+          {open === 'styling' && <StylingDrawer />}
           {open === 'elements' && <ElementsDrawer />}
-          {open === 'layouts'  && <LayoutsDrawer />}
+          {open === 'layouts' && <LayoutsDrawer />}
         </div>
       </div>
 
       <div className="drawer-tabs">
-        {TABS.map((tab) => (
+        {tabs.map((tab) => (
           <button
             key={tab.id}
             type="button"

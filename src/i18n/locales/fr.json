@@ -1,0 +1,100 @@
+{
+  "app": {
+    "reset": "Réinitialiser",
+    "preview": "Aperçu",
+    "editMode": "Mode édition",
+    "exportPdf": "Exporter en PDF"
+  },
+  "uiLanguage": {
+    "label": "Langue de l'interface"
+  },
+  "drawerTabs": {
+    "layouts": "Mises en page",
+    "elements": "Éléments",
+    "styling": "Style"
+  },
+  "layouts": {
+    "hint": "Choisissez une mise en page pour votre CV.",
+    "classicLabel": "Classique",
+    "classicDescription": "Deux colonnes avec barre latérale sombre. Style européen.",
+    "usSingleLabel": "CV US",
+    "usSingleDescription": "Une seule colonne, compatible ATS. Style États-Unis et Canada."
+  },
+  "cvLanguage": {
+    "label": "Langue du CV",
+    "confirmMessage": "Cela réinitialisera les titres de section par défaut en {{language}}. Continuer ?"
+  },
+  "elements": {
+    "header": "En-tête",
+    "contact": "Contact",
+    "mainContent": "Contenu principal",
+    "sidebar": "Barre latérale",
+    "photo": "Photo",
+    "name": "Nom",
+    "title": "Titre",
+    "position": "Poste",
+    "location": "Lieu",
+    "email": "E-mail",
+    "website": "Site web",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "technologies": "Technologies"
+  },
+  "styling": {
+    "colors": "Couleurs",
+    "primary": "Principale",
+    "accent": "Accent",
+    "font": "Police",
+    "typeface": "Typographie",
+    "sizes": "Tailles",
+    "name": "Nom",
+    "titleTagline": "Titre / slogan",
+    "contactItems": "Éléments de contact",
+    "sectionTitles": "Titres de section",
+    "bodyText": "Texte principal",
+    "photoSize": "Taille de la photo",
+    "sidebarText": "Texte de la barre latérale",
+    "spacing": "Espacement",
+    "headerSpacing": "Espacement de l'en-tête",
+    "bodySpacing": "Espacement du contenu",
+    "sidebarSpacing": "Espacement de la barre latérale",
+    "options": "Options",
+    "contactIcons": "Icônes de contact"
+  },
+  "resetModal": {
+    "close": "Fermer",
+    "title": "Réinitialiser",
+    "subtitle": "Choisissez ce que vous voulez réinitialiser. Cette action est irréversible.",
+    "layoutStyling": "Mise en page et style",
+    "layoutStylingDescription": "Restaurez les couleurs, polices, tailles, ordre des éléments et visibilité par défaut. Le contenu du CV est conservé.",
+    "resetLayout": "Réinitialiser la mise en page",
+    "cvData": "Données du CV",
+    "cvDataDescription": "Remplacez tout le contenu du CV (nom, expérience, formation...) par des données fictives. Les réglages de mise en page sont conservés.",
+    "resetData": "Réinitialiser les données",
+    "everything": "Tout",
+    "everythingDescription": "Réinitialisation complète — la mise en page et le contenu du CV reviennent à leurs valeurs d’origine.",
+    "resetAll": "Tout réinitialiser"
+  },
+  "actions": {
+    "add": "Ajouter",
+    "addSection": "Ajouter une section",
+    "addPoint": "Ajouter un point",
+    "addBullet": "Ajouter une puce",
+    "addExperience": "Ajouter une expérience",
+    "addEducation": "Ajouter une formation",
+    "addCourse": "Ajouter un cours",
+    "apply": "Appliquer",
+    "cancel": "Annuler",
+    "close": "Fermer",
+    "remove": "Supprimer",
+    "removeEntry": "Supprimer l'entrée",
+    "removeSection": "Supprimer la section",
+    "uploadPhoto": "Téléverser une photo",
+    "changePhoto": "Changer la photo",
+    "removePhoto": "Supprimer la photo"
+  },
+  "editable": {
+    "placeholder": "Modifier...",
+    "customSectionPlaceholder": "Votre texte ici."
+  }
+}

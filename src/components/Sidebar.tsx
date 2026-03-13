@@ -1,3 +1,5 @@
+import { useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faBriefcase,
@@ -7,7 +9,6 @@ import {
   faPlus,
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { useRef, useState } from 'react';
 import { useCvStore } from '../store/cvStore';
 import { useSettingsStore, SidebarKey } from '../store/settingsStore';
 import EditableText from './EditableText';
@@ -16,6 +17,7 @@ import CustomSection from './CustomSection';
 import './Sidebar.css';
 
 export default function Sidebar() {
+  const { t } = useTranslation();
   const {
     data: { photo, name, title, contact, technologies, sectionTitles, sidebarCustom },
     setName, setTitle, setContact, setPhoto, setSectionTitle,
@@ -54,42 +56,42 @@ export default function Sidebar() {
         return (
           <div key="position" className="sidebar__contact-item">
             <FontAwesomeIcon icon={faBriefcase} className="sidebar__contact-icon" fixedWidth />
-            <EditableText value={contact.position} onChange={(v) => setContact('position', v)} dark />
+            <EditableText value={contact.position} onChange={(value) => setContact('position', value)} dark />
           </div>
         );
       case 'location':
         return (
           <div key="location" className="sidebar__contact-item">
             <FontAwesomeIcon icon={faLocationDot} className="sidebar__contact-icon" fixedWidth />
-            <EditableText value={contact.location} onChange={(v) => setContact('location', v)} dark />
+            <EditableText value={contact.location} onChange={(value) => setContact('location', value)} dark />
           </div>
         );
       case 'email':
         return (
           <div key="email" className="sidebar__contact-item">
             <FontAwesomeIcon icon={faEnvelope} className="sidebar__contact-icon" fixedWidth />
-            <EditableText value={contact.email} onChange={(v) => setContact('email', v)} dark href={`mailto:${contact.email}`} fitLine />
+            <EditableText value={contact.email} onChange={(value) => setContact('email', value)} dark href={`mailto:${contact.email}`} fitLine />
           </div>
         );
       case 'webpage':
         return (
           <div key="webpage" className="sidebar__contact-item">
             <FontAwesomeIcon icon={faGlobe} className="sidebar__contact-icon" fixedWidth />
-            <EditableText value={contact.webpage} onChange={(v) => setContact('webpage', v)} dark href={contact.webpage} hrefTarget="_blank" stripProtocol fitLine />
+            <EditableText value={contact.webpage} onChange={(value) => setContact('webpage', value)} dark href={contact.webpage} hrefTarget="_blank" stripProtocol fitLine />
           </div>
         );
       case 'github':
         return (
           <div key="github" className="sidebar__contact-item">
             <FontAwesomeIcon icon={faGithub} className="sidebar__contact-icon" fixedWidth />
-            <EditableText value={contact.github} onChange={(v) => setContact('github', v)} dark href={contact.github} hrefTarget="_blank" stripProtocol fitLine />
+            <EditableText value={contact.github} onChange={(value) => setContact('github', value)} dark href={contact.github} hrefTarget="_blank" stripProtocol fitLine />
           </div>
         );
       case 'linkedin':
         return (
           <div key="linkedin" className="sidebar__contact-item">
             <FontAwesomeIcon icon={faLinkedin} className="sidebar__contact-icon" fixedWidth />
-            <EditableText value={contact.linkedin} onChange={(v) => setContact('linkedin', v)} dark href={contact.linkedin} hrefTarget="_blank" stripProtocol fitLine />
+            <EditableText value={contact.linkedin} onChange={(value) => setContact('linkedin', value)} dark href={contact.linkedin} hrefTarget="_blank" stripProtocol fitLine />
           </div>
         );
       case 'technologies':
@@ -97,24 +99,24 @@ export default function Sidebar() {
           <div key="technologies" className="sidebar__technologies">
             <div className="sidebar__divider" />
             <h2 className="sidebar__section-title">
-              <EditableText value={sectionTitles.technologies} onChange={(v) => setSectionTitle('technologies', v)} dark />
+              <EditableText value={sectionTitles.technologies} onChange={(value) => setSectionTitle('technologies', value)} dark />
             </h2>
             <ul className="sidebar__tech-list">
-              {technologies.map((tech, i) => (
+              {technologies.map((technology, index) => (
                 <li
-                  key={i}
+                  key={index}
                   className={[
                     'sidebar__tech-badge',
-                    dragOver === i ? 'sidebar__tech-badge--drag-over' : '',
-                    dragging === i ? 'sidebar__tech-badge--dragging' : '',
+                    dragOver === index ? 'sidebar__tech-badge--drag-over' : '',
+                    dragging === index ? 'sidebar__tech-badge--dragging' : '',
                   ].filter(Boolean).join(' ')}
                   draggable
-                  onDragStart={() => { dragIndex.current = i; setDragging(i); }}
-                  onDragOver={(e) => { e.preventDefault(); setDragOver(i); }}
+                  onDragStart={() => { dragIndex.current = index; setDragging(index); }}
+                  onDragOver={(e) => { e.preventDefault(); setDragOver(index); }}
                   onDragLeave={() => setDragOver(null)}
                   onDrop={() => {
-                    if (dragIndex.current !== null && dragIndex.current !== i) {
-                      reorderTechnologies(dragIndex.current, i);
+                    if (dragIndex.current !== null && dragIndex.current !== index) {
+                      reorderTechnologies(dragIndex.current, index);
                     }
                     dragIndex.current = null;
                     setDragOver(null);
@@ -122,12 +124,12 @@ export default function Sidebar() {
                   }}
                   onDragEnd={() => { dragIndex.current = null; setDragOver(null); setDragging(null); }}
                 >
-                  <EditableText value={tech} onChange={(v) => setTechnology(i, v)} dark onRemove={() => removeTechnology(i)} />
+                  <EditableText value={technology} onChange={(value) => setTechnology(index, value)} dark onRemove={() => removeTechnology(index)} />
                 </li>
               ))}
               <li>
                 <button type="button" className="sidebar__tech-add" onClick={addTechnology}>
-                  <FontAwesomeIcon icon={faPlus} /> Add
+                  <FontAwesomeIcon icon={faPlus} /> {t('actions.add')}
                 </button>
               </li>
             </ul>
@@ -141,16 +143,16 @@ export default function Sidebar() {
   return (
     <aside className="sidebar">
       {(() => {
-        const CONTACT_KEYS = ['position', 'location', 'email', 'webpage', 'github', 'linkedin'];
+        const contactKeys = ['position', 'location', 'email', 'webpage', 'github', 'linkedin'];
         const visibleItems = sidebarOrder
           .map((key) => ({ key, item: renderItem(key) }))
           .filter(({ item }) => item !== null);
 
-        return visibleItems.map(({ key, item }, idx) => {
-          const isContact = CONTACT_KEYS.includes(key);
-          const prevKey = idx > 0 ? visibleItems[idx - 1].key : null;
-          const prevIsContact = prevKey ? CONTACT_KEYS.includes(prevKey) : false;
-          const needsDivider = isContact && !prevIsContact && idx > 0;
+        return visibleItems.map(({ key, item }, index) => {
+          const isContact = contactKeys.includes(key);
+          const previousKey = index > 0 ? visibleItems[index - 1].key : null;
+          const previousIsContact = previousKey ? contactKeys.includes(previousKey) : false;
+          const needsDivider = isContact && !previousIsContact && index > 0;
 
           return (
             <div key={key} className={isContact ? 'sidebar__contact-item-wrapper' : undefined}>
@@ -161,16 +163,16 @@ export default function Sidebar() {
         });
       })()}
 
-      {sidebarCustom.map((sec) => (
-        <div key={sec.id}>
+      {sidebarCustom.map((section) => (
+        <div key={section.id}>
           <div className="sidebar__divider" />
           <CustomSection
-            title={sec.title}
-            content={sec.content}
+            title={section.title}
+            content={section.content}
             dark
-            onChangeTitle={(v) => setCustomSectionField('sidebarCustom', sec.id, 'title', v)}
-            onChangeContent={(v) => setCustomSectionField('sidebarCustom', sec.id, 'content', v)}
-            onRemove={() => removeCustomSection('sidebarCustom', sec.id)}
+            onChangeTitle={(value) => setCustomSectionField('sidebarCustom', section.id, 'title', value)}
+            onChangeContent={(value) => setCustomSectionField('sidebarCustom', section.id, 'content', value)}
+            onRemove={() => removeCustomSection('sidebarCustom', section.id)}
           />
         </div>
       ))}
@@ -180,9 +182,8 @@ export default function Sidebar() {
         className="sidebar__add-section btn-add btn-add--small"
         onClick={() => addCustomSection('sidebarCustom')}
       >
-        <FontAwesomeIcon icon={faPlus} /> Add section
+        <FontAwesomeIcon icon={faPlus} /> {t('actions.addSection')}
       </button>
     </aside>
   );
 }
-
