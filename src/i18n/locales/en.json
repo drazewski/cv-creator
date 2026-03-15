@@ -100,5 +100,81 @@
   "editable": {
     "placeholder": "Edit...",
     "customSectionPlaceholder": "Your text here."
+  },
+  "editor": {
+    "metaTitle": "CV Editor — Build and customise your CV online",
+    "metaDescription": "Create, edit and export your CV online with flexible layouts, custom styling and PDF export."
+  },
+  "landing": {
+    "metaTitle": "Free CV Builder Online — Create a professional CV with MyCeeVee",
+    "metaDescription": "Create a professional CV online for free. Choose a layout, adjust colours and fonts, edit sections comfortably and export your CV to PDF without creating an account.",
+    "createCv": "Create CV",
+    "learnMore": "See how it works",
+    "eyebrow": "Can creating a CV be even simpler?",
+    "heroTitle": "Create your CV without needing to sign up.",
+    "heroLead": "MyCeeVee helps you prepare a modern and readable CV in a few minutes. You can adjust the layout, typography and section content, change the interface language and refine the document so it is easy to print or save as a PDF later.",
+    "trust": {
+      "fast": "Fast to start, easy to finish",
+      "noAccount": "No account required for the free version",
+      "multilang": "Multilingual editor and landing page"
+    },
+    "preview": {
+      "classicBadge": "Classic layout",
+      "atsBadge": "ATS-friendly layout",
+      "customiseChip": "Customise fonts, colours and sections"
+    },
+    "sections": {
+      "whyEyebrow": "Why use it?",
+      "whyTitle": "A free CV builder designed to help you get the job done quickly.",
+      "whyLead": "This app was created for people who need to build a CV online quickly without fighting bloated forms and heavy graphic tools. The goal is simple: help you create a clear document in a low-stress way.",
+      "howEyebrow": "How it works",
+      "howTitle": "From blank page to downloadable CV in three comfortable steps.",
+      "howLead": "The flow is intentionally lightweight, so you can focus on your story instead of on technical friction.",
+      "seoEyebrow": "About the product",
+      "seoTitle": "A free resume builder for people who value clarity, speed and privacy.",
+      "faqEyebrow": "Questions",
+      "faqTitle": "Frequently asked questions"
+    },
+    "features": {
+      "speedTitle": "Built for speed",
+      "speedText": "Open the app, choose a layout and start editing right away. You can prepare a strong CV quickly, without registration, wasted time or unnecessary settings. Print or PDF? That part is up to you.",
+      "flexibleTitle": "Flexible editor",
+      "flexibleText": "You get two simple templates. Why more? A CV should be readable, clear and focused. Write, reorder sections, add your own sections, and adjust spacing, colours and fonts.",
+      "multilingualTitle": "Friendly for multilingual users",
+      "multilingualText": "English is the default language, but the interface and landing page can work in many languages, which makes the tool a better fit for different markets."
+    },
+    "steps": {
+      "step1Title": "Choose a layout and start editing",
+      "step1Text": "Begin with a clean CV template, then edit contact details, summary, experience, education and custom sections directly in the preview.",
+      "step2Title": "Adjust the document to your style",
+      "step2Text": "Tune colours, fonts, spacing and section order so the document feels consistent, readable and aligned with the type of role you want.",
+      "step3Title": "Export when you are ready",
+      "step3Text": "Use the built-in export flow to prepare your CV for printing or PDF download once the content and visual details feel complete."
+    },
+    "seo": {
+      "lead": "If you are looking for a free CV builder, an online resume tool or a simple CV generator, MyCeeVee was designed exactly for that purpose.",
+      "paragraph1": "The app lets you create a professional CV online without complicated desktop software and without creating an account. In one place you can edit your professional summary, experience, education, courses and custom sections, while seeing the result immediately in a print-ready A4 layout.",
+      "paragraph2": "Unlike many generic form-based editors, this CV builder gives you a few concrete ways to edit. You can choose between two core layouts, change fonts and colours, manage section visibility and tailor the document to a specific application. That makes the tool useful both as an online resume builder and as a practical CV creator for European and international markets.",
+      "paragraph3": "Because the free version works directly in the browser and does not require login for normal use, it is a very good option for people who want to make a CV quickly, improve an existing resume or generate a polished PDF before sending an application."
+    },
+    "faq": {
+      "question1": "Is this CV builder free?",
+      "answer1": "Yes. The free version is meant to be fully useful on its own and does not require an account for normal editing.",
+      "question2": "Can I prepare a CV as a PDF?",
+      "answer2": "Yes. The editor is built around print-ready CV output, and export is being developed to support both printing and direct PDF download.",
+      "question3": "Who is this app for?",
+      "answer3": "It is for students, juniors, experienced specialists and people changing industries who want a clear CV without complicated design software.",
+      "question4": "Can I use the app in different languages?",
+      "answer4": "Yes. English is the default language, and the interface already supports many languages. The landing page is also prepared for multilingual use.",
+      "question5": "Do I need to sign up to use the app?",
+      "answer5": "No. You can use the free version of the app without registering or logging in."
+    },
+    "final": {
+      "title": "Start building your CV now and tailor it to the job you want to get.",
+      "text": "Open the editor, try the layouts, refine the style and prepare a CV that already looks professional before a recruiter reads the first sentence.",
+      "cta": "Open the CV editor"
+    },
+    "twitterDescription": "Create a CV online for free in minutes. Choose one of two simple layouts, adjust colours and fonts, edit sections and export your CV to PDF without creating an account.",
+    "structuredDescription": "Create a CV online for free in minutes. Choose one of two simple layouts, adjust colours and fonts, edit sections and export your CV to PDF without creating an account."
   }
 }

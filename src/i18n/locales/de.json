@@ -100,5 +100,81 @@
   "editable": {
     "placeholder": "Bearbeiten...",
     "customSectionPlaceholder": "Dein Text hier."
+  },
+  "editor": {
+    "metaTitle": "CV-Editor — Lebenslauf online erstellen und anpassen",
+    "metaDescription": "Erstelle, bearbeite und exportiere deinen Lebenslauf online mit flexiblen Layouts, individuellem Styling und PDF-Export."
+  },
+  "landing": {
+    "metaTitle": "Kostenloser CV-Builder online — erstelle einen professionellen Lebenslauf mit MyCeeVee",
+    "metaDescription": "Erstelle kostenlos online einen professionellen Lebenslauf. Wähle ein Layout, passe Farben und Schriften an, bearbeite Abschnitte bequem und exportiere deinen CV als PDF — ohne Konto.",
+    "createCv": "CV erstellen",
+    "learnMore": "Mehr erfahren",
+    "eyebrow": "Geht ein Lebenslauf noch einfacher?",
+    "heroTitle": "Erstelle deinen Lebenslauf ohne Registrierung.",
+    "heroLead": "MyCeeVee hilft dir, in wenigen Minuten einen modernen und gut lesbaren Lebenslauf zu erstellen. Du kannst Layout, Typografie und Abschnittsinhalte anpassen, die Sprache der Oberfläche ändern und das Dokument so verfeinern, dass du es später leicht drucken oder als PDF speichern kannst.",
+    "trust": {
+      "fast": "Schnell starten, entspannt fertigstellen",
+      "noAccount": "Kein Konto für die kostenlose Version nötig",
+      "multilang": "Mehrsprachiger Editor und Landingpage"
+    },
+    "preview": {
+      "classicBadge": "Klassisches Layout",
+      "atsBadge": "ATS-freundliches Layout",
+      "customiseChip": "Schriften, Farben und Abschnitte anpassen"
+    },
+    "sections": {
+      "whyEyebrow": "Warum lohnt es sich?",
+      "whyTitle": "Ein kostenloser CV-Builder, der dir hilft, schnell zu erledigen, was du erledigen musst.",
+      "whyLead": "Diese App wurde für Menschen entwickelt, die schnell online einen Lebenslauf erstellen möchten, ohne mit überladenen Formularen und schweren Grafik-Tools zu kämpfen. Das Ziel ist einfach: dir dabei zu helfen, stressfrei ein übersichtliches Dokument zu erstellen.",
+      "howEyebrow": "So funktioniert es",
+      "howTitle": "Von der leeren Seite zum herunterladbaren CV in drei angenehmen Schritten.",
+      "howLead": "Der Ablauf ist bewusst leicht gehalten, damit du dich auf deinen beruflichen Werdegang konzentrieren kannst und nicht auf unnötige technische Reibung.",
+      "seoEyebrow": "Über das Produkt",
+      "seoTitle": "Ein kostenloser Resume Builder für Menschen, die Klarheit, Tempo und Privatsphäre schätzen.",
+      "faqEyebrow": "Fragen",
+      "faqTitle": "Häufig gestellte Fragen"
+    },
+    "features": {
+      "speedTitle": "Für schnelles Arbeiten gemacht",
+      "speedText": "Öffne die App, wähle ein Layout und beginne sofort mit der Bearbeitung. Du kannst schnell einen starken Lebenslauf erstellen, ganz ohne Registrierung, Zeitverlust und unnötige Einstellungen. Drucken oder PDF? Das entscheidest du.",
+      "flexibleTitle": "Flexibler Editor",
+      "flexibleText": "Dir stehen zwei einfache Vorlagen zur Verfügung. Warum mehr? Ein Lebenslauf soll lesbar, klar und deutlich sein. Schreibe, ändere die Reihenfolge von Abschnitten, füge eigene Bereiche hinzu und stelle Abstände, Farben und Schriften ein.",
+      "multilingualTitle": "Geeignet für mehrsprachige Nutzer",
+      "multilingualText": "Standardmäßig ist Englisch eingestellt, aber Oberfläche und Landingpage können in vielen Sprachen genutzt werden. Dadurch eignet sich das Tool besser für verschiedene Märkte."
+    },
+    "steps": {
+      "step1Title": "Layout wählen und direkt loslegen",
+      "step1Text": "Starte mit einer sauberen CV-Vorlage und bearbeite Kontaktdaten, Zusammenfassung, Berufserfahrung, Ausbildung und eigene Abschnitte direkt in der Vorschau.",
+      "step2Title": "Das Dokument an deinen Stil anpassen",
+      "step2Text": "Passe Farben, Schriften, Abstände und Reihenfolge so an, dass der Lebenslauf konsistent, lesbar und passend zur gewünschten Position wirkt.",
+      "step3Title": "Exportieren, wenn alles stimmt",
+      "step3Text": "Nutze den integrierten Export, um deinen CV für den Druck oder den direkten PDF-Download vorzubereiten, sobald Inhalt und Gestaltung fertig sind."
+    },
+    "seo": {
+      "lead": "Wenn du einen kostenlosen CV-Builder, ein Online-Tool zum Erstellen von Resumes oder einen einfachen Lebenslauf-Generator suchst, wurde MyCeeVee genau für diesen Zweck entwickelt.",
+      "paragraph1": "Mit der App kannst du online einen professionellen Lebenslauf erstellen, ohne komplizierte Desktop-Software und ohne Konto. An einem Ort bearbeitest du dein berufliches Profil, Erfahrung, Ausbildung, Kurse und eigene Abschnitte und siehst das Ergebnis sofort in einem druckfertigen A4-Layout.",
+      "paragraph2": "Im Unterschied zu vielen generischen formularbasierten Editoren bietet dir dieser CV-Builder mehrere konkrete Bearbeitungsmöglichkeiten. Du kannst zwischen zwei grundlegenden Layouts wählen, Schriften und Farben ändern, die Sichtbarkeit von Abschnitten steuern und das Dokument auf eine bestimmte Bewerbung zuschneiden. Dadurch eignet sich das Tool sowohl als Online-Resume-Builder als auch als praktischer CV-Ersteller für europäische und internationale Märkte.",
+      "paragraph3": "Weil die kostenlose Version direkt im Browser läuft und für die normale Nutzung kein Login verlangt, ist sie eine sehr gute Option für Menschen, die schnell einen Lebenslauf erstellen, einen bestehenden Resume verbessern oder vor dem Versenden einer Bewerbung ein sauberes PDF erzeugen möchten."
+    },
+    "faq": {
+      "question1": "Ist dieser CV-Builder kostenlos?",
+      "answer1": "Ja. Die kostenlose Version soll für sich allein vollständig nutzbar sein und erfordert für die normale Bearbeitung kein Konto.",
+      "question2": "Kann ich einen Lebenslauf als PDF vorbereiten?",
+      "answer2": "Ja. Der Editor ist auf druckfertige CV-Ausgabe ausgelegt, und der Export wird so erweitert, dass sowohl Drucken als auch direkter PDF-Download unterstützt werden.",
+      "question3": "Für wen ist diese App gedacht?",
+      "answer3": "Für Studierende, Berufseinsteiger, erfahrene Fachkräfte und Menschen im Branchenwechsel, die einen klaren Lebenslauf ohne komplizierte Designsoftware möchten.",
+      "question4": "Kann ich die App in verschiedenen Sprachen nutzen?",
+      "answer4": "Ja. Englisch ist die Standardsprache, und die Oberfläche unterstützt bereits viele Sprachen. Auch die Landingpage ist für mehrsprachige Nutzung vorbereitet.",
+      "question5": "Muss ich mich registrieren, um die App zu nutzen?",
+      "answer5": "Nein. Du kannst die kostenlose Version der App ohne Registrierung und Login nutzen."
+    },
+    "final": {
+      "title": "Beginne jetzt mit deinem Lebenslauf und passe ihn an den Job an, den du bekommen möchtest.",
+      "text": "Öffne den Editor, probiere die Layouts aus, feile am Stil und erstelle einen Lebenslauf, der professionell wirkt, noch bevor ein Recruiter den ersten Satz liest.",
+      "cta": "CV-Editor öffnen"
+    },
+    "twitterDescription": "Erstelle kostenlos in wenigen Minuten online einen Lebenslauf. Wähle eines von zwei einfachen Layouts, passe Farben und Schriften an, bearbeite Abschnitte und exportiere deinen CV als PDF — ohne Konto.",
+    "structuredDescription": "Erstelle kostenlos in wenigen Minuten online einen Lebenslauf. Wähle eines von zwei einfachen Layouts, passe Farben und Schriften an, bearbeite Abschnitte und exportiere deinen CV als PDF — ohne Konto."
   }
 }

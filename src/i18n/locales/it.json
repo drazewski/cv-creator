@@ -100,5 +100,81 @@
   "editable": {
     "placeholder": "Modifica...",
     "customSectionPlaceholder": "Inserisci qui il testo."
+  },
+  "editor": {
+    "metaTitle": "Editor CV — crea e personalizza il tuo CV online",
+    "metaDescription": "Crea, modifica ed esporta il tuo CV online con layout flessibili, stile personalizzato ed esportazione PDF."
+  },
+  "landing": {
+    "metaTitle": "Creatore di CV gratis online — crea un CV professionale con MyCeeVee",
+    "metaDescription": "Crea gratis un CV professionale online. Scegli un layout, regola colori e font, modifica le sezioni con facilità ed esporta il tuo CV in PDF senza creare un account.",
+    "createCv": "Crea CV",
+    "learnMore": "Scopri come funziona",
+    "eyebrow": "Si può creare un CV in modo ancora più semplice?",
+    "heroTitle": "Crea il tuo CV senza doverti registrare.",
+    "heroLead": "MyCeeVee ti aiuta a preparare un CV moderno e leggibile in pochi minuti. Puoi regolare layout, tipografia e contenuto delle sezioni, cambiare la lingua dell’interfaccia e rifinire il documento per stamparlo o salvarlo in PDF più tardi.",
+    "trust": {
+      "fast": "Veloce da iniziare, facile da completare",
+      "noAccount": "Nessun account richiesto per la versione gratuita",
+      "multilang": "Editor e landing page multilingue"
+    },
+    "preview": {
+      "classicBadge": "Layout classico",
+      "atsBadge": "Layout compatibile ATS",
+      "customiseChip": "Personalizza font, colori e sezioni"
+    },
+    "sections": {
+      "whyEyebrow": "Perché conviene?",
+      "whyTitle": "Un creatore di CV gratuito progettato per aiutarti a fare in fretta quello che devi fare.",
+      "whyLead": "Questa applicazione è nata per chi ha bisogno di creare rapidamente un CV online senza combattere con moduli pesanti e strumenti grafici complicati. L’obiettivo è semplice: aiutarti a creare un documento chiaro senza stress.",
+      "howEyebrow": "Come funziona",
+      "howTitle": "Da pagina vuota a CV scaricabile in tre passaggi comodi.",
+      "howLead": "Il flusso è volutamente leggero, così puoi concentrarti sulla tua storia professionale invece che sulla complessità tecnica.",
+      "seoEyebrow": "Sul prodotto",
+      "seoTitle": "Un resume builder gratuito per chi apprezza chiarezza, velocità e privacy.",
+      "faqEyebrow": "Domande",
+      "faqTitle": "Domande frequenti"
+    },
+    "features": {
+      "speedTitle": "Pensato per essere veloce",
+      "speedText": "Apri l’app, scegli un layout e inizia subito a modificare. Puoi preparare rapidamente un CV solido, senza registrazione, senza perdere tempo e senza impostazioni inutili. Stampa o PDF? La scelta è tua.",
+      "flexibleTitle": "Editor flessibile",
+      "flexibleText": "Hai a disposizione due modelli semplici. Perché di più? Un CV deve essere leggibile, chiaro e diretto. Scrivi, cambia l’ordine delle sezioni, aggiungi sezioni personalizzate e regola spaziature, colori e font.",
+      "multilingualTitle": "Adatto agli utenti multilingue",
+      "multilingualText": "L’inglese è la lingua predefinita, ma l’interfaccia e la landing page possono funzionare in molte lingue, così lo strumento si adatta meglio a mercati diversi."
+    },
+    "steps": {
+      "step1Title": "Scegli un layout e inizia a modificare",
+      "step1Text": "Parti da un modello di CV pulito e modifica direttamente nell’anteprima contatti, sommario, esperienza, formazione e sezioni personalizzate.",
+      "step2Title": "Adatta il documento al tuo stile",
+      "step2Text": "Regola colori, font, spaziature e ordine delle sezioni per ottenere un documento coerente, leggibile e adatto al tipo di posizione che desideri.",
+      "step3Title": "Esporta quando sei pronto",
+      "step3Text": "Usa il flusso di esportazione integrato per preparare il tuo CV per la stampa o per il download PDF quando contenuto e aspetto visivo sono completi."
+    },
+    "seo": {
+      "lead": "Se stai cercando un creatore di CV gratuito, uno strumento per creare resume online o un generatore di CV semplice, MyCeeVee è stato progettato esattamente per questo scopo.",
+      "paragraph1": "L’applicazione ti permette di creare un CV professionale online senza software desktop complicati e senza creare un account. In un unico posto puoi modificare il riepilogo professionale, l’esperienza, la formazione, i corsi e le sezioni personalizzate, vedendo subito il risultato in un layout A4 pronto per la stampa.",
+      "paragraph2": "A differenza di molti editor generici basati su moduli, questo creatore di CV ti offre diversi modi concreti di modificare il documento. Puoi scegliere tra due layout principali, cambiare font e colori, gestire la visibilità delle sezioni e adattare il documento a una candidatura specifica. Per questo lo strumento funziona sia come resume builder online sia come pratico creatore di CV per mercati europei e internazionali.",
+      "paragraph3": "Poiché la versione gratuita funziona direttamente nel browser e non richiede login per l’uso normale, è un’ottima opzione per chi vuole creare rapidamente un CV, migliorare un resume esistente o generare un PDF curato prima di inviare una candidatura."
+    },
+    "faq": {
+      "question1": "Questo creatore di CV è gratuito?",
+      "answer1": "Sì. La versione gratuita è pensata per essere pienamente utile da sola e non richiede un account per la normale modifica.",
+      "question2": "Posso preparare un CV in PDF?",
+      "answer2": "Sì. L’editor è costruito attorno a un output pronto per la stampa e l’esportazione viene sviluppata per supportare sia la stampa sia il download diretto in PDF.",
+      "question3": "Per chi è questa applicazione?",
+      "answer3": "Per studenti, profili junior, specialisti esperti e persone che cambiano settore e vogliono un CV chiaro senza software di design complicati.",
+      "question4": "Posso usare l’applicazione in lingue diverse?",
+      "answer4": "Sì. L’inglese è la lingua predefinita e l’interfaccia supporta già molte lingue. Anche la landing page è pronta per un uso multilingue.",
+      "question5": "Devo registrarmi per usare l’applicazione?",
+      "answer5": "No. Puoi usare la versione gratuita dell’applicazione senza registrarti né effettuare il login."
+    },
+    "final": {
+      "title": "Inizia ora a costruire il tuo CV e adattalo al lavoro che vuoi ottenere.",
+      "text": "Apri l’editor, prova i layout, rifinisci lo stile e prepara un CV che sembri professionale ancora prima che un recruiter legga la prima frase.",
+      "cta": "Apri l’editor CV"
+    },
+    "twitterDescription": "Crea gratis un CV online in pochi minuti. Scegli uno dei due layout semplici, regola colori e font, modifica le sezioni ed esporta il tuo CV in PDF senza creare un account.",
+    "structuredDescription": "Crea gratis un CV online in pochi minuti. Scegli uno dei due layout semplici, regola colori e font, modifica le sezioni ed esporta il tuo CV in PDF senza creare un account."
   }
 }
