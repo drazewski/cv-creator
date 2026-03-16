@@ -1,0 +1,27 @@
+<svg width="640" height="520" viewBox="0 0 640 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Smiling person holding a CV</title>
+  <desc id="desc">Illustration of a smiling person showing a CV document.</desc>
+  <rect width="640" height="520" rx="40" fill="#F7FAFE"/>
+  <circle cx="500" cy="90" r="34" fill="#EAF3FD"/>
+  <circle cx="112" cy="116" r="24" fill="#FFF1D9"/>
+  <path d="M198 435C198 377.562 244.562 331 302 331H361C418.438 331 465 377.562 465 435V446H198V435Z" fill="#3E74C4"/>
+  <rect x="227" y="210" width="207" height="146" rx="72" fill="#F2C6A8"/>
+  <path d="M266 205C266 156.951 304.951 118 353 118H362C410.049 118 449 156.951 449 205V248H266V205Z" fill="#1E2A3A"/>
+  <path d="M277 234C277 188.19 314.19 151 360 151C405.81 151 443 188.19 443 234V248C443 293.81 405.81 331 360 331C314.19 331 277 293.81 277 248V234Z" fill="#F5CCAF"/>
+  <path d="M325 245C337.867 259.109 358.392 268 381 268C403.608 268 424.133 259.109 437 245V276C437 306.928 411.928 332 381 332H381C350.072 332 325 306.928 325 276V245Z" fill="#EFBF9D"/>
+  <path d="M335 227C339.418 227 343 223.418 343 219C343 214.582 339.418 211 335 211C330.582 211 327 214.582 327 219C327 223.418 330.582 227 335 227Z" fill="#1E2A3A"/>
+  <path d="M392 227C396.418 227 400 223.418 400 219C400 214.582 396.418 211 392 211C387.582 211 384 214.582 384 219C384 223.418 387.582 227 392 227Z" fill="#1E2A3A"/>
+  <path d="M338 261C347.519 272.344 363.631 279 381 279C398.369 279 414.481 272.344 424 261" stroke="#C67C59" stroke-width="6" stroke-linecap="round"/>
+  <path d="M309 159C342.108 183.901 387.332 196.7 442 193V167C442 133.311 414.689 106 381 106H370C336.311 106 309 133.311 309 167V159Z" fill="#1E2A3A"/>
+  <rect x="115" y="156" width="192" height="250" rx="18" transform="rotate(-8 115 156)" fill="white" stroke="#D8E3F0" stroke-width="3"/>
+  <rect x="147" y="196" width="94" height="14" rx="7" transform="rotate(-8 147 196)" fill="#3E74C4"/>
+  <rect x="147" y="227" width="122" height="9" rx="4.5" transform="rotate(-8 147 227)" fill="#D8E3F0"/>
+  <rect x="147" y="248" width="103" height="9" rx="4.5" transform="rotate(-8 147 248)" fill="#D8E3F0"/>
+  <rect x="147" y="282" width="61" height="11" rx="5.5" transform="rotate(-8 147 282)" fill="#8AB5E6"/>
+  <rect x="147" y="309" width="121" height="9" rx="4.5" transform="rotate(-8 147 309)" fill="#D8E3F0"/>
+  <rect x="147" y="330" width="98" height="9" rx="4.5" transform="rotate(-8 147 330)" fill="#D8E3F0"/>
+  <rect x="147" y="363" width="81" height="11" rx="5.5" transform="rotate(-8 147 363)" fill="#8AB5E6"/>
+  <path d="M275 345C308 353 329 372 338 402" stroke="#F5CCAF" stroke-width="24" stroke-linecap="round"/>
+  <path d="M335 401C351 402 367 398 379 390" stroke="#F5CCAF" stroke-width="16" stroke-linecap="round"/>
+  <path d="M206 435H461" stroke="#24415F" stroke-width="6" stroke-linecap="round" opacity="0.15"/>
+</svg>

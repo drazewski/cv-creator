@@ -499,12 +499,32 @@ button {
   padding-bottom: 4rem;
 }
 
+.landing-seo-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+  gap: 2rem;
+  align-items: center;
+}
+
 .landing-seo-copy {
   max-width: 58rem;
 }
 
 .landing-seo-copy__lead {
   font-size: 1.16rem;
+}
+
+.landing-seo-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.landing-seo-visual__image {
+  width: min(100%, 440px);
+  height: auto;
+  display: block;
+  border-radius: 40px;
+  filter: drop-shadow(0 18px 34px rgba(40, 60, 83, 0.12));
 }
 
 .landing-cta {
@@ -531,6 +551,14 @@ button {
   .landing-feature-grid,
   .landing-step-grid {
     grid-template-columns: 1fr;
+  }
+
+  .landing-seo-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-seo-visual {
+    display: none;
   }
 
   .landing-hero__visual {

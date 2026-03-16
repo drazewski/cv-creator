@@ -265,15 +265,20 @@ ${renderFeatureCard('D', landing.features.studentTitle, landing.features.student
       </section>
 
       <section class="landing-section landing-section--seo">
-        <div class="landing-section__intro">
-          <p class="landing-eyebrow">${escapeHtml(landing.sections.seoEyebrow)}</p>
-          <h2>${escapeHtml(landing.sections.seoTitle)}</h2>
-        </div>
-        <div class="landing-seo-copy">
-          <p class="landing-seo-copy__lead">${escapeHtml(landing.seo.lead)}</p>
-          <p>${escapeHtml(landing.seo.paragraph1)}</p>
-          <p>${escapeHtml(landing.seo.paragraph2)}</p>
-          <p>${escapeHtml(landing.seo.paragraph3)}</p>
+        <div class="landing-seo-layout">
+          <div class="landing-seo-copy">
+            <div class="landing-section__intro">
+              <p class="landing-eyebrow">${escapeHtml(landing.sections.seoEyebrow)}</p>
+              <h2>${escapeHtml(landing.sections.seoTitle)}</h2>
+            </div>
+            <p class="landing-seo-copy__lead">${escapeHtml(landing.seo.lead)}</p>
+            <p>${escapeHtml(landing.seo.paragraph1)}</p>
+            <p>${escapeHtml(landing.seo.paragraph2)}</p>
+            <p>${escapeHtml(landing.seo.paragraph3)}</p>
+          </div>
+          <div class="landing-seo-visual">
+            <img src="/landing-seo-person.jpg" alt="" class="landing-seo-visual__image" loading="lazy" decoding="async" />
+          </div>
         </div>
       </section>
 
