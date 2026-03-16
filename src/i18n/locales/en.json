@@ -35,6 +35,7 @@
     "position": "Position",
     "location": "Location",
     "email": "Email",
+    "phone": "Mobile phone",
     "website": "Website",
     "github": "GitHub",
     "linkedin": "LinkedIn",

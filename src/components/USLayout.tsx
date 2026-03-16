@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faLocationDot, faGlobe, faPlus, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faLocationDot, faPhone, faGlobe, faPlus, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { useCvStore } from '../store/cvStore';
 import { DEFAULT_MAIN_ORDER, DEFAULT_SIDEBAR_ORDER, useSettingsStore, MainKey, SidebarKey } from '../store/settingsStore';
@@ -43,13 +43,14 @@ export default function USLayout() {
     email: { icon: faEnvelope, value: contact.email, href: `mailto:${contact.email}`, stripProtocol: false },
     location: { icon: faLocationDot, value: contact.location, href: undefined, stripProtocol: false },
     position: { icon: null, value: contact.position, href: undefined, stripProtocol: false },
+    phone: { icon: faPhone, value: contact.phone, href: `tel:${contact.phone}`, stripProtocol: false },
     webpage: { icon: faGlobe, value: contact.webpage, href: contact.webpage, stripProtocol: true },
     github: { icon: faGithub, value: contact.github, href: contact.github, stripProtocol: true },
     linkedin: { icon: faLinkedin, value: contact.linkedin, href: contact.linkedin, stripProtocol: true },
   } as const;
 
   type ContactKey = keyof typeof allContactItems;
-  const contactKeySet = new Set<SidebarKey>(['email', 'location', 'position', 'webpage', 'github', 'linkedin']);
+  const contactKeySet = new Set<SidebarKey>(['email', 'location', 'position', 'phone', 'webpage', 'github', 'linkedin']);
 
   const resolvedSidebarOrder = useMemo(
     () => resolveSectionOrder(sidebarOrder, DEFAULT_SIDEBAR_ORDER, []),
@@ -283,7 +284,7 @@ export default function USLayout() {
                   value={item.value}
                   onChange={(value) => setContact(item.key, value)}
                   href={item.href}
-                  hrefTarget={item.key !== 'email' && item.key !== 'location' && item.key !== 'position' ? '_blank' : undefined}
+                  hrefTarget={item.key !== 'email' && item.key !== 'location' && item.key !== 'position' && item.key !== 'phone' ? '_blank' : undefined}
                   stripProtocol={item.stripProtocol}
                   fitLine
                 />

@@ -2,6 +2,7 @@ export interface Contact {
   position: string;
   location: string;
   email: string;
+  phone: string;
   webpage: string;
   github: string;
   linkedin: string;
@@ -102,6 +103,7 @@ export const cvData: CvData = {
     position: 'Software Engineer at Acme Corp',
     location: 'Warsaw, Poland',
     email: 'john.doe@example.com',
+    phone: '+48 123 456 789',
     webpage: 'https://johndoe.dev',
     github: 'https://github.com/johndoe',
     linkedin: 'https://linkedin.com/in/johndoe',

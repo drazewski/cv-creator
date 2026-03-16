@@ -5,6 +5,7 @@ import {
   faBriefcase,
   faLocationDot,
   faEnvelope,
+  faPhone,
   faGlobe,
   faPlus,
 } from '@fortawesome/free-solid-svg-icons';
@@ -94,6 +95,13 @@ export default function Sidebar() {
           <div key="email" className="sidebar__contact-item">
             <FontAwesomeIcon icon={faEnvelope} className="sidebar__contact-icon" fixedWidth />
             <EditableText value={contact.email} onChange={(value) => setContact('email', value)} dark href={`mailto:${contact.email}`} fitLine />
+          </div>
+        );
+      case 'phone':
+        return (
+          <div key="phone" className="sidebar__contact-item">
+            <FontAwesomeIcon icon={faPhone} className="sidebar__contact-icon" fixedWidth />
+            <EditableText value={contact.phone} onChange={(value) => setContact('phone', value)} dark href={`tel:${contact.phone}`} fitLine />
           </div>
         );
       case 'webpage':
@@ -212,7 +220,7 @@ export default function Sidebar() {
 
     return [{
       key: item,
-      kind: ['position', 'location', 'email', 'webpage', 'github', 'linkedin'].includes(item) ? 'contact' as const : 'regular' as const,
+      kind: ['position', 'location', 'email', 'phone', 'webpage', 'github', 'linkedin'].includes(item) ? 'contact' as const : 'regular' as const,
       node,
     }];
   });

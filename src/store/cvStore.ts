@@ -132,6 +132,9 @@ function syncLocalizedDefaults(data: CvData, fromLanguage: CvLanguage, toLanguag
 function createDefaultData(language: CvLanguage): CvData {
   return {
     ...defaultData,
+    contact: { ...defaultData.contact },
+    technologies: [...defaultData.technologies],
+    languages: [...defaultData.languages],
     title: TITLE_DEFAULTS[language],
     sectionTitles: { ...SECTION_TITLE_DEFAULTS[language] },
   };
@@ -290,7 +293,7 @@ export const useCvStore = create<CvStore>()(
     }),
     {
       name: 'cv-data',
-      version: 7,
+      version: 8,
       migrate: (stored: unknown, _version: number) => {
         const s = stored as { data?: Partial<CvData>; cvLanguage?: unknown };
         const cvLanguage = isCvLanguage(s?.cvLanguage) ? s.cvLanguage : 'en';
@@ -368,6 +371,10 @@ export const useCvStore = create<CvStore>()(
           data: {
             ...defaultData,
             ...(s?.data ?? {}),
+            contact: {
+              ...defaultData.contact,
+              ...(s?.data?.contact ?? {}),
+            },
             title: s?.data?.title ?? TITLE_DEFAULTS[cvLanguage],
             aboutMe,
             experience,

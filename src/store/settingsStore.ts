@@ -32,7 +32,7 @@ export interface Styling {
   photoSizeUS: number;
 }
 
-export type SidebarKey = 'photo' | 'name' | 'title' | 'position' | 'location' | 'email' | 'webpage' | 'github' | 'linkedin' | 'technologies' | 'languages';
+export type SidebarKey = 'photo' | 'name' | 'title' | 'position' | 'location' | 'email' | 'phone' | 'webpage' | 'github' | 'linkedin' | 'technologies' | 'languages';
 export type MainKey = 'aboutMe' | 'experience' | 'education' | 'courses';
 export type VisibilityKey = SidebarKey | MainKey;
 export type Visibility = Record<VisibilityKey, boolean>;
@@ -78,12 +78,12 @@ const defaultStyling: Styling = {
 };
 
 const defaultVisibility: Visibility = {
-  photo: true, name: true, title: true, position: true, location: true, email: true, webpage: true,
+  photo: true, name: true, title: true, position: true, location: true, email: true, phone: true, webpage: true,
   github: true, linkedin: true, technologies: true, languages: true,
   aboutMe: true, experience: true, education: true, courses: true,
 };
 
-export const DEFAULT_SIDEBAR_ORDER: SidebarKey[] = ['photo', 'name', 'title', 'position', 'location', 'email', 'webpage', 'github', 'linkedin', 'technologies', 'languages'];
+export const DEFAULT_SIDEBAR_ORDER: SidebarKey[] = ['photo', 'name', 'title', 'position', 'location', 'phone', 'email', 'webpage', 'github', 'linkedin', 'technologies', 'languages'];
 export const DEFAULT_MAIN_ORDER: MainKey[] = ['aboutMe', 'experience', 'education', 'courses'];
 
 function reorder<T>(arr: T[], from: number, to: number): T[] {
@@ -139,12 +139,21 @@ type PersistedSettings = Partial<{
 
 function migrateSettings(stored: unknown) {
   const state = (stored as PersistedSettings | undefined) ?? {};
+  const sidebarOrder = sanitizeOrder(state.sidebarOrder, DEFAULT_SIDEBAR_ORDER);
+  const locationIndex = sidebarOrder.indexOf('location');
+  const emailIndex = sidebarOrder.indexOf('email');
+  const phoneIndex = sidebarOrder.indexOf('phone');
+
+  if (locationIndex >= 0 && emailIndex === locationIndex + 1 && phoneIndex === emailIndex + 1) {
+    sidebarOrder.splice(phoneIndex, 1);
+    sidebarOrder.splice(locationIndex + 1, 0, 'phone');
+  }
 
   return {
     layoutId: state.layoutId === 'us-single' ? 'us-single' : 'classic',
     styling: { ...defaultStyling, ...(state.styling ?? {}) },
     visibility: { ...defaultVisibility, ...(state.visibility ?? {}) },
-    sidebarOrder: sanitizeOrder(state.sidebarOrder, DEFAULT_SIDEBAR_ORDER),
+    sidebarOrder,
     mainOrder: sanitizeOrder(state.mainOrder, DEFAULT_MAIN_ORDER),
   };
 }
@@ -187,7 +196,7 @@ export const useSettingsStore = create<SettingsStore>()(
     }),
     {
       name: 'cv-settings',
-      version: 13,
+      version: 15,
       migrate: (stored) => migrateSettings(stored),
     },
   ),

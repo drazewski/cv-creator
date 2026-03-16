@@ -129,7 +129,7 @@ function DraggableSection<K extends VisibilityKey>({
 }
 
 const US_HEADER_FIXED: SidebarKey[] = ['photo', 'title'];
-const US_CONTACT_KEY_SET = new Set<SidebarKey>(['position', 'location', 'email', 'webpage', 'github', 'linkedin']);
+const US_CONTACT_KEY_SET = new Set<SidebarKey>(['position', 'location', 'email', 'phone', 'webpage', 'github', 'linkedin']);
 
 function StaticSection({ title, keys, labels }: {
   title: string;
@@ -180,6 +180,7 @@ export default function ElementsDrawer() {
     position: t('elements.position'),
     location: t('elements.location'),
     email: t('elements.email'),
+    phone: t('elements.phone'),
     webpage: t('elements.website'),
     github: t('elements.github'),
     linkedin: t('elements.linkedin'),
