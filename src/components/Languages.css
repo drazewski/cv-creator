@@ -1,0 +1,22 @@
+.languages__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: 0.5rem;
+}
+
+.languages__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 0.85rem;
+  background: #ffffff;
+  border: 1px solid #dde5ef;
+  border-radius: 6px;
+}
+
+.languages__item .editable-text {
+  flex: 1;
+  font-size: var(--font-size-body, 13px);
+  line-height: var(--line-height-body, 1.5);
+}

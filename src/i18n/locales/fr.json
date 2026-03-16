@@ -18,7 +18,7 @@
     "classicLabel": "Classique",
     "classicDescription": "Deux colonnes avec barre latérale sombre. Style européen.",
     "usSingleLabel": "CV US",
-    "usSingleDescription": "Une seule colonne, compatible ATS. Style États-Unis et Canada."
+    "usSingleDescription": "Une seule colonne et optimisé pour les ATS. Idéal pour les candidatures."
   },
   "cvLanguage": {
     "label": "Langue du CV",
@@ -38,10 +38,11 @@
     "website": "Site web",
     "github": "GitHub",
     "linkedin": "LinkedIn",
-    "technologies": "Technologies",
+    "technologies": "Compétences",
     "displayMode": "Mode d’affichage",
     "textMode": "Texte",
-    "listMode": "Liste"
+    "listMode": "Liste",
+    "languages": "Langues"
   },
   "styling": {
     "colors": "Couleurs",
@@ -107,20 +108,21 @@
   },
   "landing": {
     "metaTitle": "Créateur de CV gratuit en ligne — créez un CV professionnel avec MyCeeVee",
-    "metaDescription": "Créez gratuitement un CV professionnel en ligne. Choisissez une mise en page, ajustez les couleurs et les polices, modifiez les sections facilement et exportez votre CV en PDF sans créer de compte.",
+    "metaDescription": "Créez gratuitement un CV en ligne avec une structure compatible ATS. Choisissez une mise en page, ajustez les couleurs et les polices, modifiez vos sections facilement et exportez votre CV en PDF sans créer de compte.",
     "createCv": "Créer un CV",
     "learnMore": "Voir comment ça marche",
     "eyebrow": "Peut-on créer un CV encore plus simplement ?",
     "heroTitle": "Créez votre CV sans avoir besoin de vous inscrire.",
-    "heroLead": "MyCeeVee vous aide à préparer un CV moderne et lisible en quelques minutes. Vous pouvez ajuster la mise en page, la typographie et le contenu des sections, changer la langue de l’interface et affiner le document pour l’imprimer ou l’enregistrer en PDF plus tard.",
+    "heroLead": "MyCeeVee vous aide à préparer un CV moderne et lisible en quelques minutes. Vous pouvez choisir une mise en page une colonne optimisée pour les ATS, modifier le résumé, l’expérience, les compétences, les langues et les certifications directement dans l’aperçu, puis affiner le document pour l’impression ou l’export PDF.",
     "trust": {
       "fast": "Rapide à démarrer, facile à terminer",
       "noAccount": "Aucun compte nécessaire pour la version gratuite",
-      "multilang": "Éditeur et landing page multilingues"
+      "multilang": "Éditeur et landing page multilingues",
+      "ats": "Option une colonne compatible ATS"
     },
     "preview": {
       "classicBadge": "Mise en page classique",
-      "atsBadge": "Mise en page compatible ATS",
+      "atsBadge": "Une colonne optimisée ATS",
       "customiseChip": "Personnalisez polices, couleurs et sections"
     },
     "sections": {
@@ -133,19 +135,22 @@
       "seoEyebrow": "À propos du produit",
       "seoTitle": "Un créateur de resume gratuit pour les personnes qui apprécient la clarté, la rapidité et la confidentialité.",
       "faqEyebrow": "Questions",
-      "faqTitle": "Questions fréquentes"
+      "faqTitle": "Questions fréquentes",
+      "atsEyebrow": "Les ATS comptent",
+      "atsTitle": "Créez un CV qui reste lisible pour les recruteurs et les systèmes ATS.",
+      "atsLead": "Les logiciels ATS (Applicant Tracking System) analysent souvent un CV avant qu’un recruteur ne le lise. La mise en page une colonne garde le contenu dans un ordre clair et utilise des titres standards comme Résumé, Expérience, Compétences, Formation, Langues et Certifications."
     },
     "features": {
       "speedTitle": "Pensé pour aller vite",
       "speedText": "Ouvrez l’application, choisissez une mise en page et commencez à modifier immédiatement. Vous pouvez préparer un CV solide rapidement, sans inscription, sans perte de temps et sans réglages inutiles. Impression ou PDF ? C’est vous qui choisissez.",
       "flexibleTitle": "Éditeur flexible",
-      "flexibleText": "Vous disposez de deux modèles simples. Pourquoi plus ? Un CV doit être lisible, clair et direct. Écrivez, changez l’ordre des sections, ajoutez vos propres sections et réglez les espacements, les couleurs et les polices.",
+      "flexibleText": "Vous disposez de deux modèles simples. Pourquoi plus ? Un CV doit être lisible, clair et ciblé. Modifiez votre résumé, votre expérience, vos compétences, vos langues et vos certifications, réorganisez les sections, ajoutez vos propres sections et ajustez les espacements, couleurs et polices.",
       "multilingualTitle": "Pratique pour les utilisateurs multilingues",
       "multilingualText": "L’anglais est la langue par défaut, mais l’interface et la landing page peuvent fonctionner dans plusieurs langues, ce qui rend l’outil plus adapté à différents marchés."
     },
     "steps": {
       "step1Title": "Choisissez une mise en page et commencez",
-      "step1Text": "Partez d’un modèle de CV propre, puis modifiez directement dans l’aperçu vos coordonnées, votre résumé, vos expériences, vos formations et vos sections personnalisées.",
+      "step1Text": "Commencez avec un modèle propre, puis modifiez les coordonnées, le résumé, l’expérience, la formation, les compétences, les langues, les certifications et les sections personnalisées directement dans l’aperçu.",
       "step2Title": "Ajustez le document à votre style",
       "step2Text": "Réglez couleurs, polices, espacements et ordre des sections pour obtenir un document cohérent, lisible et aligné avec le type de poste recherché.",
       "step3Title": "Exportez quand tout est prêt",
@@ -153,8 +158,8 @@
     },
     "seo": {
       "lead": "Si vous cherchez un créateur de CV gratuit, un outil pour créer un resume en ligne ou un générateur de CV simple, MyCeeVee a été conçu exactement pour cela.",
-      "paragraph1": "L’application vous permet de créer un CV professionnel en ligne sans logiciel desktop compliqué et sans créer de compte. Dans un seul endroit, vous pouvez modifier votre résumé professionnel, votre expérience, votre formation, vos cours et vos sections personnalisées, tout en voyant immédiatement le résultat dans une mise en page A4 prête à imprimer.",
-      "paragraph2": "Contrairement à de nombreux éditeurs génériques basés sur des formulaires, ce créateur de CV vous offre plusieurs façons concrètes de modifier le document. Vous pouvez choisir entre deux mises en page principales, changer les polices et les couleurs, gérer la visibilité des sections et adapter le document à une candidature précise. L’outil fonctionne donc à la fois comme resume builder en ligne et comme créateur de CV pratique pour les marchés européens et internationaux.",
+      "paragraph1": "L’application vous permet de créer un CV professionnel en ligne sans logiciel de bureau complexe et sans créer de compte. Dans un seul espace, vous pouvez modifier le résumé, l’expérience, la formation, les compétences, les langues, les certifications et les sections personnalisées, tout en voyant immédiatement le résultat dans une mise en page A4 prête à l’impression.",
+      "paragraph2": "Contrairement à de nombreux éditeurs génériques basés sur des formulaires, ce créateur de CV vous offre plusieurs façons concrètes de modifier votre document. Vous pouvez choisir entre deux mises en page principales, dont un résumé une colonne optimisé pour les ATS, changer les polices et les couleurs, gérer la visibilité des sections et adapter le document à une candidature précise. L’outil est donc utile à la fois comme créateur de resume en ligne et comme générateur de CV pratique pour les marchés européens et internationaux.",
       "paragraph3": "Comme la version gratuite fonctionne directement dans le navigateur et ne demande pas de connexion pour un usage normal, c’est une très bonne option pour les personnes qui veulent créer rapidement un CV, améliorer un resume existant ou générer un PDF soigné avant d’envoyer une candidature."
     },
     "faq": {
@@ -162,8 +167,8 @@
       "answer1": "Oui. La version gratuite est pensée pour être pleinement utile à elle seule et ne demande pas de compte pour l’édition normale.",
       "question2": "Puis-je préparer un CV en PDF ?",
       "answer2": "Oui. L’éditeur est construit autour d’un rendu prêt à imprimer, et l’export évolue pour prendre en charge à la fois l’impression et le téléchargement direct en PDF.",
-      "question3": "À qui s’adresse cette application ?",
-      "answer3": "Aux étudiants, profils juniors, spécialistes expérimentés et personnes en reconversion qui veulent un CV clair sans logiciel de design compliqué.",
+      "question3": "Le resume une colonne est-il compatible ATS ?",
+      "answer3": "Oui. La mise en page CV US garde une structure simple, utilise des titres de section standards et évite les blocs en plusieurs colonnes, ce qui la rend plus adaptée à l’analyse ATS que des mises en page plus décoratives.",
       "question4": "Puis-je utiliser l’application dans différentes langues ?",
       "answer4": "Oui. L’anglais est la langue par défaut et l’interface prend déjà en charge plusieurs langues. La landing page est elle aussi prête pour un usage multilingue.",
       "question5": "Dois-je m’inscrire pour utiliser l’application ?",
@@ -174,7 +179,15 @@
       "text": "Ouvrez l’éditeur, essayez les mises en page, peaufinez le style et préparez un CV qui paraît déjà professionnel avant qu’un recruteur lise la première phrase.",
       "cta": "Ouvrir l’éditeur de CV"
     },
-    "twitterDescription": "Créez gratuitement un CV en ligne en quelques minutes. Choisissez l’une de deux mises en page simples, ajustez les couleurs et les polices, modifiez les sections et exportez votre CV en PDF sans créer de compte.",
-    "structuredDescription": "Créez gratuitement un CV en ligne en quelques minutes. Choisissez l’une de deux mises en page simples, ajustez les couleurs et les polices, modifiez les sections et exportez votre CV en PDF sans créer de compte."
+    "twitterDescription": "Créez gratuitement un CV en ligne en quelques minutes avec une option une colonne compatible ATS. Ajustez couleurs et polices, modifiez vos sections et exportez votre CV en PDF sans créer de compte.",
+    "structuredDescription": "Créez gratuitement un CV en ligne en quelques minutes avec une option une colonne compatible ATS. Ajustez couleurs et polices, modifiez vos sections et exportez votre CV en PDF sans créer de compte.",
+    "ats": {
+      "item1Title": "Titres de section clairs",
+      "item1Text": "Utilisez des intitulés reconnus par les ATS et les recruteurs afin que votre expérience et vos compétences soient plus faciles à classer.",
+      "item2Title": "Lecture en une seule colonne",
+      "item2Text": "La mise en page orientée ATS garde le contenu dans un flux naturel unique, sans barre latérale décorative, graphique ou colonnes séparées.",
+      "item3Title": "Sections textuelles simples",
+      "item3Text": "Les compétences et les langues restent de simples entrées textuelles, tandis que le résumé, l’expérience, la formation et les certifications restent faciles à modifier et à exporter."
+    }
   }
 }

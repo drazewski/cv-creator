@@ -18,7 +18,7 @@
     "classicLabel": "Classic",
     "classicDescription": "Two-column with dark sidebar. European style.",
     "usSingleLabel": "US Resume",
-    "usSingleDescription": "Single column, ATS-friendly. US & Canada style."
+    "usSingleDescription": "Single-column and ATS-optimized. Great for recruiter workflows."
   },
   "cvLanguage": {
     "label": "CV language",
@@ -38,10 +38,11 @@
     "website": "Website",
     "github": "GitHub",
     "linkedin": "LinkedIn",
-    "technologies": "Technologies",
+    "technologies": "Skills",
     "displayMode": "Display mode",
     "textMode": "Text",
-    "listMode": "List"
+    "listMode": "List",
+    "languages": "Languages"
   },
   "styling": {
     "colors": "Colors",
@@ -107,20 +108,21 @@
   },
   "landing": {
     "metaTitle": "Free CV Builder Online — Create a professional CV with MyCeeVee",
-    "metaDescription": "Create a professional CV online for free. Choose a layout, adjust colours and fonts, edit sections comfortably and export your CV to PDF without creating an account.",
+    "metaDescription": "Create a professional CV online for free with ATS-friendly structure. Choose a layout, adjust colours and fonts, edit sections comfortably and export your CV to PDF without creating an account.",
     "createCv": "Create CV",
     "learnMore": "See how it works",
     "eyebrow": "Can creating a CV be even simpler?",
     "heroTitle": "Create your CV without needing to sign up.",
-    "heroLead": "MyCeeVee helps you prepare a modern and readable CV in a few minutes. You can adjust the layout, typography and section content, change the interface language and refine the document so it is easy to print or save as a PDF later.",
+    "heroLead": "MyCeeVee helps you prepare a modern and readable CV in a few minutes. You can choose an ATS-friendly single-column layout, edit your summary, experience, skills, languages and certifications directly in the preview, then fine-tune the document for print or PDF export.",
     "trust": {
       "fast": "Fast to start, easy to finish",
       "noAccount": "No account required for the free version",
-      "multilang": "Multilingual editor and landing page"
+      "multilang": "Multilingual editor and landing page",
+      "ats": "ATS-friendly single-column option"
     },
     "preview": {
       "classicBadge": "Classic layout",
-      "atsBadge": "ATS-friendly layout",
+      "atsBadge": "ATS-optimized single-column",
       "customiseChip": "Customise fonts, colours and sections"
     },
     "sections": {
@@ -133,19 +135,22 @@
       "seoEyebrow": "About the product",
       "seoTitle": "A free resume builder for people who value clarity, speed and privacy.",
       "faqEyebrow": "Questions",
-      "faqTitle": "Frequently asked questions"
+      "faqTitle": "Frequently asked questions",
+      "atsEyebrow": "ATS matters",
+      "atsTitle": "Create a CV that stays readable for recruiters and applicant tracking systems.",
+      "atsLead": "ATS (Applicant Tracking System) software often scans a CV before a recruiter reads it. The single-column resume layout keeps the content in a clear order with standard headings such as Summary, Experience, Skills, Education, Languages and Certifications."
     },
     "features": {
       "speedTitle": "Built for speed",
       "speedText": "Open the app, choose a layout and start editing right away. You can prepare a strong CV quickly, without registration, wasted time or unnecessary settings. Print or PDF? That part is up to you.",
       "flexibleTitle": "Flexible editor",
-      "flexibleText": "You get two simple templates. Why more? A CV should be readable, clear and focused. Write, reorder sections, add your own sections, and adjust spacing, colours and fonts.",
+      "flexibleText": "You get two simple templates. Why more? A CV should be readable, clear and focused. Edit your summary, experience, skills, languages and certifications, reorder sections, add your own sections, and adjust spacing, colours and fonts.",
       "multilingualTitle": "Friendly for multilingual users",
       "multilingualText": "English is the default language, but the interface and landing page can work in many languages, which makes the tool a better fit for different markets."
     },
     "steps": {
       "step1Title": "Choose a layout and start editing",
-      "step1Text": "Begin with a clean CV template, then edit contact details, summary, experience, education and custom sections directly in the preview.",
+      "step1Text": "Begin with a clean CV template, then edit contact details, summary, experience, education, skills, languages, certifications and custom sections directly in the preview.",
       "step2Title": "Adjust the document to your style",
       "step2Text": "Tune colours, fonts, spacing and section order so the document feels consistent, readable and aligned with the type of role you want.",
       "step3Title": "Export when you are ready",
@@ -153,8 +158,8 @@
     },
     "seo": {
       "lead": "If you are looking for a free CV builder, an online resume tool or a simple CV generator, MyCeeVee was designed exactly for that purpose.",
-      "paragraph1": "The app lets you create a professional CV online without complicated desktop software and without creating an account. In one place you can edit your professional summary, experience, education, courses and custom sections, while seeing the result immediately in a print-ready A4 layout.",
-      "paragraph2": "Unlike many generic form-based editors, this CV builder gives you a few concrete ways to edit. You can choose between two core layouts, change fonts and colours, manage section visibility and tailor the document to a specific application. That makes the tool useful both as an online resume builder and as a practical CV creator for European and international markets.",
+      "paragraph1": "The app lets you create a professional CV online without complicated desktop software and without creating an account. In one place you can edit your summary, experience, education, skills, languages, certifications and custom sections, while seeing the result immediately in a print-ready A4 layout.",
+      "paragraph2": "Unlike many generic form-based editors, this CV builder gives you a few concrete ways to edit. You can choose between two core layouts, including an ATS-optimized single-column resume, change fonts and colours, manage section visibility and tailor the document to a specific application. That makes the tool useful both as an online resume builder and as a practical CV creator for European and international markets.",
       "paragraph3": "Because the free version works directly in the browser and does not require login for normal use, it is a very good option for people who want to make a CV quickly, improve an existing resume or generate a polished PDF before sending an application."
     },
     "faq": {
@@ -162,8 +167,8 @@
       "answer1": "Yes. The free version is meant to be fully useful on its own and does not require an account for normal editing.",
       "question2": "Can I prepare a CV as a PDF?",
       "answer2": "Yes. The editor is built around print-ready CV output, and export is being developed to support both printing and direct PDF download.",
-      "question3": "Who is this app for?",
-      "answer3": "It is for students, juniors, experienced specialists and people changing industries who want a clear CV without complicated design software.",
+      "question3": "Is the single-column resume ATS-friendly?",
+      "answer3": "Yes. The US Resume layout keeps the structure simple, uses standard section headings and avoids multi-column blocks, which makes it a better fit for ATS parsing than more decorative layouts.",
       "question4": "Can I use the app in different languages?",
       "answer4": "Yes. English is the default language, and the interface already supports many languages. The landing page is also prepared for multilingual use.",
       "question5": "Do I need to sign up to use the app?",
@@ -174,7 +179,15 @@
       "text": "Open the editor, try the layouts, refine the style and prepare a CV that already looks professional before a recruiter reads the first sentence.",
       "cta": "Open the CV editor"
     },
-    "twitterDescription": "Create a CV online for free in minutes. Choose one of two simple layouts, adjust colours and fonts, edit sections and export your CV to PDF without creating an account.",
-    "structuredDescription": "Create a CV online for free in minutes. Choose one of two simple layouts, adjust colours and fonts, edit sections and export your CV to PDF without creating an account."
+    "twitterDescription": "Create a CV online for free in minutes with an ATS-friendly single-column option. Adjust colours and fonts, edit sections and export your CV to PDF without creating an account.",
+    "structuredDescription": "Create a CV online for free in minutes with an ATS-friendly single-column option. Adjust colours and fonts, edit sections and export your CV to PDF without creating an account.",
+    "ats": {
+      "item1Title": "Clear section names",
+      "item1Text": "Use headings ATS tools and recruiters recognize, so your experience and skills are easier to classify.",
+      "item2Title": "Single-column reading order",
+      "item2Text": "The ATS-focused resume layout keeps content in one natural flow without decorative sidebars, charts or split columns.",
+      "item3Title": "Simple text-based sections",
+      "item3Text": "Skills and languages stay as plain text entries, while summary, experience, education and certifications remain easy to edit and export."
+    }
   }
 }

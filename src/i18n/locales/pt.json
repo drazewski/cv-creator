@@ -18,7 +18,7 @@
     "classicLabel": "Clássico",
     "classicDescription": "Duas colunas com barra lateral escura. Estilo europeu.",
     "usSingleLabel": "CV EUA",
-    "usSingleDescription": "Coluna única, compatível com ATS. Estilo dos EUA e Canadá."
+    "usSingleDescription": "Uma só coluna e otimizado para ATS. Ideal para processos de recrutamento."
   },
   "cvLanguage": {
     "label": "Idioma do CV",
@@ -38,10 +38,11 @@
     "website": "Website",
     "github": "GitHub",
     "linkedin": "LinkedIn",
-    "technologies": "Tecnologias",
+    "technologies": "Competências",
     "displayMode": "Modo de visualização",
     "textMode": "Texto",
-    "listMode": "Lista"
+    "listMode": "Lista",
+    "languages": "Idiomas"
   },
   "styling": {
     "colors": "Cores",
@@ -107,20 +108,21 @@
   },
   "landing": {
     "metaTitle": "Criador de CV grátis online — crie um CV profissional com MyCeeVee",
-    "metaDescription": "Crie um CV profissional online gratuitamente. Escolha um layout, ajuste cores e fontes, edite seções com conforto e exporte seu CV em PDF sem criar uma conta.",
+    "metaDescription": "Crie gratuitamente um CV online com uma estrutura compatível com ATS. Escolha um layout, ajuste cores e fontes, edite as secções com conforto e exporte o seu CV para PDF sem criar conta.",
     "createCv": "Criar CV",
     "learnMore": "Ver como funciona",
     "eyebrow": "Dá para criar um CV de um jeito ainda mais simples?",
     "heroTitle": "Crie o seu CV sem precisar se cadastrar.",
-    "heroLead": "O MyCeeVee ajuda você a preparar um CV moderno e fácil de ler em poucos minutos. Você pode ajustar o layout, a tipografia e o conteúdo das seções, mudar o idioma da interface e refinar o documento para depois imprimi-lo ou salvá-lo em PDF.",
+    "heroLead": "MyCeeVee ajuda a preparar um CV moderno e legível em poucos minutos. Pode escolher um layout de coluna única otimizado para ATS, editar o resumo, a experiência, as competências, os idiomas e as certificações diretamente na pré-visualização e depois afinar o documento para impressão ou exportação em PDF.",
     "trust": {
       "fast": "Rápido para começar e fácil de terminar",
       "noAccount": "Sem conta necessária na versão gratuita",
-      "multilang": "Editor e landing page multilingues"
+      "multilang": "Editor e landing page multilingues",
+      "ats": "Opção de coluna única compatível com ATS"
     },
     "preview": {
       "classicBadge": "Layout clássico",
-      "atsBadge": "Layout compatível com ATS",
+      "atsBadge": "Coluna única otimizada para ATS",
       "customiseChip": "Personalize fontes, cores e secções"
     },
     "sections": {
@@ -133,19 +135,22 @@
       "seoEyebrow": "Sobre o produto",
       "seoTitle": "Um criador de resume gratuito para pessoas que valorizam clareza, velocidade e privacidade.",
       "faqEyebrow": "Perguntas",
-      "faqTitle": "Perguntas frequentes"
+      "faqTitle": "Perguntas frequentes",
+      "atsEyebrow": "ATS importa",
+      "atsTitle": "Crie um CV que continue legível para recrutadores e sistemas ATS.",
+      "atsLead": "O software ATS (Applicant Tracking System) costuma analisar um CV antes de um recrutador o ler. O layout resume de coluna única mantém o conteúdo numa ordem clara e usa títulos padrão como Resumo, Experiência, Competências, Educação, Idiomas e Certificações."
     },
     "features": {
       "speedTitle": "Feito para ser rápido",
       "speedText": "Abra o aplicativo, escolha um layout e comece a editar na hora. Você pode preparar um CV forte rapidamente, sem cadastro, sem perder tempo e sem configurações desnecessárias. Impressão ou PDF? Essa decisão é sua.",
       "flexibleTitle": "Editor flexível",
-      "flexibleText": "Você tem dois modelos simples à disposição. Para quê mais? Um CV deve ser legível, claro e direto. Escreva, mude a ordem das seções, adicione suas próprias seções e ajuste espaçamentos, cores e fontes.",
+      "flexibleText": "Recebe dois modelos simples. Porquê mais? Um CV deve ser legível, claro e focado. Edite o resumo, a experiência, as competências, os idiomas e as certificações, reordene secções, adicione secções próprias e ajuste espaçamentos, cores e fontes.",
       "multilingualTitle": "Amigável para usuários multilíngues",
       "multilingualText": "O inglês é o idioma padrão, mas a interface e a landing page podem funcionar em vários idiomas, o que faz a ferramenta se encaixar melhor em diferentes mercados."
     },
     "steps": {
       "step1Title": "Escolha um layout e comece a editar",
-      "step1Text": "Comece com um modelo de CV limpo e edite diretamente na pré-visualização os contactos, resumo, experiência, educação e secções personalizadas.",
+      "step1Text": "Comece com um modelo limpo e depois edite diretamente na pré-visualização os contactos, o resumo, a experiência, a educação, as competências, os idiomas, as certificações e as secções personalizadas.",
       "step2Title": "Ajuste o documento ao seu estilo",
       "step2Text": "Afine cores, fontes, espaçamentos e ordem das secções para que o documento fique coerente, legível e alinhado com o tipo de função que pretende.",
       "step3Title": "Exporte quando estiver pronto",
@@ -153,8 +158,8 @@
     },
     "seo": {
       "lead": "Se você está procurando um criador de CV gratuito, uma ferramenta para criar resume online ou um gerador de CV simples, o MyCeeVee foi projetado exatamente para esse objetivo.",
-      "paragraph1": "O aplicativo permite criar um CV profissional online sem software desktop complicado e sem criar uma conta. Em um só lugar você pode editar o resumo profissional, a experiência, a formação, os cursos e as seções personalizadas, vendo imediatamente o resultado em um layout A4 pronto para impressão.",
-      "paragraph2": "Ao contrário de muitos editores genéricos baseados em formulários, este criador de CV oferece algumas formas concretas de edição. Você pode escolher entre dois layouts principais, mudar fontes e cores, gerenciar a visibilidade das seções e adaptar o documento a uma candidatura específica. Assim, a ferramenta funciona tanto como resume builder online quanto como um criador prático de CV para mercados europeus e internacionais.",
+      "paragraph1": "A aplicação permite criar um CV profissional online sem software de desktop complicado e sem criar conta. Num só lugar pode editar o resumo, a experiência, a educação, as competências, os idiomas, as certificações e as secções personalizadas, vendo logo o resultado num layout A4 pronto para imprimir.",
+      "paragraph2": "Ao contrário de muitos editores genéricos baseados em formulários, este criador de CV oferece algumas formas concretas de edição. Pode escolher entre dois layouts principais, incluindo um resume de coluna única otimizado para ATS, mudar fontes e cores, gerir a visibilidade das secções e adaptar o documento a uma candidatura específica. Isso torna a ferramenta útil tanto como resume builder online como criador prático de CV para mercados europeus e internacionais.",
       "paragraph3": "Como a versão gratuita funciona diretamente no navegador e não exige login para o uso normal, ela é uma ótima opção para quem quer fazer um CV rapidamente, melhorar um resume existente ou gerar um PDF bem acabado antes de enviar uma candidatura."
     },
     "faq": {
@@ -162,8 +167,8 @@
       "answer1": "Sim. A versão gratuita foi pensada para ser totalmente útil por si só e não exige conta para a edição normal.",
       "question2": "Posso preparar um CV em PDF?",
       "answer2": "Sim. O editor foi construído em torno de uma saída pronta para impressão, e a exportação está sendo desenvolvida para oferecer tanto impressão quanto download direto em PDF.",
-      "question3": "Para quem é este aplicativo?",
-      "answer3": "Para estudantes, perfis juniores, especialistas experientes e pessoas mudando de área que querem um CV claro sem software de design complicado.",
+      "question3": "O resume de coluna única é compatível com ATS?",
+      "answer3": "Sim. O layout CV EUA mantém a estrutura simples, usa nomes de secção padrão e evita blocos com várias colunas, o que o torna mais adequado para leitura por ATS do que layouts mais decorativos.",
       "question4": "Posso usar o aplicativo em idiomas diferentes?",
       "answer4": "Sim. O inglês é o idioma padrão e a interface já oferece suporte a vários idiomas. A landing page também está preparada para uso multilíngue.",
       "question5": "Preciso me cadastrar para usar o aplicativo?",
@@ -174,7 +179,15 @@
       "text": "Abra o editor, experimente os layouts, refine o estilo e prepare um CV que já pareça profissional antes de um recrutador ler a primeira frase.",
       "cta": "Abrir o editor de CV"
     },
-    "twitterDescription": "Crie um CV online grátis em poucos minutos. Escolha um de dois layouts simples, ajuste cores e fontes, edite seções e exporte seu CV em PDF sem criar uma conta.",
-    "structuredDescription": "Crie um CV online grátis em poucos minutos. Escolha um de dois layouts simples, ajuste cores e fontes, edite seções e exporte seu CV em PDF sem criar uma conta."
+    "twitterDescription": "Crie um CV online grátis em minutos com uma opção de coluna única compatível com ATS. Ajuste cores e fontes, edite secções e exporte o seu CV para PDF sem criar conta.",
+    "structuredDescription": "Crie um CV online grátis em minutos com uma opção de coluna única compatível com ATS. Ajuste cores e fontes, edite secções e exporte o seu CV para PDF sem criar conta.",
+    "ats": {
+      "item1Title": "Nomes de secção claros",
+      "item1Text": "Use títulos reconhecidos tanto pelos ATS como pelos recrutadores, para que a experiência e as competências sejam mais fáceis de classificar.",
+      "item2Title": "Leitura em coluna única",
+      "item2Text": "O layout focado em ATS mantém o conteúdo num único fluxo natural, sem barras laterais decorativas, gráficos ou colunas divididas.",
+      "item3Title": "Secções simples baseadas em texto",
+      "item3Text": "Competências e idiomas mantêm-se como entradas simples de texto, enquanto resumo, experiência, educação e certificações continuam fáceis de editar e exportar."
+    }
   }
 }

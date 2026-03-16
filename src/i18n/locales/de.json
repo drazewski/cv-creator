@@ -18,7 +18,7 @@
     "classicLabel": "Klassisch",
     "classicDescription": "Zweispaltig mit dunkler Seitenleiste. Europäischer Stil.",
     "usSingleLabel": "US-Lebenslauf",
-    "usSingleDescription": "Einspaltig, ATS-freundlich. Stil für USA und Kanada."
+    "usSingleDescription": "Einspaltig und ATS-optimiert. Gut für typische Recruiting-Prozesse."
   },
   "cvLanguage": {
     "label": "CV-Sprache",
@@ -38,10 +38,11 @@
     "website": "Website",
     "github": "GitHub",
     "linkedin": "LinkedIn",
-    "technologies": "Technologien",
+    "technologies": "Fähigkeiten",
     "displayMode": "Anzeigemodus",
     "textMode": "Text",
-    "listMode": "Liste"
+    "listMode": "Liste",
+    "languages": "Sprachen"
   },
   "styling": {
     "colors": "Farben",
@@ -107,20 +108,21 @@
   },
   "landing": {
     "metaTitle": "Kostenloser CV-Builder online — erstelle einen professionellen Lebenslauf mit MyCeeVee",
-    "metaDescription": "Erstelle kostenlos online einen professionellen Lebenslauf. Wähle ein Layout, passe Farben und Schriften an, bearbeite Abschnitte bequem und exportiere deinen CV als PDF — ohne Konto.",
+    "metaDescription": "Erstelle kostenlos online einen professionellen Lebenslauf mit ATS-freundlicher Struktur. Wähle ein Layout, passe Farben und Schriftarten an, bearbeite Abschnitte bequem und exportiere den Lebenslauf als PDF ohne Konto.",
     "createCv": "CV erstellen",
     "learnMore": "Mehr erfahren",
     "eyebrow": "Geht ein Lebenslauf noch einfacher?",
     "heroTitle": "Erstelle deinen Lebenslauf ohne Registrierung.",
-    "heroLead": "MyCeeVee hilft dir, in wenigen Minuten einen modernen und gut lesbaren Lebenslauf zu erstellen. Du kannst Layout, Typografie und Abschnittsinhalte anpassen, die Sprache der Oberfläche ändern und das Dokument so verfeinern, dass du es später leicht drucken oder als PDF speichern kannst.",
+    "heroLead": "MyCeeVee hilft dir, in wenigen Minuten einen modernen und gut lesbaren Lebenslauf zu erstellen. Du kannst ein ATS-freundliches einspaltiges Layout wählen, Zusammenfassung, Erfahrung, Fähigkeiten, Sprachen und Zertifikate direkt in der Vorschau bearbeiten und das Dokument anschließend für Druck oder PDF verfeinern.",
     "trust": {
       "fast": "Schnell starten, entspannt fertigstellen",
       "noAccount": "Kein Konto für die kostenlose Version nötig",
-      "multilang": "Mehrsprachiger Editor und Landingpage"
+      "multilang": "Mehrsprachiger Editor und Landingpage",
+      "ats": "Einspaltige ATS-freundliche Option"
     },
     "preview": {
       "classicBadge": "Klassisches Layout",
-      "atsBadge": "ATS-freundliches Layout",
+      "atsBadge": "ATS-optimierte Einspalten-Variante",
       "customiseChip": "Schriften, Farben und Abschnitte anpassen"
     },
     "sections": {
@@ -133,19 +135,22 @@
       "seoEyebrow": "Über das Produkt",
       "seoTitle": "Ein kostenloser Resume Builder für Menschen, die Klarheit, Tempo und Privatsphäre schätzen.",
       "faqEyebrow": "Fragen",
-      "faqTitle": "Häufig gestellte Fragen"
+      "faqTitle": "Häufig gestellte Fragen",
+      "atsEyebrow": "ATS ist wichtig",
+      "atsTitle": "Erstelle einen Lebenslauf, der für Recruiter und ATS-Systeme lesbar bleibt.",
+      "atsLead": "ATS-Software (Applicant Tracking System) scannt einen Lebenslauf oft, bevor ihn ein Recruiter liest. Das einspaltige Resume-Layout hält den Inhalt in einer klaren Reihenfolge und nutzt Standardüberschriften wie Zusammenfassung, Berufserfahrung, Fähigkeiten, Ausbildung, Sprachen und Zertifikate."
     },
     "features": {
       "speedTitle": "Für schnelles Arbeiten gemacht",
       "speedText": "Öffne die App, wähle ein Layout und beginne sofort mit der Bearbeitung. Du kannst schnell einen starken Lebenslauf erstellen, ganz ohne Registrierung, Zeitverlust und unnötige Einstellungen. Drucken oder PDF? Das entscheidest du.",
       "flexibleTitle": "Flexibler Editor",
-      "flexibleText": "Dir stehen zwei einfache Vorlagen zur Verfügung. Warum mehr? Ein Lebenslauf soll lesbar, klar und deutlich sein. Schreibe, ändere die Reihenfolge von Abschnitten, füge eigene Bereiche hinzu und stelle Abstände, Farben und Schriften ein.",
+      "flexibleText": "Du bekommst zwei einfache Vorlagen. Warum mehr? Ein Lebenslauf sollte lesbar, klar und fokussiert sein. Bearbeite Zusammenfassung, Erfahrung, Fähigkeiten, Sprachen und Zertifikate, ändere die Reihenfolge der Abschnitte, füge eigene Abschnitte hinzu und passe Abstände, Farben und Schriftarten an.",
       "multilingualTitle": "Geeignet für mehrsprachige Nutzer",
       "multilingualText": "Standardmäßig ist Englisch eingestellt, aber Oberfläche und Landingpage können in vielen Sprachen genutzt werden. Dadurch eignet sich das Tool besser für verschiedene Märkte."
     },
     "steps": {
       "step1Title": "Layout wählen und direkt loslegen",
-      "step1Text": "Starte mit einer sauberen CV-Vorlage und bearbeite Kontaktdaten, Zusammenfassung, Berufserfahrung, Ausbildung und eigene Abschnitte direkt in der Vorschau.",
+      "step1Text": "Starte mit einer klaren Lebenslaufvorlage und bearbeite dann Kontaktdaten, Zusammenfassung, Erfahrung, Ausbildung, Fähigkeiten, Sprachen, Zertifikate und eigene Abschnitte direkt in der Vorschau.",
       "step2Title": "Das Dokument an deinen Stil anpassen",
       "step2Text": "Passe Farben, Schriften, Abstände und Reihenfolge so an, dass der Lebenslauf konsistent, lesbar und passend zur gewünschten Position wirkt.",
       "step3Title": "Exportieren, wenn alles stimmt",
@@ -153,8 +158,8 @@
     },
     "seo": {
       "lead": "Wenn du einen kostenlosen CV-Builder, ein Online-Tool zum Erstellen von Resumes oder einen einfachen Lebenslauf-Generator suchst, wurde MyCeeVee genau für diesen Zweck entwickelt.",
-      "paragraph1": "Mit der App kannst du online einen professionellen Lebenslauf erstellen, ohne komplizierte Desktop-Software und ohne Konto. An einem Ort bearbeitest du dein berufliches Profil, Erfahrung, Ausbildung, Kurse und eigene Abschnitte und siehst das Ergebnis sofort in einem druckfertigen A4-Layout.",
-      "paragraph2": "Im Unterschied zu vielen generischen formularbasierten Editoren bietet dir dieser CV-Builder mehrere konkrete Bearbeitungsmöglichkeiten. Du kannst zwischen zwei grundlegenden Layouts wählen, Schriften und Farben ändern, die Sichtbarkeit von Abschnitten steuern und das Dokument auf eine bestimmte Bewerbung zuschneiden. Dadurch eignet sich das Tool sowohl als Online-Resume-Builder als auch als praktischer CV-Ersteller für europäische und internationale Märkte.",
+      "paragraph1": "Mit der App kannst du kostenlos online einen professionellen Lebenslauf erstellen, ohne komplizierte Desktop-Software und ohne Konto. An einem Ort bearbeitest du Zusammenfassung, Erfahrung, Ausbildung, Fähigkeiten, Sprachen, Zertifikate und eigene Abschnitte und siehst das Ergebnis sofort in einem druckfertigen A4-Layout.",
+      "paragraph2": "Im Gegensatz zu vielen generischen Formular-Editoren bietet dir dieser Lebenslauf-Builder einige konkrete Möglichkeiten zur Bearbeitung. Du kannst zwischen zwei Kernlayouts wählen, darunter ein ATS-optimiertes einspaltiges Resume, Schriftarten und Farben ändern, die Sichtbarkeit von Abschnitten steuern und das Dokument auf eine bestimmte Bewerbung zuschneiden. Dadurch ist das Tool sowohl als Online-Resume-Builder als auch als praktischer CV-Ersteller für europäische und internationale Märkte nützlich.",
       "paragraph3": "Weil die kostenlose Version direkt im Browser läuft und für die normale Nutzung kein Login verlangt, ist sie eine sehr gute Option für Menschen, die schnell einen Lebenslauf erstellen, einen bestehenden Resume verbessern oder vor dem Versenden einer Bewerbung ein sauberes PDF erzeugen möchten."
     },
     "faq": {
@@ -162,8 +167,8 @@
       "answer1": "Ja. Die kostenlose Version soll für sich allein vollständig nutzbar sein und erfordert für die normale Bearbeitung kein Konto.",
       "question2": "Kann ich einen Lebenslauf als PDF vorbereiten?",
       "answer2": "Ja. Der Editor ist auf druckfertige CV-Ausgabe ausgelegt, und der Export wird so erweitert, dass sowohl Drucken als auch direkter PDF-Download unterstützt werden.",
-      "question3": "Für wen ist diese App gedacht?",
-      "answer3": "Für Studierende, Berufseinsteiger, erfahrene Fachkräfte und Menschen im Branchenwechsel, die einen klaren Lebenslauf ohne komplizierte Designsoftware möchten.",
+      "question3": "Ist das einspaltige Resume ATS-freundlich?",
+      "answer3": "Ja. Das US-Resume-Layout hält die Struktur einfach, verwendet Standardüberschriften und vermeidet mehrspaltige Blöcke. Dadurch eignet es sich besser für ATS-Parsing als dekorativere Layouts.",
       "question4": "Kann ich die App in verschiedenen Sprachen nutzen?",
       "answer4": "Ja. Englisch ist die Standardsprache, und die Oberfläche unterstützt bereits viele Sprachen. Auch die Landingpage ist für mehrsprachige Nutzung vorbereitet.",
       "question5": "Muss ich mich registrieren, um die App zu nutzen?",
@@ -174,7 +179,15 @@
       "text": "Öffne den Editor, probiere die Layouts aus, feile am Stil und erstelle einen Lebenslauf, der professionell wirkt, noch bevor ein Recruiter den ersten Satz liest.",
       "cta": "CV-Editor öffnen"
     },
-    "twitterDescription": "Erstelle kostenlos in wenigen Minuten online einen Lebenslauf. Wähle eines von zwei einfachen Layouts, passe Farben und Schriften an, bearbeite Abschnitte und exportiere deinen CV als PDF — ohne Konto.",
-    "structuredDescription": "Erstelle kostenlos in wenigen Minuten online einen Lebenslauf. Wähle eines von zwei einfachen Layouts, passe Farben und Schriften an, bearbeite Abschnitte und exportiere deinen CV als PDF — ohne Konto."
+    "twitterDescription": "Erstelle in wenigen Minuten kostenlos online einen Lebenslauf mit ATS-freundlicher Einspalten-Option. Passe Farben und Schriftarten an, bearbeite Abschnitte und exportiere dein PDF ohne Konto.",
+    "structuredDescription": "Erstelle in wenigen Minuten kostenlos online einen Lebenslauf mit ATS-freundlicher Einspalten-Option. Passe Farben und Schriftarten an, bearbeite Abschnitte und exportiere dein PDF ohne Konto.",
+    "ats": {
+      "item1Title": "Klare Abschnittsnamen",
+      "item1Text": "Nutze Überschriften, die ATS-Tools und Recruiter kennen, damit Erfahrung und Fähigkeiten leichter eingeordnet werden können.",
+      "item2Title": "Einspaltige Leserichtung",
+      "item2Text": "Das ATS-orientierte Layout hält den Inhalt in einem natürlichen Fluss, ohne dekorative Seitenleisten, Diagramme oder geteilte Spalten.",
+      "item3Title": "Einfache Textabschnitte",
+      "item3Text": "Fähigkeiten und Sprachen bleiben einfache Texteinträge, während Zusammenfassung, Erfahrung, Ausbildung und Zertifikate leicht zu bearbeiten und zu exportieren sind."
+    }
   }
 }

@@ -16,18 +16,25 @@ Everything you type is saved locally in your browser (localStorage). Nothing is 
 
 ### Two professional layouts
 - **Classic** — two-column European-style CV with a dark sidebar. Great for designers, developers, and anyone in creative or tech fields.
-- **US Resume** — clean single-column layout, ATS-friendly. Ideal for job applications in the US and Canada.
+- **US Resume** — clean single-column layout, ATS-optimized. Ideal for job applications and recruiter workflows in the US and Canada.
 
 ### Click-to-edit
 Edit your CV directly on the page — click any text to change it. No forms, no sidebars, no separate edit view.
 
 ### Full content control
 - Personal info: name, job title, location, email, website, GitHub, LinkedIn
+- Professional summary
 - Work experience with role, company, location, period, and bullet points
 - Education
-- Courses & certifications
-- Technologies / skills
+- Languages
+- Certifications
+- Skills
 - Custom sections — add as many as you need
+
+### ATS-focused structure
+- The single-column resume keeps content in one reading order with standard headings
+- Skills and languages are plain text entries for easier parsing
+- Summary, experience, education, languages, certifications, and custom sections can all be edited directly in the preview
 
 ### Customization
 - **Colors** — primary and accent color pickers

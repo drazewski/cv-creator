@@ -20,9 +20,10 @@ import './Sidebar.css';
 export default function Sidebar() {
   const { t } = useTranslation();
   const {
-    data: { photo, name, title, contact, technologies, sectionTitles, sidebarCustom },
+    data: { photo, name, title, contact, technologies, languages, sectionTitles, sidebarCustom },
     setName, setTitle, setContact, setPhoto, setSectionTitle,
     setTechnology, addTechnology, removeTechnology, reorderTechnologies,
+    setLanguageEntry, addLanguageEntry, removeLanguageEntry,
     addCustomSection, removeCustomSection, setCustomSectionField,
     addCustomSectionItem, setCustomSectionItem, removeCustomSectionItem,
   } = useCvStore();
@@ -151,6 +152,27 @@ export default function Sidebar() {
               ))}
               <li>
                 <button type="button" className="sidebar__tech-add" onClick={addTechnology}>
+                  <FontAwesomeIcon icon={faPlus} /> {t('actions.add')}
+                </button>
+              </li>
+            </ul>
+          </div>
+        );
+      case 'languages':
+        return (
+          <div key="languages" className="sidebar__technologies">
+            <div className="sidebar__divider" />
+            <h2 className="sidebar__section-title">
+              <EditableText value={sectionTitles.languages} onChange={(value) => setSectionTitle('languages', value)} dark />
+            </h2>
+            <ul className="sidebar__tech-list sidebar__tech-list--stack">
+              {languages.map((language, index) => (
+                <li key={index} className="sidebar__language-item">
+                  <EditableText value={language} onChange={(value) => setLanguageEntry(index, value)} dark onRemove={() => removeLanguageEntry(index)} />
+                </li>
+              ))}
+              <li>
+                <button type="button" className="sidebar__tech-add" onClick={addLanguageEntry}>
                   <FontAwesomeIcon icon={faPlus} /> {t('actions.add')}
                 </button>
               </li>

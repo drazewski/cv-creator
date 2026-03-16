@@ -45,6 +45,7 @@ export interface SectionTitles {
   aboutMe: string;
   experience: string;
   education: string;
+  languages: string;
   courses: string;
 }
 
@@ -61,13 +62,13 @@ export const TITLE_DEFAULTS: Record<CvLanguage, string> = {
 };
 
 export const SECTION_TITLE_DEFAULTS: Record<CvLanguage, SectionTitles> = {
-  en: { technologies: 'Technologies',    aboutMe: 'About Me',     experience: 'Experience',          education: 'Education',      courses: 'Courses & Certifications' },
-  pl: { technologies: 'Technologie',     aboutMe: 'O mnie',       experience: 'Doświadczenie',       education: 'Wykształcenie',  courses: 'Kursy i certyfikaty'      },
-  de: { technologies: 'Technologien',    aboutMe: 'Über mich',    experience: 'Berufserfahrung',     education: 'Ausbildung',     courses: 'Kurse & Zertifikate'      },
-  es: { technologies: 'Tecnologías',     aboutMe: 'Sobre mí',     experience: 'Experiencia',         education: 'Educación',      courses: 'Cursos y certificaciones' },
-  fr: { technologies: 'Technologies',    aboutMe: 'À propos',     experience: 'Expérience',          education: 'Formation',      courses: 'Cours et certifications'  },
-  it: { technologies: 'Tecnologie',      aboutMe: 'Chi sono',     experience: 'Esperienza',          education: 'Formazione',     courses: 'Corsi e certificazioni'   },
-  pt: { technologies: 'Tecnologias',     aboutMe: 'Sobre mim',    experience: 'Experiência',         education: 'Educação',       courses: 'Cursos e certificações'   },
+  en: { technologies: 'Skills',       aboutMe: 'Summary',        experience: 'Experience',      education: 'Education',      languages: 'Languages',   courses: 'Certifications' },
+  pl: { technologies: 'Umiejętności', aboutMe: 'Podsumowanie',   experience: 'Doświadczenie',  education: 'Wykształcenie',  languages: 'Języki',      courses: 'Certyfikaty'    },
+  de: { technologies: 'Fähigkeiten',  aboutMe: 'Zusammenfassung',experience: 'Berufserfahrung',education: 'Ausbildung',     languages: 'Sprachen',    courses: 'Zertifikate'    },
+  es: { technologies: 'Habilidades',  aboutMe: 'Resumen',        experience: 'Experiencia',     education: 'Educación',      languages: 'Idiomas',     courses: 'Certificaciones'},
+  fr: { technologies: 'Compétences',  aboutMe: 'Résumé',         experience: 'Expérience',      education: 'Formation',      languages: 'Langues',     courses: 'Certifications' },
+  it: { technologies: 'Competenze',   aboutMe: 'Profilo',        experience: 'Esperienza',      education: 'Formazione',     languages: 'Lingue',      courses: 'Certificazioni' },
+  pt: { technologies: 'Competências', aboutMe: 'Resumo',         experience: 'Experiência',     education: 'Educação',       languages: 'Idiomas',     courses: 'Certificações'  },
 };
 
 export interface CustomSection {
@@ -82,6 +83,7 @@ export interface CvData {
   title: string;
   contact: Contact;
   technologies: string[];
+  languages: string[];
   sectionTitles: SectionTitles;
   aboutMe: TextPointItem[];
   experience: ExperienceEntry[];
@@ -110,12 +112,18 @@ export const cvData: CvData = {
     'Python', 'Docker', 'PostgreSQL', 'GraphQL',
   ],
 
+  languages: [
+    'English — C1',
+    'Polish — Native',
+  ],
+
   sectionTitles: {
-    technologies: 'Technologies',
-    aboutMe: 'About Me',
+    technologies: 'Skills',
+    aboutMe: 'Summary',
     experience: 'Experience',
     education: 'Education',
-    courses: 'Courses & Certifications',
+    languages: 'Languages',
+    courses: 'Certifications',
   },
 
   aboutMe: [

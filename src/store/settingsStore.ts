@@ -32,7 +32,7 @@ export interface Styling {
   photoSizeUS: number;
 }
 
-export type SidebarKey = 'photo' | 'name' | 'title' | 'position' | 'location' | 'email' | 'webpage' | 'github' | 'linkedin' | 'technologies';
+export type SidebarKey = 'photo' | 'name' | 'title' | 'position' | 'location' | 'email' | 'webpage' | 'github' | 'linkedin' | 'technologies' | 'languages';
 export type MainKey = 'aboutMe' | 'experience' | 'education' | 'courses';
 export type VisibilityKey = SidebarKey | MainKey;
 export type Visibility = Record<VisibilityKey, boolean>;
@@ -79,11 +79,11 @@ const defaultStyling: Styling = {
 
 const defaultVisibility: Visibility = {
   photo: true, name: true, title: true, position: true, location: true, email: true, webpage: true,
-  github: true, linkedin: true, technologies: true,
+  github: true, linkedin: true, technologies: true, languages: true,
   aboutMe: true, experience: true, education: true, courses: true,
 };
 
-export const DEFAULT_SIDEBAR_ORDER: SidebarKey[] = ['photo', 'name', 'title', 'position', 'location', 'email', 'webpage', 'github', 'linkedin', 'technologies'];
+export const DEFAULT_SIDEBAR_ORDER: SidebarKey[] = ['photo', 'name', 'title', 'position', 'location', 'email', 'webpage', 'github', 'linkedin', 'technologies', 'languages'];
 export const DEFAULT_MAIN_ORDER: MainKey[] = ['aboutMe', 'experience', 'education', 'courses'];
 
 function reorder<T>(arr: T[], from: number, to: number): T[] {
@@ -187,7 +187,7 @@ export const useSettingsStore = create<SettingsStore>()(
     }),
     {
       name: 'cv-settings',
-      version: 11,
+      version: 13,
       migrate: (stored) => migrateSettings(stored),
     },
   ),

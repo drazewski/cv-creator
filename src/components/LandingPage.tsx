@@ -1,5 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faBolt, faGlobe, faLayerGroup, faWandMagicSparkles } from '@fortawesome/free-solid-svg-icons';
+import {
+  faArrowRight,
+  faBolt,
+  faGlobe,
+  faLayerGroup,
+  faListCheck,
+  faAlignLeft,
+  faWandMagicSparkles,
+} from '@fortawesome/free-solid-svg-icons';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import UILanguageSelector from './UILanguageSelector';
@@ -33,11 +41,18 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
     { number: '03', title: t('landing.steps.step3Title'), text: t('landing.steps.step3Text') },
   ];
 
+  const atsItems = [
+    { icon: faListCheck, title: t('landing.ats.item1Title'), text: t('landing.ats.item1Text') },
+    { icon: faAlignLeft, title: t('landing.ats.item2Title'), text: t('landing.ats.item2Text') },
+    { icon: faBolt, title: t('landing.ats.item3Title'), text: t('landing.ats.item3Text') },
+  ];
+
   const faqItems = [
     { question: t('landing.faq.question1'), answer: t('landing.faq.answer1') },
     { question: t('landing.faq.question2'), answer: t('landing.faq.answer2') },
     { question: t('landing.faq.question3'), answer: t('landing.faq.answer3') },
     { question: t('landing.faq.question4'), answer: t('landing.faq.answer4') },
+    { question: t('landing.faq.question5'), answer: t('landing.faq.answer5') },
   ];
 
   return (
@@ -78,6 +93,7 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
             <ul className="landing-trust">
               <li>{t('landing.trust.fast')}</li>
               <li>{t('landing.trust.noAccount')}</li>
+              <li>{t('landing.trust.ats')}</li>
               <li>{t('landing.trust.multilang')}</li>
             </ul>
           </div>
@@ -147,6 +163,25 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
           </div>
           <div className="landing-feature-grid">
             {featureItems.map((item) => (
+              <article key={item.title} className="landing-card">
+                <div className="landing-card__icon">
+                  <FontAwesomeIcon icon={item.icon} />
+                </div>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="landing-section landing-section--warm">
+          <div className="landing-section__intro">
+            <p className="landing-eyebrow">{t('landing.sections.atsEyebrow')}</p>
+            <h2>{t('landing.sections.atsTitle')}</h2>
+            <p>{t('landing.sections.atsLead')}</p>
+          </div>
+          <div className="landing-feature-grid">
+            {atsItems.map((item) => (
               <article key={item.title} className="landing-card">
                 <div className="landing-card__icon">
                   <FontAwesomeIcon icon={item.icon} />

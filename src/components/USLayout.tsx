@@ -15,12 +15,13 @@ export default function USLayout() {
   const { t } = useTranslation();
   const {
     data: {
-      name, title, contact, photo, technologies, sectionTitles,
+      name, title, contact, photo, technologies, languages, sectionTitles,
       aboutMe, experience, education, courses, mainCustom,
     },
     setName, setTitle, setContact, setPhoto, setSectionTitle,
     setAboutMeItem, addAboutMeItem, removeAboutMeItem,
     setTechnology, addTechnology, removeTechnology,
+    setLanguageEntry, addLanguageEntry, removeLanguageEntry,
     setExperienceField, setExperienceBullet, addExperienceBullet,
     removeExperienceBullet, addExperience, removeExperience,
     setEducationField, addEducation, removeEducation,
@@ -246,6 +247,7 @@ export default function USLayout() {
           </section>
         );
       }
+
     }
   };
 
@@ -266,7 +268,7 @@ export default function USLayout() {
           </p>
         )}
         {visibleContact.length > 0 && (
-          <div className="us-header__contact">
+          <address className="us-header__contact">
             {visibleContact.map((item, index) => (
               <span key={item.key} className="us-header__contact-item">
                 {index > 0 && <span className="us-header__contact-sep">·</span>}
@@ -281,7 +283,7 @@ export default function USLayout() {
                 />
               </span>
             ))}
-          </div>
+          </address>
         )}
       </header>
 
@@ -310,17 +312,39 @@ export default function USLayout() {
         })}
 
         {visibility.technologies && (
-          <section className="us-section">
+          <section className="us-section" data-ats-section="skills">
             <h2 className="us-section__title">
               <EditableText value={sectionTitles.technologies} onChange={(value) => setSectionTitle('technologies', value)} />
             </h2>
-            <div className="us-tech-list">
+            <ul className="us-simple-list">
               {technologies.map((technology, index) => (
-                <span key={index} className="us-tech-badge">
+                <li key={index} className="us-simple-list__item">
                   <EditableText value={technology} onChange={(value) => setTechnology(index, value)} onRemove={() => removeTechnology(index)} />
-                </span>
+                </li>
               ))}
+            </ul>
+            <div className="us-simple-list__actions">
               <button type="button" className="btn-add btn-add--small" onClick={addTechnology}>
+                <FontAwesomeIcon icon={faPlus} /> {t('actions.add')}
+              </button>
+            </div>
+          </section>
+        )}
+
+        {visibility.languages && (
+          <section className="us-section" data-ats-section="languages">
+            <h2 className="us-section__title">
+              <EditableText value={sectionTitles.languages} onChange={(value) => setSectionTitle('languages', value)} />
+            </h2>
+            <ul className="us-simple-list">
+              {languages.map((language, index) => (
+                <li key={index} className="us-simple-list__item">
+                  <EditableText value={language} onChange={(value) => setLanguageEntry(index, value)} onRemove={() => removeLanguageEntry(index)} />
+                </li>
+              ))}
+            </ul>
+            <div className="us-simple-list__actions">
+              <button type="button" className="btn-add btn-add--small" onClick={addLanguageEntry}>
                 <FontAwesomeIcon icon={faPlus} /> {t('actions.add')}
               </button>
             </div>

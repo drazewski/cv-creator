@@ -81,6 +81,7 @@
   font-size: var(--font-size-us-contact, 12px);
   line-height: var(--line-height-us-header, 1.5);
   color: #444;
+  font-style: normal;
 }
 
 .us-header__contact-item {
@@ -208,23 +209,20 @@
 }
 
 /* ── Bullets ─────────────────────────────────────────────────── */
-/* ── Technologies ────────────────────────────────────────────── */
-.us-tech-list {
+.us-simple-list {
+  margin: 0;
+  padding-left: 1.1rem;
   display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  align-items: center;
+  flex-direction: column;
+  gap: 0.35rem;
 }
 
-.us-tech-badge {
-  display: inline-flex;
-  align-items: center;
-  background: #f0f4f8;
-  border: 1px solid #dde3ec;
-  border-radius: 4px;
-  padding: 2px 8px;
-  font-size: calc(var(--font-size-body, 13px) - 1px);
-  color: #3a4a5a;
+.us-simple-list__item {
+  color: #1a1a1a;
+}
+
+.us-simple-list__actions {
+  margin-top: 0.55rem;
 }
 
 .us-text-list {

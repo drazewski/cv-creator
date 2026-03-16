@@ -37,6 +37,9 @@ interface CvStore {
   addTechnology: () => void;
   removeTechnology: (index: number) => void;
   reorderTechnologies: (from: number, to: number) => void;
+  setLanguageEntry: (index: number, value: string) => void;
+  addLanguageEntry: () => void;
+  removeLanguageEntry: (index: number) => void;
 
   setExperienceField: (index: number, field: keyof Omit<ExperienceEntry, 'id' | 'bullets'>, value: string) => void;
   setExperienceBullet: (expIndex: number, bulletIndex: number, value: string) => void;
@@ -180,6 +183,12 @@ export const useCvStore = create<CvStore>()(
           list.splice(to, 0, item);
           return { data: { ...s.data, technologies: list } };
         }),
+      setLanguageEntry: (index, value) =>
+        set((s) => ({ data: { ...s.data, languages: updateAt(s.data.languages, index, () => value) } })),
+      addLanguageEntry: () =>
+        set((s) => ({ data: { ...s.data, languages: [...s.data.languages, ''] } })),
+      removeLanguageEntry: (index) =>
+        set((s) => ({ data: { ...s.data, languages: s.data.languages.filter((_, i) => i !== index) } })),
 
       setExperienceField: (index, field, value) =>
         set((s) => ({ data: { ...s.data, experience: updateAt(s.data.experience, index, (e) => ({ ...e, [field]: value })) } })),
@@ -281,7 +290,7 @@ export const useCvStore = create<CvStore>()(
     }),
     {
       name: 'cv-data',
-      version: 6,
+      version: 7,
       migrate: (stored: unknown, _version: number) => {
         const s = stored as { data?: Partial<CvData>; cvLanguage?: unknown };
         const cvLanguage = isCvLanguage(s?.cvLanguage) ? s.cvLanguage : 'en';
@@ -368,6 +377,7 @@ export const useCvStore = create<CvStore>()(
               ...SECTION_TITLE_DEFAULTS[cvLanguage],
               ...(s?.data?.sectionTitles ?? {}),
             },
+            languages: s?.data?.languages ?? defaultData.languages,
             sidebarCustom: mapCustomSections(s?.data?.sidebarCustom ?? defaultData.sidebarCustom),
             mainCustom: mapCustomSections(s?.data?.mainCustom ?? defaultData.mainCustom),
           },

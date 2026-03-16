@@ -18,6 +18,7 @@ import './ElementsDrawer.css';
 
 const SIDEBAR_TITLE_KEYS: Partial<Record<SidebarKey, keyof SectionTitles>> = {
   technologies: 'technologies',
+  languages: 'languages',
 };
 
 const MAIN_TITLE_KEYS: Record<MainKey, keyof SectionTitles> = {
@@ -183,6 +184,7 @@ export default function ElementsDrawer() {
     github: t('elements.github'),
     linkedin: t('elements.linkedin'),
     technologies: t('elements.technologies'),
+    languages: t('elements.languages'),
   };
 
   const resolvedSidebarOrder = useMemo(
@@ -300,7 +302,7 @@ export default function ElementsDrawer() {
           />
           <div className="ed-divider" />
           <div className="ed-section">
-            <h3 className="ed-section__title">{t('elements.technologies')}</h3>
+            <h3 className="ed-section__title">{t('elements.sidebar')}</h3>
             <ul className="ed-list">
               <li className="ed-item">
                 <span className="ed-item__grip ed-item__grip--spacer" />
@@ -308,6 +310,14 @@ export default function ElementsDrawer() {
                 <Toggle
                   checked={visibility.technologies}
                   onChange={(value) => setVisibility('technologies', value)}
+                />
+              </li>
+              <li className="ed-item">
+                <span className="ed-item__grip ed-item__grip--spacer" />
+                <span className="ed-item__label">{sidebarLabels.languages}</span>
+                <Toggle
+                  checked={visibility.languages}
+                  onChange={(value) => setVisibility('languages', value)}
                 />
               </li>
             </ul>

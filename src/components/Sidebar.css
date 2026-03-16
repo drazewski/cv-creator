@@ -102,6 +102,11 @@
   gap: 0.45rem;
 }
 
+.sidebar__tech-list--stack {
+  flex-direction: column;
+  align-items: stretch;
+}
+
 .sidebar__tech-badge {
   background: color-mix(in srgb, var(--color-accent) 20%, transparent);
   color: #a8c8e8;
@@ -157,6 +162,12 @@
   align-items: center;
   gap: 0.3rem;
   transition: color 0.15s, border-color 0.15s;
+}
+
+.sidebar__language-item {
+  font-size: var(--font-size-sidebar, 13px);
+  line-height: var(--line-height-sidebar, 1.4);
+  color: #e8edf3;
 }
 
 .sidebar__tech-add:hover {
