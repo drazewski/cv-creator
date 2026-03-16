@@ -347,18 +347,51 @@ function renderPage(locale, messages) {
     .map((item) => `<meta property="og:locale:alternate" content="${item.ogLocale}" />`)
     .join('\n    ');
 
+  const faqEntries = Object.entries(landing.faq ?? {})
+    .filter(([key]) => key.startsWith('question'))
+    .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))
+    .reduce((acc, [qKey, question]) => {
+      const answer = landing.faq[qKey.replace('question', 'answer')];
+      if (question && answer) {
+        acc.push({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } });
+      }
+      return acc;
+    }, []);
+
   const jsonLd = JSON.stringify({
     '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: landing.metaTitle,
-    url: pageUrl,
-    inLanguage: locale.code,
-    description: structuredDescription,
-    isPartOf: {
-      '@type': 'WebSite',
-      name: 'MyCeeVee',
-      url: 'https://myceevee.com/',
-    },
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        name: landing.metaTitle,
+        url: pageUrl,
+        inLanguage: locale.code,
+        description: structuredDescription,
+        isPartOf: {
+          '@type': 'WebSite',
+          name: 'MyCeeVee',
+          url: 'https://myceevee.com/',
+        },
+      },
+      {
+        '@type': 'WebApplication',
+        name: 'MyCeeVee',
+        url: 'https://myceevee.com/app/',
+        applicationCategory: 'BusinessApplication',
+        operatingSystem: 'All',
+        offers: {
+          '@type': 'Offer',
+          price: '0',
+          priceCurrency: 'USD',
+        },
+        inLanguage: locale.code,
+        description: structuredDescription,
+      },
+      ...(faqEntries.length > 0 ? [{
+        '@type': 'FAQPage',
+        mainEntity: faqEntries,
+      }] : []),
+    ],
   }, null, 2);
 
   return `<!doctype html>

@@ -37,16 +37,79 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Free CV Builder Online — Create a professional CV with MyCeeVee",
-  "url": "https://myceevee.com/",
-  "inLanguage": "en",
-  "description": "Create a CV online for free in minutes with an ATS-friendly single-column option. Adjust colours and fonts, edit sections and export your CV to PDF without creating an account.",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "MyCeeVee",
-    "url": "https://myceevee.com/"
-  }
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "Free CV Builder Online — Create a professional CV with MyCeeVee",
+      "url": "https://myceevee.com/",
+      "inLanguage": "en",
+      "description": "Create a CV online for free in minutes with an ATS-friendly single-column option. Adjust colours and fonts, edit sections and export your CV to PDF without creating an account.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "MyCeeVee",
+        "url": "https://myceevee.com/"
+      }
+    },
+    {
+      "@type": "WebApplication",
+      "name": "MyCeeVee",
+      "url": "https://myceevee.com/app/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "inLanguage": "en",
+      "description": "Create a CV online for free in minutes with an ATS-friendly single-column option. Adjust colours and fonts, edit sections and export your CV to PDF without creating an account."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is this CV builder free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The free version is meant to be fully useful on its own and does not require an account for normal editing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I prepare a CV as a PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The editor is built around print-ready CV output, and export is being developed to support both printing and direct PDF download."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the single-column resume ATS-friendly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The US Resume layout keeps the structure simple, uses standard section headings and avoids multi-column blocks, which makes it a better fit for ATS parsing than more decorative layouts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use the app in different languages?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. English is the default language, and the interface already supports many languages. The landing page is also prepared for multilingual use."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to sign up to use the app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. You can use the free version of the app without registering or logging in."
+          }
+        }
+      ]
+    }
+  ]
 }
     </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
