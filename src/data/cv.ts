@@ -50,6 +50,16 @@ export interface SectionTitles {
 
 export type CvLanguage = 'en' | 'pl' | 'de' | 'es' | 'fr' | 'it' | 'pt';
 
+export const TITLE_DEFAULTS: Record<CvLanguage, string> = {
+  en: 'Senior Software Engineer',
+  pl: 'Starszy Inżynier Oprogramowania',
+  de: 'Senior Softwareentwickler',
+  es: 'Ingeniero de Software Senior',
+  fr: 'Ingénieur logiciel senior',
+  it: 'Ingegnere software senior',
+  pt: 'Engenheiro de software sénior',
+};
+
 export const SECTION_TITLE_DEFAULTS: Record<CvLanguage, SectionTitles> = {
   en: { technologies: 'Technologies',    aboutMe: 'About Me',     experience: 'Experience',          education: 'Education',      courses: 'Courses & Certifications' },
   pl: { technologies: 'Technologie',     aboutMe: 'O mnie',       experience: 'Doświadczenie',       education: 'Wykształcenie',  courses: 'Kursy i certyfikaty'      },
@@ -84,7 +94,7 @@ export interface CvData {
 export const cvData: CvData = {
   photo: null,
   name: 'John Doe',
-  title: 'Senior Software Engineer',
+  title: TITLE_DEFAULTS.en,
 
   contact: {
     position: 'Software Engineer at Acme Corp',

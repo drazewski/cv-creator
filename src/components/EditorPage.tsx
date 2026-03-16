@@ -13,6 +13,7 @@ import { useSettingsStore, FONTS } from '../store/settingsStore';
 import { useCvStore } from '../store/cvStore';
 import { Analytics } from '../lib/analytics';
 import { setDocumentMetadata } from '../lib/metadata';
+import { getSupportedLanguage } from '../i18n/languages';
 
 const CV_WIDTH = 794;
 
@@ -24,6 +25,7 @@ export default function EditorPage({ onNavigate }: EditorPageProps) {
   const { t, i18n } = useTranslation();
   const { styling, resetLayout, layoutId } = useSettingsStore();
   const { resetData } = useCvStore();
+  const activeLanguage = getSupportedLanguage(i18n.resolvedLanguage ?? i18n.language);
   const scalerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
   const [showReset, setShowReset] = useState(false);
@@ -132,13 +134,13 @@ export default function EditorPage({ onNavigate }: EditorPageProps) {
           }}
           onResetData={() => {
             Analytics.resetClicked();
-            resetData();
+            resetData(activeLanguage);
             setShowReset(false);
           }}
           onResetAll={() => {
             Analytics.resetClicked();
             resetLayout();
-            resetData();
+            resetData(activeLanguage);
             setShowReset(false);
           }}
           onClose={() => setShowReset(false)}

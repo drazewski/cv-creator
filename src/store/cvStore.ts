@@ -7,6 +7,7 @@ import {
   Contact,
   SectionTitles,
   SECTION_TITLE_DEFAULTS,
+  TITLE_DEFAULTS,
   CustomSection,
   ExperienceEntry,
   EducationEntry,
@@ -59,7 +60,7 @@ interface CvStore {
   setCustomSectionItem: (area: 'sidebarCustom' | 'mainCustom', id: string, itemIndex: number, value: string) => void;
   removeCustomSectionItem: (area: 'sidebarCustom' | 'mainCustom', id: string, itemIndex: number) => void;
 
-  resetData: () => void;
+  resetData: (lang?: CvLanguage) => void;
 }
 
 function createTextPointItem(type: MainSectionItemType): TextPointItem {
@@ -105,6 +106,38 @@ function updateAt<T>(arr: T[], index: number, updater: (item: T) => T): T[] {
   return arr.map((item, i) => (i === index ? updater(item) : item));
 }
 
+function syncLocalizedDefaults(data: CvData, fromLanguage: CvLanguage, toLanguage: CvLanguage): CvData {
+  if (fromLanguage === toLanguage) return data;
+
+  const previousTitles = SECTION_TITLE_DEFAULTS[fromLanguage];
+  const nextTitles = SECTION_TITLE_DEFAULTS[toLanguage];
+  const sectionTitles = { ...data.sectionTitles };
+
+  (Object.keys(nextTitles) as Array<keyof SectionTitles>).forEach((key) => {
+    if (data.sectionTitles[key] === previousTitles[key]) {
+      sectionTitles[key] = nextTitles[key];
+    }
+  });
+
+  return {
+    ...data,
+    title: data.title === TITLE_DEFAULTS[fromLanguage] ? TITLE_DEFAULTS[toLanguage] : data.title,
+    sectionTitles,
+  };
+}
+
+function createDefaultData(language: CvLanguage): CvData {
+  return {
+    ...defaultData,
+    title: TITLE_DEFAULTS[language],
+    sectionTitles: { ...SECTION_TITLE_DEFAULTS[language] },
+  };
+}
+
+function isCvLanguage(value: unknown): value is CvLanguage {
+  return typeof value === 'string' && value in SECTION_TITLE_DEFAULTS;
+}
+
 export const useCvStore = create<CvStore>()(
   persist(
     (set) => ({
@@ -124,7 +157,7 @@ export const useCvStore = create<CvStore>()(
       setCvLanguage: (lang) =>
         set((s) => ({
           cvLanguage: lang,
-          data: { ...s.data, sectionTitles: SECTION_TITLE_DEFAULTS[lang] },
+          data: syncLocalizedDefaults(s.data, s.cvLanguage, lang),
         })),
 
       setAboutMeItem: (index, value) =>
@@ -244,13 +277,14 @@ export const useCvStore = create<CvStore>()(
           },
         })),
 
-      resetData: () => set({ data: defaultData, cvLanguage: 'en' as CvLanguage }),
+      resetData: (lang = 'en') => set({ data: createDefaultData(lang), cvLanguage: lang }),
     }),
     {
       name: 'cv-data',
-      version: 5,
+      version: 6,
       migrate: (stored: unknown, _version: number) => {
-        const s = stored as { data?: Partial<CvData> };
+        const s = stored as { data?: Partial<CvData>; cvLanguage?: unknown };
+        const cvLanguage = isCvLanguage(s?.cvLanguage) ? s.cvLanguage : 'en';
 
         const aboutMe = (s?.data?.aboutMe ?? defaultData.aboutMe).map((item, index) => {
           if (typeof item === 'string') {
@@ -321,15 +355,17 @@ export const useCvStore = create<CvStore>()(
           });
 
         return {
+          cvLanguage,
           data: {
             ...defaultData,
             ...(s?.data ?? {}),
+            title: s?.data?.title ?? TITLE_DEFAULTS[cvLanguage],
             aboutMe,
             experience,
             education,
             courses,
             sectionTitles: {
-              ...defaultData.sectionTitles,
+              ...SECTION_TITLE_DEFAULTS[cvLanguage],
               ...(s?.data?.sectionTitles ?? {}),
             },
             sidebarCustom: mapCustomSections(s?.data?.sidebarCustom ?? defaultData.sidebarCustom),

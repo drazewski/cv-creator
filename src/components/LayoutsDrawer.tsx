@@ -1,7 +1,6 @@
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSettingsStore, LayoutId } from '../store/settingsStore';
-import LanguageSelector from './LanguageSelector';
 import { Analytics } from '../lib/analytics';
 import './LayoutsDrawer.css';
 
@@ -99,8 +98,6 @@ export default function LayoutsDrawer() {
           </button>
         ))}
       </div>
-      <div className="layouts-drawer__divider" />
-      <LanguageSelector />
     </div>
   );
 }
