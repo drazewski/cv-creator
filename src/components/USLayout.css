@@ -231,6 +231,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  list-style-type: disc;
 }
 
 .us-simple-list__item {
