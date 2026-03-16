@@ -212,7 +212,7 @@ button {
 }
 
 .landing-trust li::before {
-  content: '•';
+  content: '\2022';
   margin-right: 0.45rem;
   color: #4a90d9;
 }
@@ -433,7 +433,10 @@ button {
   gap: 1.2rem;
 }
 
-.landing-feature-grid,
+.landing-feature-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
 .landing-step-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }

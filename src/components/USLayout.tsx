@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faLocationDot, faGlobe, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faLocationDot, faGlobe, faPlus, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { useCvStore } from '../store/cvStore';
 import { DEFAULT_MAIN_ORDER, DEFAULT_SIDEBAR_ORDER, useSettingsStore, MainKey, SidebarKey } from '../store/settingsStore';
@@ -137,7 +137,9 @@ export default function USLayout() {
                     <span className="us-entry__location">
                       <EditableText value={entry.location} onChange={(value) => setExperienceField(index, 'location', value)} fitLine />
                     </span>
-                    <button type="button" className="btn-entry-remove" onClick={() => removeExperience(index)} title={t('actions.remove')}>×</button>
+                    <button type="button" className="btn-entry-remove" onClick={() => removeExperience(index)} title={t('actions.remove')}>
+                      <FontAwesomeIcon icon={faXmark} />
+                    </button>
                   </div>
                 </div>
                 <div className="us-text-list us-text-list--compact">
@@ -190,7 +192,9 @@ export default function USLayout() {
                       <span className="us-entry__period">
                         <EditableText value={entry.period} onChange={(value) => setEducationField(index, 'period', value)} fitLine />
                       </span>
-                      <button type="button" className="btn-entry-remove" onClick={() => removeEducation(index)} title={t('actions.remove')}>×</button>
+                      <button type="button" className="btn-entry-remove" onClick={() => removeEducation(index)} title={t('actions.remove')}>
+                        <FontAwesomeIcon icon={faXmark} />
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -230,7 +234,9 @@ export default function USLayout() {
                       <span className="us-entry__period">
                         <EditableText value={entry.year} onChange={(value) => setCourseField(index, 'year', value)} fitLine />
                       </span>
-                      <button type="button" className="btn-entry-remove" onClick={() => removeCourse(index)} title={t('actions.remove')}>×</button>
+                      <button type="button" className="btn-entry-remove" onClick={() => removeCourse(index)} title={t('actions.remove')}>
+                        <FontAwesomeIcon icon={faXmark} />
+                      </button>
                     </div>
                   </div>
                 </div>

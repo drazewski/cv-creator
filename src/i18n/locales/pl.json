@@ -118,7 +118,8 @@
       "fast": "Szybki start i wygodne wykończenie",
       "noAccount": "W wersji darmowej nie potrzebujesz konta",
       "multilang": "Wielojęzyczny edytor i landing page",
-      "ats": "Jednokolumnowy wariant przyjazny ATS"
+      "ats": "Jednokolumnowy wariant przyjazny ATS",
+      "school": "Pomocne dla uczniów, szkół i przy tworzeniu pierwszego CV"
     },
     "preview": {
       "classicBadge": "Układ klasyczny",
@@ -146,7 +147,9 @@
       "flexibleTitle": "Elastyczny edytor",
       "flexibleText": "Dostajesz dwa proste szablony. Po co więcej? CV powinno być czytelne, przejrzyste i konkretne. Edytuj podsumowanie, doświadczenie, umiejętności, języki i certyfikaty, zmieniaj kolejność sekcji, dodawaj własne sekcje oraz dopasowuj odstępy, kolory i fonty.",
       "multilingualTitle": "Przyjazny dla użytkowników wielojęzycznych",
-      "multilingualText": "Domyślnym językiem jest angielski, ale interfejs i landing page mogą działać w wielu językach, dzięki czemu narzędzie lepiej sprawdza się na różnych rynkach."
+      "multilingualText": "Domyślnym językiem jest angielski, ale interfejs i landing page mogą działać w wielu językach, dzięki czemu narzędzie lepiej sprawdza się na różnych rynkach.",
+      "studentTitle": "Świetne dla uczniów i szkół",
+      "studentText": "Ponieważ edytor jest prosty i wizualny, dobrze sprawdza się dla uczniów tworzących pierwsze CV oraz dla szkół, które chcą uczyć krok po kroku, jak przygotować czytelny życiorys."
     },
     "steps": {
       "step1Title": "Wybierz układ i zacznij edycję",
@@ -188,6 +191,7 @@
       "item2Text": "Układ ukierunkowany na ATS prowadzi treść jednym naturalnym torem, bez dekoracyjnych pasków bocznych, wykresów i podzielonych kolumn.",
       "item3Title": "Proste sekcje tekstowe",
       "item3Text": "Umiejętności i języki pozostają zwykłymi wpisami tekstowymi, a podsumowanie, doświadczenie, wykształcenie i certyfikaty są łatwe do edycji oraz eksportu."
-    }
+    },
+    "heroAudience": "Świetne dla uczniów uczących się tworzyć pierwsze CV oraz dla szkół uczących podstaw pisania życiorysu."
   }
 }

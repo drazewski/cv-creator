@@ -7,6 +7,19 @@
 :root {
   --color-primary: #1e2a3a;
   --color-accent:  #4a90d9;
+  --ui-icon-button-size: 24px;
+  --ui-icon-size: 12px;
+  --ui-remove-color: #8a97a8;
+  --ui-remove-hover-color: #e57373;
+  --ui-remove-hover-bg: rgba(229, 115, 115, 0.08);
+  --ui-edit-hover-bg: rgba(74, 144, 217, 0.08);
+  --ui-edit-hover-border: rgba(74, 144, 217, 0.18);
+  --ui-edit-focus-bg: rgba(74, 144, 217, 0.12);
+  --ui-edit-focus-border: rgba(74, 144, 217, 0.28);
+  --ui-edit-dark-hover-bg: rgba(255, 255, 255, 0.08);
+  --ui-edit-dark-hover-border: rgba(255, 255, 255, 0.14);
+  --ui-edit-dark-focus-bg: rgba(255, 255, 255, 0.12);
+  --ui-edit-dark-focus-border: rgba(255, 255, 255, 0.2);
 }
 
 html, body {

@@ -114,10 +114,10 @@ export default function EditableText({
           href={href}
           target={hrefTarget}
           rel={hrefTarget === '_blank' ? 'noopener noreferrer' : undefined}
-          className="editable-text__link"
+          className="editable-text__value editable-text__link"
           onClick={enterEdit}
         >
-          <span className="editable-text__value">{valueContent}</span>
+          {valueContent}
         </a>
       ) : (
         <span className="editable-text__value" onClick={enterEdit}>{valueContent}</span>

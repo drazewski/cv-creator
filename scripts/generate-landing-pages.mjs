@@ -187,6 +187,13 @@ ${jsonLd}
             <a href="/app/" class="landing-btn landing-btn--primary">${escapeHtml(landing.createCv)}</a>
             <a href="#why" class="landing-btn landing-btn--secondary">${escapeHtml(landing.learnMore)}</a>
           </div>
+          <ul class="landing-trust">
+            <li>${escapeHtml(landing.trust.fast)}</li>
+            <li>${escapeHtml(landing.trust.noAccount)}</li>
+            <li>${escapeHtml(landing.trust.ats)}</li>
+            <li>${escapeHtml(landing.trust.multilang)}</li>
+            <li>${escapeHtml(landing.trust.school)}</li>
+          </ul>
         </div>
 
           <div class="landing-hero__visual" aria-hidden="true">
@@ -253,6 +260,7 @@ ${jsonLd}
 ${renderFeatureCard('A', landing.features.speedTitle, landing.features.speedText)}
 ${renderFeatureCard('B', landing.features.flexibleTitle, landing.features.flexibleText)}
 ${renderFeatureCard('C', landing.features.multilingualTitle, landing.features.multilingualText)}
+${renderFeatureCard('D', landing.features.studentTitle, landing.features.studentText)}
         </div>
       </section>
 

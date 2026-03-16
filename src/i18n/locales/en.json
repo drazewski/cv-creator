@@ -118,7 +118,8 @@
       "fast": "Fast to start, easy to finish",
       "noAccount": "No account required for the free version",
       "multilang": "Multilingual editor and landing page",
-      "ats": "ATS-friendly single-column option"
+      "ats": "ATS-friendly single-column option",
+      "school": "Helpful for students, schools and first CV lessons"
     },
     "preview": {
       "classicBadge": "Classic layout",
@@ -146,7 +147,9 @@
       "flexibleTitle": "Flexible editor",
       "flexibleText": "You get two simple templates. Why more? A CV should be readable, clear and focused. Edit your summary, experience, skills, languages and certifications, reorder sections, add your own sections, and adjust spacing, colours and fonts.",
       "multilingualTitle": "Friendly for multilingual users",
-      "multilingualText": "English is the default language, but the interface and landing page can work in many languages, which makes the tool a better fit for different markets."
+      "multilingualText": "English is the default language, but the interface and landing page can work in many languages, which makes the tool a better fit for different markets.",
+      "studentTitle": "Great for students and schools",
+      "studentText": "Because the editor is simple and visual, it works well for students creating a first CV and for schools that want to teach how to build a clear resume step by step."
     },
     "steps": {
       "step1Title": "Choose a layout and start editing",
@@ -188,6 +191,7 @@
       "item2Text": "The ATS-focused resume layout keeps content in one natural flow without decorative sidebars, charts or split columns.",
       "item3Title": "Simple text-based sections",
       "item3Text": "Skills and languages stay as plain text entries, while summary, experience, education and certifications remain easy to edit and export."
-    }
+    },
+    "heroAudience": "Great for students learning to build a first CV and for schools teaching resume basics."
   }
 }

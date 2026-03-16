@@ -61,27 +61,33 @@
   position: absolute;
   top: 2px;
   right: 2px;
-  width: 1.4rem;
-  height: 1.4rem;
+  width: var(--ui-icon-button-size, 24px);
+  height: var(--ui-icon-button-size, 24px);
   border-radius: 50%;
   border: none;
   background: rgba(30, 30, 30, 0.75);
   color: #fff;
-  font-size: 0.65rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.15s, background 0.15s;
+  transition: opacity 0.15s, color 0.15s, background 0.15s;
 }
 
-.photo-upload:hover .photo-upload__remove {
+.photo-upload:hover .photo-upload__remove,
+.photo-upload:focus-within .photo-upload__remove {
   opacity: 1;
 }
 
 .photo-upload__remove:hover {
+  color: #fff;
   background: #c0392b;
+}
+
+.photo-upload__remove svg {
+  width: var(--ui-icon-size, 12px);
+  height: var(--ui-icon-size, 12px);
 }
 
 .photo-upload__input {

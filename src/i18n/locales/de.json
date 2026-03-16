@@ -118,7 +118,8 @@
       "fast": "Schnell starten, entspannt fertigstellen",
       "noAccount": "Kein Konto für die kostenlose Version nötig",
       "multilang": "Mehrsprachiger Editor und Landingpage",
-      "ats": "Einspaltige ATS-freundliche Option"
+      "ats": "Einspaltige ATS-freundliche Option",
+      "school": "Hilfreich für Schüler, Schulen und den ersten Lebenslauf"
     },
     "preview": {
       "classicBadge": "Klassisches Layout",
@@ -146,7 +147,9 @@
       "flexibleTitle": "Flexibler Editor",
       "flexibleText": "Du bekommst zwei einfache Vorlagen. Warum mehr? Ein Lebenslauf sollte lesbar, klar und fokussiert sein. Bearbeite Zusammenfassung, Erfahrung, Fähigkeiten, Sprachen und Zertifikate, ändere die Reihenfolge der Abschnitte, füge eigene Abschnitte hinzu und passe Abstände, Farben und Schriftarten an.",
       "multilingualTitle": "Geeignet für mehrsprachige Nutzer",
-      "multilingualText": "Standardmäßig ist Englisch eingestellt, aber Oberfläche und Landingpage können in vielen Sprachen genutzt werden. Dadurch eignet sich das Tool besser für verschiedene Märkte."
+      "multilingualText": "Standardmäßig ist Englisch eingestellt, aber Oberfläche und Landingpage können in vielen Sprachen genutzt werden. Dadurch eignet sich das Tool besser für verschiedene Märkte.",
+      "studentTitle": "Ideal für Schüler und Schulen",
+      "studentText": "Weil der Editor einfach und visuell ist, eignet er sich gut für Schüler, die ihren ersten Lebenslauf erstellen, und für Schulen, die Schritt für Schritt zeigen möchten, wie man einen klaren Resume aufbaut."
     },
     "steps": {
       "step1Title": "Layout wählen und direkt loslegen",
@@ -188,6 +191,7 @@
       "item2Text": "Das ATS-orientierte Layout hält den Inhalt in einem natürlichen Fluss, ohne dekorative Seitenleisten, Diagramme oder geteilte Spalten.",
       "item3Title": "Einfache Textabschnitte",
       "item3Text": "Fähigkeiten und Sprachen bleiben einfache Texteinträge, während Zusammenfassung, Erfahrung, Ausbildung und Zertifikate leicht zu bearbeiten und zu exportieren sind."
-    }
+    },
+    "heroAudience": "Ideal für Schüler, die ihren ersten Lebenslauf erstellen, und für Schulen, die die Grundlagen des Resume-Schreibens vermitteln."
   }
 }

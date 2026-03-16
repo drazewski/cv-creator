@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import './ResetModal.css';
 
 interface Props {
@@ -24,7 +24,7 @@ export default function ResetModal({ onResetLayout, onResetData, onResetAll, onC
     <div className="reset-overlay" onMouseDown={onClose}>
       <div className="reset-modal" onMouseDown={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
         <button className="reset-modal__close" onClick={onClose} title={t('resetModal.close')}>
-          <FontAwesomeIcon icon={faTimes} />
+          <FontAwesomeIcon icon={faXmark} />
         </button>
 
         <h2 className="reset-modal__title">{t('resetModal.title')}</h2>

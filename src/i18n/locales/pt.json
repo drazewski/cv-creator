@@ -118,7 +118,8 @@
       "fast": "Rápido para começar e fácil de terminar",
       "noAccount": "Sem conta necessária na versão gratuita",
       "multilang": "Editor e landing page multilingues",
-      "ats": "Opção de coluna única compatível com ATS"
+      "ats": "Opção de coluna única compatível com ATS",
+      "school": "Útil para estudantes, escolas e para o primeiro CV"
     },
     "preview": {
       "classicBadge": "Layout clássico",
@@ -146,7 +147,9 @@
       "flexibleTitle": "Editor flexível",
       "flexibleText": "Recebe dois modelos simples. Porquê mais? Um CV deve ser legível, claro e focado. Edite o resumo, a experiência, as competências, os idiomas e as certificações, reordene secções, adicione secções próprias e ajuste espaçamentos, cores e fontes.",
       "multilingualTitle": "Amigável para usuários multilíngues",
-      "multilingualText": "O inglês é o idioma padrão, mas a interface e a landing page podem funcionar em vários idiomas, o que faz a ferramenta se encaixar melhor em diferentes mercados."
+      "multilingualText": "O inglês é o idioma padrão, mas a interface e a landing page podem funcionar em vários idiomas, o que faz a ferramenta se encaixar melhor em diferentes mercados.",
+      "studentTitle": "Ótimo para estudantes e escolas",
+      "studentText": "Como o editor é simples e visual, funciona muito bem para estudantes que estão a criar o primeiro CV e para escolas que querem ensinar, passo a passo, como preparar um currículo claro."
     },
     "steps": {
       "step1Title": "Escolha um layout e comece a editar",
@@ -188,6 +191,7 @@
       "item2Text": "O layout focado em ATS mantém o conteúdo num único fluxo natural, sem barras laterais decorativas, gráficos ou colunas divididas.",
       "item3Title": "Secções simples baseadas em texto",
       "item3Text": "Competências e idiomas mantêm-se como entradas simples de texto, enquanto resumo, experiência, educação e certificações continuam fáceis de editar e exportar."
-    }
+    },
+    "heroAudience": "Ótimo para estudantes que estão a aprender a criar o primeiro CV e para escolas que ensinam as bases do currículo."
   }
 }

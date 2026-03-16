@@ -118,7 +118,8 @@
       "fast": "Rápido para empezar y fácil de terminar",
       "noAccount": "No necesitas cuenta para la versión gratuita",
       "multilang": "Editor y landing page multilingües",
-      "ats": "Opción de una columna compatible con ATS"
+      "ats": "Opción de una columna compatible con ATS",
+      "school": "Útil para estudiantes, escuelas y el primer CV"
     },
     "preview": {
       "classicBadge": "Diseño clásico",
@@ -146,7 +147,9 @@
       "flexibleTitle": "Editor flexible",
       "flexibleText": "Recibes dos plantillas simples. ¿Para qué más? Un CV debe ser legible, claro y enfocado. Edita tu resumen, experiencia, habilidades, idiomas y certificaciones, reorganiza secciones, añade las tuyas y ajusta espaciado, colores y tipografías.",
       "multilingualTitle": "Amigable para usuarios multilingües",
-      "multilingualText": "El idioma predeterminado es el inglés, pero la interfaz y la landing page pueden funcionar en muchos idiomas, lo que hace que la herramienta encaje mejor en distintos mercados."
+      "multilingualText": "El idioma predeterminado es el inglés, pero la interfaz y la landing page pueden funcionar en muchos idiomas, lo que hace que la herramienta encaje mejor en distintos mercados.",
+      "studentTitle": "Ideal para estudiantes y escuelas",
+      "studentText": "Como el editor es simple y visual, funciona muy bien para estudiantes que crean su primer CV y para escuelas que quieren enseñar paso a paso cómo preparar un currículum claro."
     },
     "steps": {
       "step1Title": "Elige un diseño y empieza a editar",
@@ -188,6 +191,7 @@
       "item2Text": "El diseño centrado en ATS mantiene el contenido en un único flujo natural, sin barras laterales decorativas, gráficos ni columnas divididas.",
       "item3Title": "Secciones simples basadas en texto",
       "item3Text": "Las habilidades y los idiomas permanecen como entradas de texto simples, mientras que el resumen, la experiencia, la educación y las certificaciones siguen siendo fáciles de editar y exportar."
-    }
+    },
+    "heroAudience": "Ideal para estudiantes que aprenden a crear su primer CV y para escuelas que enseñan los fundamentos del currículum."
   }
 }

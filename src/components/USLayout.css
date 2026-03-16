@@ -189,23 +189,39 @@
   white-space: nowrap;
 }
 
-.btn-entry-remove {
+.us-layout .btn-entry-remove {
   position: absolute;
   top: -2px;
   right: -18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--ui-icon-button-size, 24px);
+  height: var(--ui-icon-button-size, 24px);
   background: none;
   border: none;
-  color: #c0392b;
+  color: var(--ui-remove-color, #8a97a8);
   cursor: pointer;
-  font-size: 12px;
   line-height: 1;
-  padding: 2px 4px;
+  padding: 0;
+  border-radius: 999px;
   opacity: 0;
-  transition: opacity 0.15s;
+  transition: opacity 0.15s, background 0.15s;
 }
 
-.us-entry:hover .btn-entry-remove {
+.us-layout .btn-entry-remove svg {
+  width: var(--ui-icon-size, 12px);
+  height: var(--ui-icon-size, 12px);
+}
+
+.us-entry:hover .btn-entry-remove,
+.us-entry:focus-within .btn-entry-remove {
   opacity: 1;
+}
+
+.us-layout .btn-entry-remove:hover {
+  color: var(--ui-remove-hover-color, #e57373);
+  background: var(--ui-remove-hover-bg, rgba(229, 115, 115, 0.08));
 }
 
 /* ── Bullets ─────────────────────────────────────────────────── */

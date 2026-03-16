@@ -48,24 +48,36 @@
   white-space: nowrap;
 }
 
-.btn-entry-remove {
+.experience .btn-entry-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--ui-icon-button-size, 24px);
+  height: var(--ui-icon-button-size, 24px);
   background: none;
   border: none;
   cursor: pointer;
-  color: #ccc;
-  font-size: 12px;
-  padding: 0.15rem 0.25rem;
-  border-radius: 3px;
+  color: var(--ui-remove-color, #8a97a8);
+  padding: 0;
+  border-radius: 999px;
+  flex-shrink: 0;
   opacity: 0;
-  transition: opacity 0.15s, color 0.15s;
+  transition: opacity 0.15s, color 0.15s, background 0.15s;
 }
 
-.experience__entry:hover .btn-entry-remove {
+.experience .btn-entry-remove svg {
+  width: var(--ui-icon-size, 12px);
+  height: var(--ui-icon-size, 12px);
+}
+
+.experience__entry:hover .btn-entry-remove,
+.experience__entry:focus-within .btn-entry-remove {
   opacity: 1;
 }
 
-.btn-entry-remove:hover {
-  color: #e57373;
+.experience .btn-entry-remove:hover {
+  color: var(--ui-remove-hover-color, #e57373);
+  background: var(--ui-remove-hover-bg, rgba(229, 115, 115, 0.08));
 }
 
 .experience__bullets {
@@ -106,22 +118,35 @@
   opacity: 0;
 }
 
-.experience__bullet-item:hover .btn-remove {
+.experience__bullet-item:hover .btn-remove,
+.experience__bullet-item:focus-within .btn-remove {
   opacity: 1;
 }
 
 /* Shared add button styles (also used by AboutMe, Education, Courses) */
 .btn-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--ui-icon-button-size, 24px);
+  height: var(--ui-icon-button-size, 24px);
   flex-shrink: 0;
   background: none;
   border: none;
   cursor: pointer;
-  color: #ccc;
-  font-size: 12px;
+  color: var(--ui-remove-color, #8a97a8);
+  padding: 0;
+  border-radius: 999px;
 }
 
 .btn-remove:hover {
-  color: #e57373;
+  color: var(--ui-remove-hover-color, #e57373);
+  background: var(--ui-remove-hover-bg, rgba(229, 115, 115, 0.08));
+}
+
+.btn-remove svg {
+  width: var(--ui-icon-size, 12px);
+  height: var(--ui-icon-size, 12px);
 }
 
 .btn-add {

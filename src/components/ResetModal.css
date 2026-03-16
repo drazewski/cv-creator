@@ -23,17 +23,29 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--ui-icon-button-size, 24px);
+  height: var(--ui-icon-button-size, 24px);
   background: none;
   border: none;
-  font-size: 1rem;
   color: #8a97a8;
   cursor: pointer;
-  padding: 0.25rem;
+  padding: 0;
   line-height: 1;
+  border-radius: 999px;
+  transition: color 0.15s, background 0.15s;
 }
 
 .reset-modal__close:hover {
   color: #3a4a5a;
+  background: #f0f4f8;
+}
+
+.reset-modal__close svg {
+  width: var(--ui-icon-size, 12px);
+  height: var(--ui-icon-size, 12px);
 }
 
 .reset-modal__title {

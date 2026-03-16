@@ -118,7 +118,8 @@
       "fast": "Veloce da iniziare, facile da completare",
       "noAccount": "Nessun account richiesto per la versione gratuita",
       "multilang": "Editor e landing page multilingue",
-      "ats": "Opzione a colonna singola compatibile con ATS"
+      "ats": "Opzione a colonna singola compatibile con ATS",
+      "school": "Utile per studenti, scuole e primo CV"
     },
     "preview": {
       "classicBadge": "Layout classico",
@@ -146,7 +147,9 @@
       "flexibleTitle": "Editor flessibile",
       "flexibleText": "Hai due modelli semplici. Perché di più? Un CV dovrebbe essere leggibile, chiaro e mirato. Modifica profilo, esperienza, competenze, lingue e certificazioni, riordina le sezioni, aggiungi sezioni personalizzate e regola spaziature, colori e font.",
       "multilingualTitle": "Adatto agli utenti multilingue",
-      "multilingualText": "L’inglese è la lingua predefinita, ma l’interfaccia e la landing page possono funzionare in molte lingue, così lo strumento si adatta meglio a mercati diversi."
+      "multilingualText": "L’inglese è la lingua predefinita, ma l’interfaccia e la landing page possono funzionare in molte lingue, così lo strumento si adatta meglio a mercati diversi.",
+      "studentTitle": "Ideale per studenti e scuole",
+      "studentText": "Poiché l’editor è semplice e visivo, funziona bene sia per gli studenti che devono creare il primo CV sia per le scuole che vogliono insegnare passo dopo passo come preparare un curriculum chiaro."
     },
     "steps": {
       "step1Title": "Scegli un layout e inizia a modificare",
@@ -188,6 +191,7 @@
       "item2Text": "Il layout orientato agli ATS mantiene i contenuti in un unico flusso naturale, senza barre laterali decorative, grafici o colonne separate.",
       "item3Title": "Sezioni semplici basate sul testo",
       "item3Text": "Competenze e lingue restano semplici voci testuali, mentre profilo, esperienza, formazione e certificazioni rimangono facili da modificare ed esportare."
-    }
+    },
+    "heroAudience": "Ideale per studenti che imparano a creare il primo CV e per scuole che insegnano le basi del curriculum."
   }
 }

@@ -118,7 +118,8 @@
       "fast": "Rapide à démarrer, facile à terminer",
       "noAccount": "Aucun compte nécessaire pour la version gratuite",
       "multilang": "Éditeur et landing page multilingues",
-      "ats": "Option une colonne compatible ATS"
+      "ats": "Option une colonne compatible ATS",
+      "school": "Utile pour les étudiants, les écoles et un premier CV"
     },
     "preview": {
       "classicBadge": "Mise en page classique",
@@ -146,7 +147,9 @@
       "flexibleTitle": "Éditeur flexible",
       "flexibleText": "Vous disposez de deux modèles simples. Pourquoi plus ? Un CV doit être lisible, clair et ciblé. Modifiez votre résumé, votre expérience, vos compétences, vos langues et vos certifications, réorganisez les sections, ajoutez vos propres sections et ajustez les espacements, couleurs et polices.",
       "multilingualTitle": "Pratique pour les utilisateurs multilingues",
-      "multilingualText": "L’anglais est la langue par défaut, mais l’interface et la landing page peuvent fonctionner dans plusieurs langues, ce qui rend l’outil plus adapté à différents marchés."
+      "multilingualText": "L’anglais est la langue par défaut, mais l’interface et la landing page peuvent fonctionner dans plusieurs langues, ce qui rend l’outil plus adapté à différents marchés.",
+      "studentTitle": "Idéal pour les étudiants et les écoles",
+      "studentText": "Comme l’éditeur est simple et visuel, il convient très bien aux étudiants qui créent leur premier CV ainsi qu’aux écoles qui veulent apprendre pas à pas à rédiger un CV clair."
     },
     "steps": {
       "step1Title": "Choisissez une mise en page et commencez",
@@ -188,6 +191,7 @@
       "item2Text": "La mise en page orientée ATS garde le contenu dans un flux naturel unique, sans barre latérale décorative, graphique ou colonnes séparées.",
       "item3Title": "Sections textuelles simples",
       "item3Text": "Les compétences et les langues restent de simples entrées textuelles, tandis que le résumé, l’expérience, la formation et les certifications restent faciles à modifier et à exporter."
-    }
+    },
+    "heroAudience": "Idéal pour les étudiants qui apprennent à créer un premier CV et pour les écoles qui enseignent les bases du CV."
   }
 }

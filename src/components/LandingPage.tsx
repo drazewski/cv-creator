@@ -3,6 +3,7 @@ import {
   faArrowRight,
   faBolt,
   faGlobe,
+  faGraduationCap,
   faLayerGroup,
   faListCheck,
   faAlignLeft,
@@ -33,6 +34,7 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
     { icon: faBolt, title: t('landing.features.speedTitle'), text: t('landing.features.speedText') },
     { icon: faLayerGroup, title: t('landing.features.flexibleTitle'), text: t('landing.features.flexibleText') },
     { icon: faGlobe, title: t('landing.features.multilingualTitle'), text: t('landing.features.multilingualText') },
+    { icon: faGraduationCap, title: t('landing.features.studentTitle'), text: t('landing.features.studentText') },
   ];
 
   const stepItems = [
@@ -82,6 +84,10 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
             <p className="landing-eyebrow">{t('landing.eyebrow')}</p>
             <h1 className="landing-hero__title">{t('landing.heroTitle')}</h1>
             <p className="landing-hero__lead">{t('landing.heroLead')}</p>
+            <div className="landing-hero__audience">
+              <FontAwesomeIcon icon={faGraduationCap} />
+              <span>{t('landing.heroAudience')}</span>
+            </div>
             <div className="landing-hero__actions">
               <button className="landing-btn landing-btn--primary" onClick={() => onNavigate('/app')}>
                 {t('landing.createCv')}
@@ -95,6 +101,7 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
               <li>{t('landing.trust.noAccount')}</li>
               <li>{t('landing.trust.ats')}</li>
               <li>{t('landing.trust.multilang')}</li>
+              <li>{t('landing.trust.school')}</li>
             </ul>
           </div>
 
