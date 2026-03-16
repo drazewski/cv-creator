@@ -58,6 +58,7 @@
     "sectionTitles": "Titres de section",
     "bodyText": "Texte principal",
     "photoSize": "Taille de la photo",
+    "photoRadius": "Arrondi de la photo",
     "sidebarText": "Texte de la barre latérale",
     "spacing": "Espacement",
     "headerSpacing": "Espacement de l'en-tête",

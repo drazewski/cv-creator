@@ -37,6 +37,31 @@ function SizeSlider({
   );
 }
 
+function PercentSlider({
+  label,
+  value,
+  min,
+  max,
+  onChange,
+}: { label: string; value: number; min: number; max: number; onChange: (value: number) => void }) {
+  return (
+    <Row label={label}>
+      <div className="sd-slider-group">
+        <input
+          type="range"
+          min={min}
+          max={max}
+          step={1}
+          value={value}
+          onChange={(e) => onChange(Number(e.target.value))}
+          className="sd-slider"
+        />
+        <span className="sd-slider__value">{value}%</span>
+      </div>
+    </Row>
+  );
+}
+
 function SpacingSlider({
   label,
   value,
@@ -138,9 +163,13 @@ export default function StylingDrawer() {
             onChange={(value) => setStyling('fontSizeBody', value)} />
           <SizeSlider label={t('styling.photoSize')} value={styling.photoSizeUS} min={60} max={180}
             onChange={(value) => setStyling('photoSizeUS', value)} />
+          <PercentSlider label={t('styling.photoRadius')} value={styling.photoRadius} min={0} max={50}
+            onChange={(value) => setStyling('photoRadius', value)} />
         </>
       ) : (
         <>
+          <SizeSlider label={t('styling.name')} value={styling.fontSizeSidebarName} min={14} max={36}
+            onChange={(value) => setStyling('fontSizeSidebarName', value)} />
           <SizeSlider label={t('styling.sidebarText')} value={styling.fontSizeSidebar} min={10} max={16}
             onChange={(value) => setStyling('fontSizeSidebar', value)} />
           <SizeSlider label={t('styling.sectionTitles')} value={styling.fontSizeTitle} min={9} max={20}
@@ -149,6 +178,8 @@ export default function StylingDrawer() {
             onChange={(value) => setStyling('fontSizeBody', value)} />
           <SizeSlider label={t('styling.photoSize')} value={styling.photoSizeClassic} min={60} max={200}
             onChange={(value) => setStyling('photoSizeClassic', value)} />
+          <PercentSlider label={t('styling.photoRadius')} value={styling.photoRadius} min={0} max={50}
+            onChange={(value) => setStyling('photoRadius', value)} />
         </>
       )}
 

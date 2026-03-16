@@ -24,7 +24,7 @@ interface EditorPageProps {
 export default function EditorPage({ onNavigate }: EditorPageProps) {
   const { t, i18n } = useTranslation();
   const { styling, resetLayout, layoutId } = useSettingsStore();
-  const { resetData } = useCvStore();
+  const { resetData, data: { name: userName } } = useCvStore();
   const activeLanguage = getSupportedLanguage(i18n.resolvedLanguage ?? i18n.language);
   const scalerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
@@ -51,6 +51,7 @@ export default function EditorPage({ onNavigate }: EditorPageProps) {
   const cvVars = {
     '--color-primary': styling.primaryColor,
     '--color-accent': styling.accentColor,
+    '--font-size-sidebar-name': `${styling.fontSizeSidebarName}px`,
     '--font-size-sidebar': `${styling.fontSizeSidebar}px`,
     '--font-size-title': `${styling.fontSizeTitle}px`,
     '--font-size-body': `${styling.fontSizeBody}px`,
@@ -62,11 +63,12 @@ export default function EditorPage({ onNavigate }: EditorPageProps) {
     '--line-height-us-header': styling.lineHeightUSHeader,
     '--photo-size-classic': `${styling.photoSizeClassic}px`,
     '--photo-size-us': `${styling.photoSizeUS}px`,
+    '--photo-radius': `${styling.photoRadius}%`,
     fontFamily: FONTS[styling.font].css,
   } as React.CSSProperties;
 
   return (
-    <div className={`cv-page${preview ? ' is-preview' : ''}`}>
+    <div className={`cv-page cv-page--${layoutId}${preview ? ' is-preview' : ''}`}>
       <header className="cv-header">
         <div className="cv-toolbar" style={{ width: CV_WIDTH * scale }}>
           <BrandLogo
@@ -94,7 +96,11 @@ export default function EditorPage({ onNavigate }: EditorPageProps) {
               className="cv-toolbar__export"
               onClick={() => {
                 Analytics.cvExported();
+                const prevTitle = document.title;
+                const slug = userName.trim().toLowerCase().replace(/\s+/g, '-') || 'my';
+                document.title = `${slug}-cv`;
                 window.print();
+                document.title = prevTitle;
               }}
               title={t('app.exportPdf')}
             >
@@ -112,7 +118,7 @@ export default function EditorPage({ onNavigate }: EditorPageProps) {
             marginBottom: scale < 1 ? `${(scale - 1) * 1123}px` : undefined,
           }}
         >
-          <div className="cv-layout" style={cvVars}>
+          <div className={`cv-layout ${layoutId === 'classic' ? 'cv-layout--classic' : 'cv-layout--us'}`} style={cvVars}>
             {layoutId === 'classic' ? (
               <>
                 <Sidebar />

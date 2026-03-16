@@ -27,27 +27,27 @@
 .us-header__photo .photo-upload {
   width: var(--photo-size-us, 80px);
   height: var(--photo-size-us, 80px);
-  border-radius: 50%;
+  border-radius: var(--photo-radius, 50%);
   overflow: hidden;
 }
 
 .us-header__photo .photo-upload__trigger {
   width: var(--photo-size-us, 80px);
   height: var(--photo-size-us, 80px);
-  border-radius: 50%;
+  border-radius: var(--photo-radius, 50%);
 }
 
 .us-header__photo .photo-upload__img {
   width: var(--photo-size-us, 80px);
   height: var(--photo-size-us, 80px);
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: var(--photo-radius, 50%);
 }
 
 .us-header__photo .photo-upload__placeholder {
   width: var(--photo-size-us, 80px);
   height: var(--photo-size-us, 80px);
-  border-radius: 50%;
+  border-radius: var(--photo-radius, 50%);
   background: #e8edf2;
   display: flex;
   align-items: center;

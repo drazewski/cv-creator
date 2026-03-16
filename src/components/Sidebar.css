@@ -1,5 +1,5 @@
 .sidebar {
-  width: 27%;
+  width: var(--classic-sidebar-width, 27%);
   min-width: 200px;
   background: var(--color-primary);
   color: #e8edf3;
@@ -18,7 +18,7 @@
 
 /* Name & Title */
 .sidebar__name {
-  font-size: 1.4rem;
+  font-size: var(--font-size-sidebar-name, 22px);
   font-weight: 700;
   text-align: center;
   margin: 0 0 0.35rem;

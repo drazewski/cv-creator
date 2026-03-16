@@ -58,6 +58,7 @@
     "sectionTitles": "Abschnittstitel",
     "bodyText": "Fließtext",
     "photoSize": "Fotogröße",
+    "photoRadius": "Bildrundung",
     "sidebarText": "Seitenleisten-Text",
     "spacing": "Abstände",
     "headerSpacing": "Kopfbereich-Abstand",

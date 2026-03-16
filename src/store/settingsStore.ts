@@ -18,6 +18,7 @@ export interface Styling {
   primaryColor: string;
   accentColor: string;
   font: FontKey;
+  fontSizeSidebarName: number;
   fontSizeSidebar: number;
   fontSizeTitle: number;
   fontSizeBody: number;
@@ -30,6 +31,7 @@ export interface Styling {
   showContactIcons: boolean;
   photoSizeClassic: number;
   photoSizeUS: number;
+  photoRadius: number;
 }
 
 export type SidebarKey = 'photo' | 'name' | 'title' | 'position' | 'location' | 'email' | 'phone' | 'webpage' | 'github' | 'linkedin' | 'technologies' | 'languages';
@@ -63,6 +65,7 @@ const defaultStyling: Styling = {
   primaryColor: '#1e2a3a',
   accentColor: '#4a90d9',
   font: 'system',
+  fontSizeSidebarName: 22,
   fontSizeSidebar: 13,
   fontSizeTitle: 11,
   fontSizeBody: 14,
@@ -75,6 +78,7 @@ const defaultStyling: Styling = {
   showContactIcons: true,
   photoSizeClassic: 120,
   photoSizeUS: 80,
+  photoRadius: 50,
 };
 
 const defaultVisibility: Visibility = {
@@ -196,7 +200,7 @@ export const useSettingsStore = create<SettingsStore>()(
     }),
     {
       name: 'cv-settings',
-      version: 15,
+      version: 17,
       migrate: (stored) => migrateSettings(stored),
     },
   ),

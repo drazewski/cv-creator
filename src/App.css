@@ -34,6 +34,10 @@
   border: 1px solid #888;
 }
 
+.cv-layout--classic {
+  --classic-sidebar-width: 27%;
+}
+
 /* ── Header ─────────────────────────────────────────────────── */
 .cv-header {
   width: 100%;
@@ -247,6 +251,21 @@
     display: block;
   }
 
+  .cv-page--classic {
+    position: relative;
+  }
+
+  .cv-page--classic::before {
+    content: '';
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: var(--classic-sidebar-width, 27%);
+    background: var(--color-primary);
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    z-index: 0;
+  }
+
   .cv-layout {
     width: 100%;
     min-height: 100vh;
@@ -254,6 +273,20 @@
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
     border: none;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cv-layout--classic {
+    background: transparent;
+  }
+
+  .cv-layout--classic .sidebar {
+    background: transparent;
+  }
+
+  .cv-layout--classic .main-content {
+    background: #fff;
   }
 
   /* Hide all interactive chrome */
