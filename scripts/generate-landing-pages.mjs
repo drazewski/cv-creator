@@ -1,4 +1,5 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { readFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -6,6 +7,24 @@ const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(scriptDir, '..');
 const localeDir = path.join(rootDir, 'src/i18n/locales');
 const publicDir = path.join(rootDir, 'public');
+
+// ── Environment variables (PostHog) ────────────────────────────────────────
+function loadEnvVars() {
+  const envFile = path.join(rootDir, '.env');
+  const fileVars = {};
+  if (existsSync(envFile)) {
+    for (const line of readFileSync(envFile, 'utf8').split('\n')) {
+      const m = line.match(/^([A-Z_][A-Z0-9_]*)=(.*)$/);
+      if (m) fileVars[m[1]] = m[2].trim();
+    }
+  }
+  return {
+    posthogKey: process.env.VITE_PUBLIC_POSTHOG_KEY || fileVars.VITE_PUBLIC_POSTHOG_KEY || '',
+    posthogHost: process.env.VITE_PUBLIC_POSTHOG_HOST || fileVars.VITE_PUBLIC_POSTHOG_HOST || '',
+  };
+}
+
+const env = loadEnvVars();
 
 const LOCALES = [
   { code: 'en', path: '', nativeLabel: 'EN', ogLocale: 'en_US' },
@@ -16,6 +35,220 @@ const LOCALES = [
   { code: 'it', path: 'it', nativeLabel: 'IT', ogLocale: 'it_IT' },
   { code: 'pt', path: 'pt', nativeLabel: 'PT', ogLocale: 'pt_PT' },
 ];
+
+// ── Cookie-consent translations (mirrors src/lib/cookieconsent.ts) ──────────
+const COOKIE_TRANSLATIONS = {
+  en: {
+    consentModal: {
+      title: '🍪 We use cookies',
+      description: 'We use essential cookies to make the app work. With your consent we also use analytics cookies to understand how people use MyCeeVee.',
+      acceptAllBtn: 'Accept all',
+      acceptNecessaryBtn: 'Reject optional',
+      showPreferencesBtn: 'Manage preferences',
+    },
+    preferencesModal: {
+      title: 'Cookie preferences',
+      acceptAllBtn: 'Accept all',
+      acceptNecessaryBtn: 'Reject all optional',
+      savePreferencesBtn: 'Save preferences',
+      closeIconLabel: 'Close',
+      sections: [
+        { title: 'Essential cookies', description: 'These cookies are required for the app to function, for example to save your CV locally. They cannot be disabled.', linkedCategory: 'necessary' },
+        { title: 'Analytics cookies', description: 'These cookies help us understand which features are used and where the product can improve. No personal data is sold.', linkedCategory: 'analytics' },
+      ],
+    },
+  },
+  pl: {
+    consentModal: {
+      title: '🍪 Używamy plików cookie',
+      description: 'Używamy niezbędnych plików cookie, aby aplikacja działała. Za Twoją zgodą używamy też analitycznych plików cookie, aby lepiej rozumieć korzystanie z MyCeeVee.',
+      acceptAllBtn: 'Akceptuj wszystko',
+      acceptNecessaryBtn: 'Odrzuć opcjonalne',
+      showPreferencesBtn: 'Zarządzaj preferencjami',
+    },
+    preferencesModal: {
+      title: 'Preferencje plików cookie',
+      acceptAllBtn: 'Akceptuj wszystko',
+      acceptNecessaryBtn: 'Odrzuć opcjonalne',
+      savePreferencesBtn: 'Zapisz preferencje',
+      closeIconLabel: 'Zamknij',
+      sections: [
+        { title: 'Niezbędne pliki cookie', description: 'Te pliki cookie są wymagane do działania aplikacji, np. do lokalnego zapisywania CV. Nie można ich wyłączyć.', linkedCategory: 'necessary' },
+        { title: 'Analityczne pliki cookie', description: 'Te pliki cookie pomagają nam zrozumieć, z których funkcji korzystają użytkownicy i co warto ulepszyć. Nie sprzedajemy danych osobowych.', linkedCategory: 'analytics' },
+      ],
+    },
+  },
+  de: {
+    consentModal: {
+      title: '🍪 Wir verwenden Cookies',
+      description: 'Wir verwenden notwendige Cookies, damit die App funktioniert. Mit deiner Zustimmung nutzen wir auch Analyse-Cookies, um die Nutzung von MyCeeVee besser zu verstehen.',
+      acceptAllBtn: 'Alle akzeptieren',
+      acceptNecessaryBtn: 'Optionale ablehnen',
+      showPreferencesBtn: 'Einstellungen verwalten',
+    },
+    preferencesModal: {
+      title: 'Cookie-Einstellungen',
+      acceptAllBtn: 'Alle akzeptieren',
+      acceptNecessaryBtn: 'Optionale ablehnen',
+      savePreferencesBtn: 'Einstellungen speichern',
+      closeIconLabel: 'Schließen',
+      sections: [
+        { title: 'Notwendige Cookies', description: 'Diese Cookies sind für die Funktion der App erforderlich, zum Beispiel um deinen CV lokal zu speichern. Sie können nicht deaktiviert werden.', linkedCategory: 'necessary' },
+        { title: 'Analyse-Cookies', description: 'Diese Cookies helfen uns zu verstehen, welche Funktionen genutzt werden und wo wir das Produkt verbessern können. Es werden keine persönlichen Daten verkauft.', linkedCategory: 'analytics' },
+      ],
+    },
+  },
+  es: {
+    consentModal: {
+      title: '🍪 Usamos cookies',
+      description: 'Usamos cookies esenciales para que la aplicación funcione. Con tu consentimiento también usamos cookies analíticas para entender mejor cómo se usa MyCeeVee.',
+      acceptAllBtn: 'Aceptar todo',
+      acceptNecessaryBtn: 'Rechazar opcionales',
+      showPreferencesBtn: 'Gestionar preferencias',
+    },
+    preferencesModal: {
+      title: 'Preferencias de cookies',
+      acceptAllBtn: 'Aceptar todo',
+      acceptNecessaryBtn: 'Rechazar opcionales',
+      savePreferencesBtn: 'Guardar preferencias',
+      closeIconLabel: 'Cerrar',
+      sections: [
+        { title: 'Cookies esenciales', description: 'Estas cookies son necesarias para que la aplicación funcione, por ejemplo para guardar tu CV localmente. No se pueden desactivar.', linkedCategory: 'necessary' },
+        { title: 'Cookies analíticas', description: 'Estas cookies nos ayudan a entender qué funciones se usan y dónde mejorar el producto. No se venden datos personales.', linkedCategory: 'analytics' },
+      ],
+    },
+  },
+  fr: {
+    consentModal: {
+      title: '🍪 Nous utilisons des cookies',
+      description: "Nous utilisons des cookies essentiels pour faire fonctionner l\u2019application. Avec votre accord, nous utilisons aussi des cookies analytiques pour mieux comprendre l\u2019usage de MyCeeVee.",
+      acceptAllBtn: 'Tout accepter',
+      acceptNecessaryBtn: 'Refuser les optionnels',
+      showPreferencesBtn: 'Gérer les préférences',
+    },
+    preferencesModal: {
+      title: 'Préférences de cookies',
+      acceptAllBtn: 'Tout accepter',
+      acceptNecessaryBtn: 'Refuser les optionnels',
+      savePreferencesBtn: 'Enregistrer les préférences',
+      closeIconLabel: 'Fermer',
+      sections: [
+        { title: 'Cookies essentiels', description: "Ces cookies sont nécessaires au fonctionnement de l\u2019application, par exemple pour enregistrer votre CV localement. Ils ne peuvent pas être désactivés.", linkedCategory: 'necessary' },
+        { title: 'Cookies analytiques', description: "Ces cookies nous aident à comprendre quelles fonctionnalités sont utilisées et où améliorer le produit. Aucune donnée personnelle n\u2019est vendue.", linkedCategory: 'analytics' },
+      ],
+    },
+  },
+  it: {
+    consentModal: {
+      title: '🍪 Usiamo i cookie',
+      description: "Usiamo cookie essenziali per far funzionare l\u2019app. Con il tuo consenso usiamo anche cookie analitici per capire meglio come viene usato MyCeeVee.",
+      acceptAllBtn: 'Accetta tutto',
+      acceptNecessaryBtn: 'Rifiuta facoltativi',
+      showPreferencesBtn: 'Gestisci preferenze',
+    },
+    preferencesModal: {
+      title: 'Preferenze cookie',
+      acceptAllBtn: 'Accetta tutto',
+      acceptNecessaryBtn: 'Rifiuta facoltativi',
+      savePreferencesBtn: 'Salva preferenze',
+      closeIconLabel: 'Chiudi',
+      sections: [
+        { title: 'Cookie essenziali', description: "Questi cookie sono necessari per il funzionamento dell\u2019app, ad esempio per salvare il tuo CV in locale. Non possono essere disattivati.", linkedCategory: 'necessary' },
+        { title: 'Cookie analitici', description: 'Questi cookie ci aiutano a capire quali funzioni vengono usate e dove migliorare il prodotto. Nessun dato personale viene venduto.', linkedCategory: 'analytics' },
+      ],
+    },
+  },
+  pt: {
+    consentModal: {
+      title: '🍪 Utilizamos cookies',
+      description: 'Utilizamos cookies essenciais para que a aplicação funcione. Com o seu consentimento, também usamos cookies analíticos para compreender melhor como o MyCeeVee é utilizado.',
+      acceptAllBtn: 'Aceitar tudo',
+      acceptNecessaryBtn: 'Rejeitar opcionais',
+      showPreferencesBtn: 'Gerir preferências',
+    },
+    preferencesModal: {
+      title: 'Preferências de cookies',
+      acceptAllBtn: 'Aceitar tudo',
+      acceptNecessaryBtn: 'Rejeitar opcionais',
+      savePreferencesBtn: 'Guardar preferências',
+      closeIconLabel: 'Fechar',
+      sections: [
+        { title: 'Cookies essenciais', description: 'Estes cookies são necessários para o funcionamento da aplicação, por exemplo para guardar o seu CV localmente. Não podem ser desativados.', linkedCategory: 'necessary' },
+        { title: 'Cookies analíticos', description: 'Estes cookies ajudam-nos a perceber quais funcionalidades são usadas e onde melhorar o produto. Nenhum dado pessoal é vendido.', linkedCategory: 'analytics' },
+      ],
+    },
+  },
+};
+
+// PostHog async loader snippet (official)
+const POSTHOG_SNIPPET = '!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageViewId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);';
+
+function renderConsentAndAnalyticsScripts(langCode) {
+  const translation = COOKIE_TRANSLATIONS[langCode] || COOKIE_TRANSLATIONS.en;
+  const hasPosthog = env.posthogKey && env.posthogHost;
+
+  const posthogInit = hasPosthog
+    ? `
+    var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+    if (!isLocal) {
+      ${POSTHOG_SNIPPET}
+      posthog.init('${env.posthogKey}', {
+        api_host: '${env.posthogHost}',
+        persistence: 'memory',
+        autocapture: false,
+        capture_pageview: false,
+        loaded: function(ph) {
+          if (!CookieConsent.acceptedCategory('analytics')) {
+            ph.opt_out_capturing();
+          }
+        }
+      });
+    }
+    function _mcEnableAnalytics() {
+      if (isLocal) return;
+      posthog.opt_in_capturing();
+      posthog.capture('$pageview');
+    }
+    function _mcDisableAnalytics() {
+      if (isLocal) return;
+      posthog.opt_out_capturing();
+      posthog.reset();
+    }`
+    : `
+    function _mcEnableAnalytics() {}
+    function _mcDisableAnalytics() {}`;
+
+  return `
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3.1.0/dist/cookieconsent.umd.js"></script>
+    <script>
+    (function() {${posthogInit}
+
+      CookieConsent.run({
+        onConsent: function() {
+          if (CookieConsent.acceptedCategory('analytics')) _mcEnableAnalytics();
+        },
+        onChange: function(param) {
+          if (param.changedCategories.indexOf('analytics') > -1) {
+            if (CookieConsent.acceptedCategory('analytics')) _mcEnableAnalytics();
+            else _mcDisableAnalytics();
+          }
+        },
+        guiOptions: {
+          consentModal: { layout: 'bar', position: 'bottom', equalWeightButtons: false },
+          preferencesModal: { layout: 'box' }
+        },
+        categories: {
+          necessary: { enabled: true, readOnly: true },
+          analytics: { enabled: false, autoClear: { cookies: [{ name: /^_ph_/ }, { name: /^_ga/ }] } }
+        },
+        language: {
+          default: '${langCode}',
+          translations: ${JSON.stringify({ [langCode]: translation })}
+        }
+      });
+    })();
+    </script>`;
+}
 
 function escapeHtml(value) {
   return value
@@ -161,6 +394,7 @@ ${jsonLd}
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/landing-static.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3.1.0/dist/cookieconsent.css" />
   </head>
   <body>
     <header class="landing-header">
@@ -300,6 +534,7 @@ ${renderFaqItems(landing.faq)}
         </div>
       </section>
     </main>
+${renderConsentAndAnalyticsScripts(locale.code)}
   </body>
 </html>
 `;
