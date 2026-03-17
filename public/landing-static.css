@@ -444,11 +444,12 @@ button {
 .landing-card,
 .landing-step,
 .landing-faq__item {
-  padding: 1.5rem;
+  padding: 1rem;
   background: rgba(255, 255, 255, 0.88);
   border: 1px solid #e7ebf1;
   border-radius: 22px;
   box-shadow: 0 14px 30px rgba(40, 60, 83, 0.06);
+  text-align: center;
 }
 
 .landing-card h3,
@@ -466,7 +467,7 @@ button {
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
-  border-radius: 14px;
+  border-radius: 50%;
   background: #edf4fc;
   color: #4a90d9;
   font-size: 1.2rem;

@@ -217,6 +217,15 @@ These are the items still needed to finish the free version.
 - Review empty states and default content
 - Review landing page → app conversion flow
 
+### 4.Footer with Contact, Policies and Links
+**Priority:** Low  
+**Why:** A footer with contact info, policies, and links can enhance credibility and provide users with ways to connect, but it’s not critical for the initial free version launch.
+
+- Add a simple footer to the landing page and app with:
+  - Contact email
+  - Links to Privacy Policy and Terms of Service
+  - Optional links (e.g. GitHub)
+
 ### Free Version Completion Definition
 
 The free version can be considered complete when:
