@@ -8,6 +8,8 @@ import {
   SectionTitles,
   SECTION_TITLE_DEFAULTS,
   TITLE_DEFAULTS,
+  PRESENT_DEFAULTS,
+  PLACEHOLDER_DEFAULTS,
   CustomSection,
   ExperienceEntry,
   EducationEntry,
@@ -74,34 +76,37 @@ function createTextPointItem(type: MainSectionItemType): TextPointItem {
   };
 }
 
-function createExperienceEntry(): ExperienceEntry {
+function createExperienceEntry(lang: CvLanguage): ExperienceEntry {
+  const p = PLACEHOLDER_DEFAULTS[lang];
   return {
     id: crypto.randomUUID(),
-    company: 'Company',
-    role: 'Role',
-    period: 'Year – Year',
-    location: 'Location',
+    company: p.company,
+    role: p.role,
+    period: p.periodRange,
+    location: p.location,
     bullets: [createTextPointItem('point')],
   };
 }
 
-function createEducationEntry(type: MainSectionItemType): EducationEntry {
+function createEducationEntry(type: MainSectionItemType, lang: CvLanguage): EducationEntry {
+  const p = PLACEHOLDER_DEFAULTS[lang];
   return {
     id: crypto.randomUUID(),
     type,
-    institution: 'Institution',
-    degree: 'Degree',
-    period: 'Year – Year',
+    institution: p.institution,
+    degree: p.degree,
+    period: p.periodRange,
   };
 }
 
-function createCourseEntry(type: MainSectionItemType): CourseEntry {
+function createCourseEntry(type: MainSectionItemType, lang: CvLanguage): CourseEntry {
+  const p = PLACEHOLDER_DEFAULTS[lang];
   return {
     id: crypto.randomUUID(),
     type,
-    name: 'Course name',
-    provider: 'Provider',
-    year: 'Year',
+    name: p.courseName,
+    provider: p.provider,
+    year: p.year,
   };
 }
 
@@ -122,10 +127,57 @@ function syncLocalizedDefaults(data: CvData, fromLanguage: CvLanguage, toLanguag
     }
   });
 
+  const fromPresent = PRESENT_DEFAULTS[fromLanguage];
+  const toPresent = PRESENT_DEFAULTS[toLanguage];
+  const fromPlaceholders = PLACEHOLDER_DEFAULTS[fromLanguage];
+  const toPlaceholders = PLACEHOLDER_DEFAULTS[toLanguage];
+
+  const experience = data.experience.map((entry) => {
+    let period = entry.period;
+    if (period.includes(fromPresent)) {
+      period = period.replace(fromPresent, toPresent);
+    }
+    const updated: Partial<ExperienceEntry> = {};
+    if (period !== entry.period) updated.period = period;
+    if (entry.company === fromPlaceholders.company) updated.company = toPlaceholders.company;
+    if (entry.role === fromPlaceholders.role) updated.role = toPlaceholders.role;
+    if (entry.location === fromPlaceholders.location) updated.location = toPlaceholders.location;
+    if (entry.period === fromPlaceholders.periodRange) updated.period = toPlaceholders.periodRange;
+    return Object.keys(updated).length > 0 ? { ...entry, ...updated } : entry;
+  });
+
+  const education = data.education.map((entry) => {
+    const updated: Partial<EducationEntry> = {};
+    if (entry.institution === fromPlaceholders.institution) updated.institution = toPlaceholders.institution;
+    if (entry.degree === fromPlaceholders.degree) updated.degree = toPlaceholders.degree;
+    if (entry.period === fromPlaceholders.periodRange) updated.period = toPlaceholders.periodRange;
+    return Object.keys(updated).length > 0 ? { ...entry, ...updated } : entry;
+  });
+
+  const courses = data.courses.map((entry) => {
+    const updated: Partial<CourseEntry> = {};
+    if (entry.name === fromPlaceholders.courseName) updated.name = toPlaceholders.courseName;
+    if (entry.provider === fromPlaceholders.provider) updated.provider = toPlaceholders.provider;
+    if (entry.year === fromPlaceholders.year) updated.year = toPlaceholders.year;
+    return Object.keys(updated).length > 0 ? { ...entry, ...updated } : entry;
+  });
+
+  const sidebarCustom = data.sidebarCustom.map((sec) =>
+    sec.title === fromPlaceholders.sectionTitle ? { ...sec, title: toPlaceholders.sectionTitle } : sec,
+  );
+  const mainCustom = data.mainCustom.map((sec) =>
+    sec.title === fromPlaceholders.sectionTitle ? { ...sec, title: toPlaceholders.sectionTitle } : sec,
+  );
+
   return {
     ...data,
     title: data.title === TITLE_DEFAULTS[fromLanguage] ? TITLE_DEFAULTS[toLanguage] : data.title,
     sectionTitles,
+    experience,
+    education,
+    courses,
+    sidebarCustom,
+    mainCustom,
   };
 }
 
@@ -226,21 +278,21 @@ export const useCvStore = create<CvStore>()(
           },
         })),
       addExperience: () =>
-        set((s) => ({ data: { ...s.data, experience: [...s.data.experience, createExperienceEntry()] } })),
+        set((s) => ({ data: { ...s.data, experience: [...s.data.experience, createExperienceEntry(s.cvLanguage)] } })),
       removeExperience: (index) =>
         set((s) => ({ data: { ...s.data, experience: s.data.experience.filter((_, i) => i !== index) } })),
 
       setEducationField: (index, field, value) =>
         set((s) => ({ data: { ...s.data, education: updateAt(s.data.education, index, (e) => ({ ...e, [field]: value })) } })),
       addEducation: (type) =>
-        set((s) => ({ data: { ...s.data, education: [...s.data.education, createEducationEntry(type)] } })),
+        set((s) => ({ data: { ...s.data, education: [...s.data.education, createEducationEntry(type, s.cvLanguage)] } })),
       removeEducation: (index) =>
         set((s) => ({ data: { ...s.data, education: s.data.education.filter((_, i) => i !== index) } })),
 
       setCourseField: (index, field, value) =>
         set((s) => ({ data: { ...s.data, courses: updateAt(s.data.courses, index, (c) => ({ ...c, [field]: value })) } })),
       addCourse: (type) =>
-        set((s) => ({ data: { ...s.data, courses: [...s.data.courses, createCourseEntry(type)] } })),
+        set((s) => ({ data: { ...s.data, courses: [...s.data.courses, createCourseEntry(type, s.cvLanguage)] } })),
       removeCourse: (index) =>
         set((s) => ({ data: { ...s.data, courses: s.data.courses.filter((_, i) => i !== index) } })),
 
@@ -249,7 +301,7 @@ export const useCvStore = create<CvStore>()(
         set((s) => ({
           data: {
             ...s.data,
-            [area]: [...s.data[area], { id, title: 'Section Title', items: [] }],
+            [area]: [...s.data[area], { id, title: PLACEHOLDER_DEFAULTS[s.cvLanguage].sectionTitle, items: [] }],
           },
         }));
         return id;

@@ -72,6 +72,39 @@ export const SECTION_TITLE_DEFAULTS: Record<CvLanguage, SectionTitles> = {
   pt: { technologies: 'Competências', aboutMe: 'Resumo',         experience: 'Experiência',     education: 'Educação',       languages: 'Idiomas',     courses: 'Certificações'  },
 };
 
+export const PRESENT_DEFAULTS: Record<CvLanguage, string> = {
+  en: 'Present',
+  pl: 'Obecnie',
+  de: 'Heute',
+  es: 'Actualidad',
+  fr: 'Présent',
+  it: 'Presente',
+  pt: 'Presente',
+};
+
+export interface PlaceholderTexts {
+  company: string;
+  role: string;
+  periodRange: string;
+  location: string;
+  institution: string;
+  degree: string;
+  courseName: string;
+  provider: string;
+  year: string;
+  sectionTitle: string;
+}
+
+export const PLACEHOLDER_DEFAULTS: Record<CvLanguage, PlaceholderTexts> = {
+  en: { company: 'Company', role: 'Role', periodRange: 'Year – Year', location: 'Location', institution: 'Institution', degree: 'Degree', courseName: 'Course name', provider: 'Provider', year: 'Year', sectionTitle: 'Section Title' },
+  pl: { company: 'Firma', role: 'Stanowisko', periodRange: 'Rok – Rok', location: 'Lokalizacja', institution: 'Uczelnia', degree: 'Kierunek', courseName: 'Nazwa kursu', provider: 'Organizator', year: 'Rok', sectionTitle: 'Tytuł sekcji' },
+  de: { company: 'Unternehmen', role: 'Position', periodRange: 'Jahr – Jahr', location: 'Standort', institution: 'Hochschule', degree: 'Abschluss', courseName: 'Kursname', provider: 'Anbieter', year: 'Jahr', sectionTitle: 'Abschnittstitel' },
+  es: { company: 'Empresa', role: 'Puesto', periodRange: 'Año – Año', location: 'Ubicación', institution: 'Institución', degree: 'Título', courseName: 'Nombre del curso', provider: 'Proveedor', year: 'Año', sectionTitle: 'Título de sección' },
+  fr: { company: 'Entreprise', role: 'Poste', periodRange: 'Année – Année', location: 'Lieu', institution: 'Établissement', degree: 'Diplôme', courseName: 'Nom du cours', provider: 'Organisme', year: 'Année', sectionTitle: 'Titre de section' },
+  it: { company: 'Azienda', role: 'Ruolo', periodRange: 'Anno – Anno', location: 'Sede', institution: 'Istituto', degree: 'Titolo', courseName: 'Nome del corso', provider: 'Ente', year: 'Anno', sectionTitle: 'Titolo sezione' },
+  pt: { company: 'Empresa', role: 'Cargo', periodRange: 'Ano – Ano', location: 'Localização', institution: 'Instituição', degree: 'Grau', courseName: 'Nome do curso', provider: 'Instituição', year: 'Ano', sectionTitle: 'Título da secção' },
+};
+
 export interface CustomSection {
   id: string;
   title: string;

@@ -191,10 +191,10 @@ These are the items still needed to finish the free version.
 - Keep `Print` on the current browser print flow
 - Implement `Download PDF` as a real direct PDF file download, not a print-dialog workaround
 - Show a short loading/progress modal while the PDF is being prepared
-- Use that waiting state for lightweight messaging such as:
+<!-- - Use that waiting state for lightweight messaging such as:
   - future premium upgrade teaser
   - voluntary contribution prompt
-- Keep promotional messaging subtle, skippable, and non-blocking
+- Keep promotional messaging subtle, skippable, and non-blocking -->
 - Add analytics for:
   - export modal opened
   - print chosen
