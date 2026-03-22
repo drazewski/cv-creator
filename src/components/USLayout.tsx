@@ -97,6 +97,7 @@ export default function USLayout() {
                   <EditableText
                     value={item.content}
                     onChange={(value) => setAboutMeItem(index, value)}
+                    multiline={item.type === 'text'}
                     onRemove={() => removeAboutMeItem(index)}
                   />
                 </div>

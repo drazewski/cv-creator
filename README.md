@@ -64,7 +64,7 @@ Applicant Tracking Systems (ATS) are the software recruiters use to filter resum
 - Defaults to the single-column US Resume layout on mobile for easier editing
 
 ### 🌍 Internationalization
-- UI available in **English, Polish, German, Spanish, French, Italian, and Portuguese**
+- UI available in **English, Polish, German, Spanish, French, Italian, Portuguese, and Romanian**
 - CV section title defaults can also be switched between those languages
 
 ### 🔒 Privacy first

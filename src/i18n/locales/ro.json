@@ -1,0 +1,199 @@
+{
+  "app": {
+    "reset": "Reseteaza",
+    "preview": "Previzualizare",
+    "editMode": "Mod de editare",
+    "exportPdf": "Exporta PDF"
+  },
+  "uiLanguage": {
+    "label": "Limba"
+  },
+  "drawerTabs": {
+    "layouts": "Aspecte",
+    "elements": "Elemente",
+    "styling": "Stilizare"
+  },
+  "layouts": {
+    "hint": "Alege un aspect pentru CV-ul tau.",
+    "classicLabel": "Clasic",
+    "classicDescription": "Doua coloane cu bara laterala inchisa la culoare. Stil european.",
+    "usSingleLabel": "Resume SUA",
+    "usSingleDescription": "O singura coloana si optimizat pentru ATS. Excelent pentru fluxurile recrutorilor."
+  },
+  "cvLanguage": {
+    "label": "Limba CV-ului",
+    "confirmMessage": "Aceasta va reseta titlurile sectiunilor la valorile implicite pentru {{language}}. Continui?"
+  },
+  "elements": {
+    "header": "Antet",
+    "contact": "Contact",
+    "mainContent": "Continut principal",
+    "sidebar": "Bara laterala",
+    "photo": "Fotografie",
+    "name": "Nume",
+    "title": "Titlu",
+    "position": "Functie",
+    "location": "Locatie",
+    "email": "Email",
+    "phone": "Telefon mobil",
+    "website": "Website",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "technologies": "Competente",
+    "displayMode": "Mod de afisare",
+    "textMode": "Text",
+    "listMode": "Lista",
+    "languages": "Limbi"
+  },
+  "styling": {
+    "colors": "Culori",
+    "primary": "Principal",
+    "accent": "Accent",
+    "font": "Font",
+    "typeface": "Tip de litera",
+    "sizes": "Dimensiuni",
+    "name": "Nume",
+    "titleTagline": "Titlu / slogan",
+    "contactItems": "Elemente de contact",
+    "sectionTitles": "Titluri de sectiune",
+    "bodyText": "Text principal",
+    "photoSize": "Dimensiunea fotografiei",
+    "photoRadius": "Raza fotografiei",
+    "sidebarText": "Text bara laterala",
+    "spacing": "Spatiere",
+    "headerSpacing": "Spatiere antet",
+    "bodySpacing": "Spatiere corp",
+    "sidebarSpacing": "Spatiere bara laterala",
+    "options": "Optiuni",
+    "contactIcons": "Iconite contact"
+  },
+  "resetModal": {
+    "close": "Inchide",
+    "title": "Resetare",
+    "subtitle": "Alege ce vrei sa resetezi. Aceasta actiune nu poate fi anulata.",
+    "layoutStyling": "Aspect si stilizare",
+    "layoutStylingDescription": "Restabileste culorile, fonturile, dimensiunile, ordinea elementelor si vizibilitatea la valorile implicite. Continutul CV-ului tau ramane neschimbat.",
+    "resetLayout": "Reseteaza aspectul",
+    "cvData": "Date CV",
+    "cvDataDescription": "Inlocuieste tot continutul CV-ului (nume, experienta, educatie...) cu date demonstrative. Setarile de aspect raman pastrate.",
+    "resetData": "Reseteaza datele",
+    "everything": "Totul",
+    "everythingDescription": "Resetare completa — atat aspectul, cat si continutul CV-ului revin la valorile implicite originale.",
+    "resetAll": "Reseteaza tot"
+  },
+  "actions": {
+    "add": "Adauga",
+    "addSection": "Adauga sectiune",
+    "addText": "Adauga text",
+    "addPoint": "Adauga punct",
+    "addBullet": "Adauga bullet",
+    "addExperience": "Adauga experienta",
+    "addEducation": "Adauga educatie",
+    "addCourse": "Adauga curs",
+    "apply": "Aplica",
+    "cancel": "Anuleaza",
+    "close": "Inchide",
+    "remove": "Elimina",
+    "removeEntry": "Elimina intrarea",
+    "removeSection": "Elimina sectiunea",
+    "uploadPhoto": "Incarca fotografia",
+    "changePhoto": "Schimba fotografia",
+    "removePhoto": "Elimina fotografia"
+  },
+  "editable": {
+    "placeholder": "Editeaza...",
+    "customSectionPlaceholder": "Textul tau aici."
+  },
+  "editor": {
+    "metaTitle": "Editor CV — creeaza si personalizeaza CV-ul online",
+    "metaDescription": "Creeaza, editeaza si exporta CV-ul online cu aspecte flexibile, stilizare personalizata si export PDF."
+  },
+  "landing": {
+    "metaTitle": "Creator de CV gratuit online — creeaza un CV profesional cu MyCeeVee",
+    "metaDescription": "Creeaza gratuit online un CV profesional cu o structura prietenoasa cu ATS. Alege un aspect, ajusteaza culorile si fonturile, editeaza sectiunile confortabil si exporta CV-ul in PDF fara cont.",
+    "createCv": "Creeaza CV",
+    "learnMore": "Vezi cum functioneaza",
+    "eyebrow": "Se poate crea un CV si mai simplu?",
+    "heroTitle": "Creeaza-ti CV-ul fara sa fie nevoie sa te inregistrezi.",
+    "heroLead": "MyCeeVee te ajuta sa pregatesti un CV modern si usor de citit in doar cateva minute. Poti alege un aspect pe o singura coloana optimizat pentru ATS, poti edita rezumatul, experienta, competentele, limbile si certificarile direct in previzualizare, apoi poti ajusta documentul pentru tiparire sau export PDF.",
+    "trust": {
+      "fast": "Complet gratuit",
+      "noAccount": "Fara inregistrare sau autentificare",
+      "multilang": "Editor multilingv si flexibil",
+      "ats": "Layouturi simple prietenoase cu ATS",
+      "school": "Util pentru elevi, scoli si crearea primului CV"
+    },
+    "preview": {
+      "classicBadge": "Aspect clasic",
+      "atsBadge": "O singura coloana optimizata pentru ATS",
+      "customiseChip": "Personalizeaza fonturile, culorile si sectiunile"
+    },
+    "sections": {
+      "whyEyebrow": "De ce sa il folosesti?",
+      "whyTitle": "Un creator de CV gratuit conceput sa te ajute sa termini treaba rapid.",
+      "whyLead": "Aceasta aplicatie a fost creata pentru persoanele care au nevoie sa construiasca rapid un CV online, fara formulare greoaie si fara unelte grafice complicate. Scopul este simplu: sa te ajute sa creezi un document clar, fara stres inutil.",
+      "howEyebrow": "Cum functioneaza",
+      "howTitle": "De la pagina goala la un CV descarcabil in trei pasi simpli.",
+      "howLead": "Fluxul este intentionat usor, ca sa te poti concentra pe povestea ta profesionala, nu pe obstacole tehnice.",
+      "seoEyebrow": "Despre produs",
+      "seoTitle": "Un resume builder gratuit pentru oameni care apreciaza claritatea, viteza si confidentialitatea.",
+      "faqEyebrow": "Intrebari",
+      "faqTitle": "Intrebari frecvente",
+      "atsEyebrow": "ATS conteaza",
+      "atsTitle": "Creeaza un CV care ramane usor de citit pentru recrutori si sistemele ATS.",
+      "atsLead": "Software-ul ATS (Applicant Tracking System) scaneaza adesea un CV inainte ca un recrutor sa il citeasca. Aspectul resume pe o singura coloana pastreaza continutul intr-o ordine clara, cu titluri standard precum Rezumat, Experienta, Competente, Educatie, Limbi si Certificari."
+    },
+    "features": {
+      "speedTitle": "Construit pentru viteza",
+      "speedText": "Deschide aplicatia, alege un aspect si incepe imediat sa editezi. Poti pregati rapid un CV puternic, fara inregistrare, fara timp pierdut si fara setari inutile. Tiparire sau PDF? Asta depinde doar de tine.",
+      "flexibleTitle": "Editor flexibil",
+      "flexibleText": "Primesti doua sabloane simple. De ce mai multe? Un CV ar trebui sa fie usor de citit, clar si concentrat. Editeaza rezumatul, experienta, competentele, limbile si certificarile, reordoneaza sectiunile, adauga propriile sectiuni si ajusteaza spatierea, culorile si fonturile.",
+      "multilingualTitle": "Prietenos pentru utilizatorii multilingvi",
+      "multilingualText": "Engleza este limba implicita, dar interfata si landing page-ul pot functiona in multe limbi, ceea ce face instrumentul mai potrivit pentru piete diferite.",
+      "studentTitle": "Excelent pentru elevi si scoli",
+      "studentText": "Fiindca editorul este simplu si vizual, functioneaza foarte bine pentru elevii care isi creeaza primul CV si pentru scolile care vor sa predea pas cu pas cum se construieste un resume clar."
+    },
+    "steps": {
+      "step1Title": "Alege un aspect si incepe editarea",
+      "step1Text": "Porneste de la un sablon CV curat, apoi editeaza direct in previzualizare datele de contact, rezumatul, experienta, educatia, competentele, limbile, certificarile si sectiunile personalizate.",
+      "step2Title": "Ajusteaza documentul dupa stilul tau",
+      "step2Text": "Regleaza culorile, fonturile, spatierea si ordinea sectiunilor astfel incat documentul sa fie coerent, usor de citit si potrivit pentru tipul de rol pe care il doresti.",
+      "step3Title": "Exporta cand esti gata",
+      "step3Text": "Foloseste fluxul de export integrat pentru a pregati CV-ul pentru tiparire sau descarcare PDF dupa ce textul si detaliile vizuale sunt finalizate."
+    },
+    "seo": {
+      "lead": "Daca esti in cautarea unui creator de CV gratuit, a unui instrument online pentru resume sau a unui generator simplu de CV, MyCeeVee a fost conceput exact pentru acest scop.",
+      "paragraph1": "Aplicatia iti permite sa creezi un CV profesional online fara software desktop complicat si fara sa creezi un cont. Intr-un singur loc poti edita rezumatul, experienta, educatia, competentele, limbile, certificarile si sectiunile personalizate, vazand imediat rezultatul intr-un format A4 pregatit pentru tipar.",
+      "paragraph2": "Spre deosebire de multe editoare generice bazate pe formulare, acest creator de CV iti ofera cateva moduri concrete de editare. Poti alege intre doua aspecte de baza, inclusiv un resume pe o singura coloana optimizat pentru ATS, poti schimba fonturile si culorile, poti gestiona vizibilitatea sectiunilor si poti adapta documentul pentru o aplicatie anume. Astfel, instrumentul este util atat ca resume builder online, cat si ca solutie practica de creare a CV-urilor pentru pietele europene si internationale.",
+      "paragraph3": "Fiindca versiunea gratuita functioneaza direct in browser si nu necesita autentificare pentru utilizarea obisnuita, este o optiune foarte buna pentru oamenii care vor sa faca rapid un CV, sa imbunatateasca un resume existent sau sa genereze un PDF finisat inainte de a trimite o candidatura."
+    },
+    "faq": {
+      "question1": "Este gratuit acest creator de CV?",
+      "answer1": "Da. Versiunea gratuita este gandita sa fie pe deplin utila de una singura si nu necesita cont pentru editarea obisnuita.",
+      "question2": "Pot pregati CV-ul ca PDF?",
+      "answer2": "Da. Editorul este construit in jurul unui rezultat CV pregatit pentru tipar, iar exportul este dezvoltat pentru a sustine atat tiparirea, cat si descarcarea directa in PDF.",
+      "question3": "Este resume-ul pe o singura coloana prietenos cu ATS?",
+      "answer3": "Da. Aspectul Resume SUA pastreaza structura simpla, foloseste titluri standard pentru sectiuni si evita blocurile pe mai multe coloane, ceea ce il face mai potrivit pentru parsarea ATS decat aspectele mai decorative.",
+      "question4": "Pot folosi aplicatia in limbi diferite?",
+      "answer4": "Da. Engleza este limba implicita, iar interfata suporta deja multe limbi. Landing page-ul este de asemenea pregatit pentru utilizare multilingva.",
+      "question5": "Trebuie sa ma inregistrez ca sa folosesc aplicatia?",
+      "answer5": "Nu. Poti folosi versiunea gratuita a aplicatiei fara sa te inregistrezi sau sa te autentifici."
+    },
+    "final": {
+      "title": "Incepe sa-ti construiesti CV-ul acum si adapteaza-l la jobul pe care vrei sa il obtii.",
+      "text": "Deschide editorul, incearca aspectele, rafineaza stilul si pregateste un CV care arata profesionist inca dinainte ca un recrutor sa citeasca prima propozitie.",
+      "cta": "Deschide editorul CV"
+    },
+    "twitterDescription": "Creeaza gratuit online un CV in cateva minute cu o optiune pe o singura coloana prietenoasa cu ATS. Ajusteaza culorile si fonturile, editeaza sectiunile si exporta CV-ul in PDF fara sa creezi un cont.",
+    "structuredDescription": "Creeaza gratuit online un CV in cateva minute cu o optiune pe o singura coloana prietenoasa cu ATS. Ajusteaza culorile si fonturile, editeaza sectiunile si exporta CV-ul in PDF fara sa creezi un cont.",
+    "ats": {
+      "item1Title": "Denumiri clare pentru sectiuni",
+      "item1Text": "Foloseste titluri pe care uneltele ATS si recrutorii le recunosc, astfel incat experienta si competentele tale sa fie mai usor de clasificat.",
+      "item2Title": "Ordine de citire pe o singura coloana",
+      "item2Text": "Aspectul resume orientat catre ATS pastreaza continutul intr-un flux natural, fara bare laterale decorative, grafice sau coloane impartite.",
+      "item3Title": "Sectiuni simple bazate pe text",
+      "item3Text": "Competentele si limbile raman intrari de text simplu, iar rezumatul, experienta, educatia si certificarile raman usor de editat si exportat."
+    },
+    "heroAudience": "Excelent pentru elevii care invata sa creeze primul CV si pentru scolile care predau bazele redactarii unui resume."
+  }
+}

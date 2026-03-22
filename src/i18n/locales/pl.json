@@ -117,10 +117,10 @@
     "heroTitle": "Stwórz swoje CV bez konieczności zakładania konta.",
     "heroLead": "MyCeeVee pomaga przygotować nowoczesne i czytelne CV w kilka minut. Możesz wybrać jednokolumnowy układ przyjazny ATS, edytować podsumowanie, doświadczenie, umiejętności, języki i certyfikaty bezpośrednio w podglądzie, a potem dopracować dokument do druku lub eksportu PDF.",
     "trust": {
-      "fast": "Szybki start i wygodne wykończenie",
-      "noAccount": "W wersji darmowej nie potrzebujesz konta",
-      "multilang": "Wielojęzyczny edytor i landing page",
-      "ats": "Jednokolumnowy wariant przyjazny ATS",
+      "fast": "Całkowicie za darmo",
+      "noAccount": "Bez rejestracji i logowania",
+      "multilang": "Wielojęzyczny i elastyczny edytor",
+      "ats": "Proste układy przyjazne ATS",
       "school": "Pomocne dla uczniów, szkół i przy tworzeniu pierwszego CV"
     },
     "preview": {

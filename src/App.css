@@ -94,6 +94,7 @@
 }
 
 .cv-toolbar__language {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
@@ -110,20 +111,22 @@
   color: #4a90d9;
 }
 
-.cv-toolbar__language-label {
-  white-space: nowrap;
+.cv-toolbar__language-value {
+  min-width: 1.8rem;
+  text-transform: uppercase;
 }
 
 .cv-toolbar__language-select {
+  position: absolute;
+  inset: 0;
   border: none;
   background: transparent;
-  color: inherit;
+  color: transparent;
   font: inherit;
-  min-width: 3.1rem;
-  width: 3.1rem;
+  width: 100%;
   outline: none;
   cursor: pointer;
-  text-transform: uppercase;
+  opacity: 0;
 }
 
 .cv-toolbar__reset {
@@ -238,8 +241,7 @@
   }
 
   .cv-toolbar__language-select {
-    min-width: 2.6rem;
-    width: 2.6rem;
+    width: 100%;
   }
 }
 

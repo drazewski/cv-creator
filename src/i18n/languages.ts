@@ -14,6 +14,7 @@ export const LANGUAGE_OPTIONS: LanguageOption[] = [
   { code: 'fr', nativeLabel: 'Français', flag: '🇫🇷' },
   { code: 'it', nativeLabel: 'Italiano', flag: '🇮🇹' },
   { code: 'pt', nativeLabel: 'Português', flag: '🇵🇹' },
+  { code: 'ro', nativeLabel: 'Română', flag: '🇷🇴' },
 ];
 
 export const SUPPORTED_LANGUAGES = LANGUAGE_OPTIONS.map(({ code }) => code);

@@ -15,6 +15,7 @@ export default defineConfig({
         landingFr: resolve(__dirname, 'fr/index.html'),
         landingIt: resolve(__dirname, 'it/index.html'),
         landingPt: resolve(__dirname, 'pt/index.html'),
+        landingRo: resolve(__dirname, 'ro/index.html'),
         app: resolve(__dirname, 'app/index.html'),
       },
     },

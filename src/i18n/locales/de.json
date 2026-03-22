@@ -117,10 +117,10 @@
     "heroTitle": "Erstelle deinen Lebenslauf ohne Registrierung.",
     "heroLead": "MyCeeVee hilft dir, in wenigen Minuten einen modernen und gut lesbaren Lebenslauf zu erstellen. Du kannst ein ATS-freundliches einspaltiges Layout wählen, Zusammenfassung, Erfahrung, Fähigkeiten, Sprachen und Zertifikate direkt in der Vorschau bearbeiten und das Dokument anschließend für Druck oder PDF verfeinern.",
     "trust": {
-      "fast": "Schnell starten, entspannt fertigstellen",
-      "noAccount": "Kein Konto für die kostenlose Version nötig",
-      "multilang": "Mehrsprachiger Editor und Landingpage",
-      "ats": "Einspaltige ATS-freundliche Option",
+      "fast": "Komplett kostenlos",
+      "noAccount": "Keine Registrierung und kein Login nötig",
+      "multilang": "Mehrsprachiger und flexibler Editor",
+      "ats": "Einfache ATS-freundliche Layouts",
       "school": "Hilfreich für Schüler, Schulen und den ersten Lebenslauf"
     },
     "preview": {

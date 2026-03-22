@@ -145,6 +145,7 @@
 }
 
 .editable-text__input--multiline {
-  resize: vertical;
+  resize: none;
   display: block;
+  overflow: hidden;
 }

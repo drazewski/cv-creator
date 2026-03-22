@@ -117,11 +117,11 @@
     "heroTitle": "Créez votre CV sans avoir besoin de vous inscrire.",
     "heroLead": "MyCeeVee vous aide à préparer un CV moderne et lisible en quelques minutes. Vous pouvez choisir une mise en page une colonne optimisée pour les ATS, modifier le résumé, l’expérience, les compétences, les langues et les certifications directement dans l’aperçu, puis affiner le document pour l’impression ou l’export PDF.",
     "trust": {
-      "fast": "Rapide à démarrer, facile à terminer",
-      "noAccount": "Aucun compte nécessaire pour la version gratuite",
-      "multilang": "Éditeur et landing page multilingues",
-      "ats": "Option une colonne compatible ATS",
-      "school": "Utile pour les étudiants, les écoles et un premier CV"
+      "fast": "Entièrement gratuit",
+      "noAccount": "Sans inscription ni connexion",
+      "multilang": "Éditeur multilingue et flexible",
+      "ats": "Mises en page simples compatibles ATS",
+      "school": "Utile pour les étudiants, les écoles et la création d’un premier CV"
     },
     "preview": {
       "classicBadge": "Mise en page classique",

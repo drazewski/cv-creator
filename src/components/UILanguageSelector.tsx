@@ -20,6 +20,7 @@ export default function UILanguageSelector() {
   return (
     <label className="cv-toolbar__language" title={t('uiLanguage.label')}>
       <FontAwesomeIcon icon={faLanguage} className="cv-toolbar__language-icon" />
+      <span aria-hidden="true" className="cv-toolbar__language-value">{activeLanguage.toUpperCase()}</span>
       <select
         value={activeLanguage}
         onChange={(e) => {
@@ -35,7 +36,7 @@ export default function UILanguageSelector() {
       >
         {LANGUAGE_OPTIONS.map((language) => (
           <option key={language.code} value={language.code}>
-            {language.code.toUpperCase()}
+            {`${language.nativeLabel} (${language.code.toUpperCase()})`}
           </option>
         ))}
       </select>

@@ -8,6 +8,7 @@ import es from './locales/es.json';
 import fr from './locales/fr.json';
 import it from './locales/it.json';
 import pt from './locales/pt.json';
+import ro from './locales/ro.json';
 import { getSupportedLanguage, SUPPORTED_LANGUAGES } from './languages';
 
 const resources = {
@@ -18,6 +19,7 @@ const resources = {
   fr: { translation: fr },
   it: { translation: it },
   pt: { translation: pt },
+  ro: { translation: ro },
 } as const;
 
 function updateDocumentLanguage(language?: string) {

@@ -206,6 +206,34 @@ const COOKIE_TRANSLATIONS: Record<CvLanguage, NonNullable<Parameters<typeof Cook
       ],
     },
   },
+  ro: {
+    consentModal: {
+      title: '🍪 Folosim cookie-uri',
+      description: 'Folosim cookie-uri esentiale pentru ca aplicatia sa functioneze. Cu acordul tau folosim si cookie-uri de analiza pentru a intelege mai bine cum este folosit MyCeeVee.',
+      acceptAllBtn: 'Accepta tot',
+      acceptNecessaryBtn: 'Respinge optionalele',
+      showPreferencesBtn: 'Gestioneaza preferintele',
+    },
+    preferencesModal: {
+      title: 'Preferinte cookie',
+      acceptAllBtn: 'Accepta tot',
+      acceptNecessaryBtn: 'Respinge optionalele',
+      savePreferencesBtn: 'Salveaza preferintele',
+      closeIconLabel: 'Inchide',
+      sections: [
+        {
+          title: 'Cookie-uri esentiale',
+          description: 'Aceste cookie-uri sunt necesare pentru functionarea aplicatiei, de exemplu pentru a salva CV-ul local. Ele nu pot fi dezactivate.',
+          linkedCategory: 'necessary',
+        },
+        {
+          title: 'Cookie-uri de analiza',
+          description: 'Aceste cookie-uri ne ajuta sa intelegem ce functionalitati sunt folosite si unde putem imbunatati produsul. Nu se vand date personale.',
+          linkedCategory: 'analytics',
+        },
+      ],
+    },
+  },
 };
 
 export function initCookieConsent(callbacks?: ConsentCallbacks) {

@@ -50,7 +50,7 @@ export interface SectionTitles {
   courses: string;
 }
 
-export type CvLanguage = 'en' | 'pl' | 'de' | 'es' | 'fr' | 'it' | 'pt';
+export type CvLanguage = 'en' | 'pl' | 'de' | 'es' | 'fr' | 'it' | 'pt' | 'ro';
 
 export const TITLE_DEFAULTS: Record<CvLanguage, string> = {
   en: 'Senior Software Engineer',
@@ -60,6 +60,7 @@ export const TITLE_DEFAULTS: Record<CvLanguage, string> = {
   fr: 'Ingénieur logiciel senior',
   it: 'Ingegnere software senior',
   pt: 'Engenheiro de software sénior',
+  ro: 'Inginer software senior',
 };
 
 export const SECTION_TITLE_DEFAULTS: Record<CvLanguage, SectionTitles> = {
@@ -70,6 +71,7 @@ export const SECTION_TITLE_DEFAULTS: Record<CvLanguage, SectionTitles> = {
   fr: { technologies: 'Compétences',  aboutMe: 'Résumé',         experience: 'Expérience',      education: 'Formation',      languages: 'Langues',     courses: 'Certifications' },
   it: { technologies: 'Competenze',   aboutMe: 'Profilo',        experience: 'Esperienza',      education: 'Formazione',     languages: 'Lingue',      courses: 'Certificazioni' },
   pt: { technologies: 'Competências', aboutMe: 'Resumo',         experience: 'Experiência',     education: 'Educação',       languages: 'Idiomas',     courses: 'Certificações'  },
+  ro: { technologies: 'Competențe',  aboutMe: 'Rezumat',        experience: 'Experiență',      education: 'Educație',      languages: 'Limbi',       courses: 'Certificări'   },
 };
 
 export const PRESENT_DEFAULTS: Record<CvLanguage, string> = {
@@ -80,6 +82,7 @@ export const PRESENT_DEFAULTS: Record<CvLanguage, string> = {
   fr: 'Présent',
   it: 'Presente',
   pt: 'Presente',
+  ro: 'Prezent',
 };
 
 export interface PlaceholderTexts {
@@ -103,6 +106,7 @@ export const PLACEHOLDER_DEFAULTS: Record<CvLanguage, PlaceholderTexts> = {
   fr: { company: 'Entreprise', role: 'Poste', periodRange: 'Année – Année', location: 'Lieu', institution: 'Établissement', degree: 'Diplôme', courseName: 'Nom du cours', provider: 'Organisme', year: 'Année', sectionTitle: 'Titre de section' },
   it: { company: 'Azienda', role: 'Ruolo', periodRange: 'Anno – Anno', location: 'Sede', institution: 'Istituto', degree: 'Titolo', courseName: 'Nome del corso', provider: 'Ente', year: 'Anno', sectionTitle: 'Titolo sezione' },
   pt: { company: 'Empresa', role: 'Cargo', periodRange: 'Ano – Ano', location: 'Localização', institution: 'Instituição', degree: 'Grau', courseName: 'Nome do curso', provider: 'Instituição', year: 'Ano', sectionTitle: 'Título da secção' },
+  ro: { company: 'Companie', role: 'Rol', periodRange: 'An – An', location: 'Locație', institution: 'Instituție', degree: 'Diplomă', courseName: 'Numele cursului', provider: 'Furnizor', year: 'An', sectionTitle: 'Titlul secțiunii' },
 };
 
 export interface CustomSection {
@@ -126,6 +130,14 @@ export interface CvData {
   sidebarCustom: CustomSection[];
   mainCustom: CustomSection[];
 }
+
+export const DEFAULT_ABOUT_ME: TextPointItem[] = [
+  {
+    id: 'about-1',
+    type: 'text',
+    content: 'Passionate about building scalable and maintainable web applications. 8+ years of experience across full-stack development and cloud architecture. Strong communicator who thrives in cross-functional agile teams. Open-source contributor and continuous learner.',
+  },
+];
 
 export const cvData: CvData = {
   photo: null,
@@ -161,12 +173,7 @@ export const cvData: CvData = {
     courses: 'Certifications',
   },
 
-  aboutMe: [
-    { id: 'about-1', type: 'text', content: 'Passionate about building scalable and maintainable web applications.' },
-    { id: 'about-2', type: 'text', content: '8+ years of experience across full-stack development and cloud architecture.' },
-    { id: 'about-3', type: 'text', content: 'Strong communicator who thrives in cross-functional agile teams.' },
-    { id: 'about-4', type: 'text', content: 'Open-source contributor and continuous learner.' },
-  ],
+  aboutMe: DEFAULT_ABOUT_ME,
 
   experience: [
     {

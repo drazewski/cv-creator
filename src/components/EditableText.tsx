@@ -51,6 +51,14 @@ export default function EditableText({
     }
   }, [editing, multiline]);
 
+  useEffect(() => {
+    if (!editing || !multiline || !textareaRef.current) return;
+
+    const textarea = textareaRef.current;
+    textarea.style.height = 'auto';
+    textarea.style.height = `${textarea.scrollHeight}px`;
+  }, [draft, editing, multiline]);
+
   const confirm = () => {
     const trimmed = draft.trim();
     if (trimmed) onChange(trimmed);

@@ -66,8 +66,10 @@ button {
 }
 
 .landing-language-dropdown {
+  position: relative;
   display: inline-flex;
   align-items: center;
+  gap: 0.45rem;
   border: 1px solid #c8cdd4;
   border-radius: 6px;
   padding: 0.45rem 0.55rem;
@@ -77,16 +79,32 @@ button {
   font-weight: 600;
 }
 
+.landing-language-dropdown__icon {
+  display: inline-flex;
+  color: #4a90d9;
+}
+
+.landing-language-dropdown__icon svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.landing-language-dropdown__value {
+  min-width: 1.8rem;
+  text-transform: uppercase;
+}
+
 .landing-language-dropdown__select {
+  position: absolute;
+  inset: 0;
   border: none;
   background: transparent;
-  color: inherit;
+  color: transparent;
   font: inherit;
-  min-width: 3.1rem;
-  width: 3.1rem;
+  width: 100%;
   outline: none;
   cursor: pointer;
-  text-transform: uppercase;
+  opacity: 0;
 }
 
 .cv-toolbar__logo {
@@ -196,14 +214,14 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .landing-trust {
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem 1.3rem;
-  margin: 2rem 0 0;
+  margin: 4rem 0 0;
   padding: 0;
   list-style: none;
   color: #5c6d7e;
@@ -547,6 +565,11 @@ button {
   margin: 1rem auto 1.6rem;
 }
 
+.landing-hero__lead {
+  display: none;
+}
+
+
 @media (max-width: 960px) {
   .landing-hero,
   .landing-feature-grid,
@@ -575,6 +598,18 @@ button {
     right: auto;
     left: 1rem;
     bottom: 0.5rem;
+  }
+
+  .landing-hero__lead {
+    display: block;
+  }
+
+  .landing-hero__actions {
+    margin-top: 2rem;
+  }
+
+  .landing-trust {
+    margin: 2rem 0 0;
   }
 }
 

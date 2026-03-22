@@ -10,6 +10,7 @@ import {
   TITLE_DEFAULTS,
   PRESENT_DEFAULTS,
   PLACEHOLDER_DEFAULTS,
+  DEFAULT_ABOUT_ME,
   CustomSection,
   ExperienceEntry,
   EducationEntry,
@@ -74,6 +75,23 @@ function createTextPointItem(type: MainSectionItemType): TextPointItem {
     type,
     content: '',
   };
+}
+
+function cloneTextPointItems(items: TextPointItem[]): TextPointItem[] {
+  return items.map((item) => ({ ...item }));
+}
+
+function isLegacyDefaultAboutMe(items: TextPointItem[]): boolean {
+  if (items.length !== 4) return false;
+
+  const legacyContent = [
+    'Passionate about building scalable and maintainable web applications.',
+    '8+ years of experience across full-stack development and cloud architecture.',
+    'Strong communicator who thrives in cross-functional agile teams.',
+    'Open-source contributor and continuous learner.',
+  ];
+
+  return items.every((item, index) => item.type === 'text' && item.content === legacyContent[index]);
 }
 
 function createExperienceEntry(lang: CvLanguage): ExperienceEntry {
@@ -187,6 +205,7 @@ function createDefaultData(language: CvLanguage): CvData {
     contact: { ...defaultData.contact },
     technologies: [...defaultData.technologies],
     languages: [...defaultData.languages],
+    aboutMe: cloneTextPointItems(DEFAULT_ABOUT_ME),
     title: TITLE_DEFAULTS[language],
     sectionTitles: { ...SECTION_TITLE_DEFAULTS[language] },
   };
@@ -345,7 +364,7 @@ export const useCvStore = create<CvStore>()(
     }),
     {
       name: 'cv-data',
-      version: 8,
+      version: 9,
       migrate: (stored: unknown, _version: number) => {
         const s = stored as { data?: Partial<CvData>; cvLanguage?: unknown };
         const cvLanguage = isCvLanguage(s?.cvLanguage) ? s.cvLanguage : 'en';
@@ -361,6 +380,9 @@ export const useCvStore = create<CvStore>()(
             content: item.content ?? '',
           };
         });
+        const normalizedAboutMe = isLegacyDefaultAboutMe(aboutMe)
+          ? cloneTextPointItems(DEFAULT_ABOUT_ME)
+          : aboutMe;
 
         const experience = (s?.data?.experience ?? defaultData.experience).map((entry, index) => ({
           ...entry,
@@ -428,7 +450,7 @@ export const useCvStore = create<CvStore>()(
               ...(s?.data?.contact ?? {}),
             },
             title: s?.data?.title ?? TITLE_DEFAULTS[cvLanguage],
-            aboutMe,
+            aboutMe: normalizedAboutMe,
             experience,
             education,
             courses,

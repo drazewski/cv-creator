@@ -27,13 +27,14 @@ function loadEnvVars() {
 const env = loadEnvVars();
 
 const LOCALES = [
-  { code: 'en', path: '', nativeLabel: 'EN', ogLocale: 'en_US' },
-  { code: 'pl', path: 'pl', nativeLabel: 'PL', ogLocale: 'pl_PL' },
-  { code: 'de', path: 'de', nativeLabel: 'DE', ogLocale: 'de_DE' },
-  { code: 'es', path: 'es', nativeLabel: 'ES', ogLocale: 'es_ES' },
-  { code: 'fr', path: 'fr', nativeLabel: 'FR', ogLocale: 'fr_FR' },
-  { code: 'it', path: 'it', nativeLabel: 'IT', ogLocale: 'it_IT' },
-  { code: 'pt', path: 'pt', nativeLabel: 'PT', ogLocale: 'pt_PT' },
+  { code: 'en', path: '', nativeLabel: 'English', ogLocale: 'en_US' },
+  { code: 'pl', path: 'pl', nativeLabel: 'Polski', ogLocale: 'pl_PL' },
+  { code: 'de', path: 'de', nativeLabel: 'Deutsch', ogLocale: 'de_DE' },
+  { code: 'es', path: 'es', nativeLabel: 'Español', ogLocale: 'es_ES' },
+  { code: 'fr', path: 'fr', nativeLabel: 'Français', ogLocale: 'fr_FR' },
+  { code: 'it', path: 'it', nativeLabel: 'Italiano', ogLocale: 'it_IT' },
+  { code: 'pt', path: 'pt', nativeLabel: 'Português', ogLocale: 'pt_PT' },
+  { code: 'ro', path: 'ro', nativeLabel: 'Română', ogLocale: 'ro_RO' },
 ];
 
 // ── Cookie-consent translations (mirrors src/lib/cookieconsent.ts) ──────────
@@ -178,6 +179,26 @@ const COOKIE_TRANSLATIONS = {
       ],
     },
   },
+  ro: {
+    consentModal: {
+      title: '🍪 Folosim cookie-uri',
+      description: 'Folosim cookie-uri esentiale pentru ca aplicatia sa functioneze. Cu acordul tau folosim si cookie-uri de analiza pentru a intelege mai bine cum este folosit MyCeeVee.',
+      acceptAllBtn: 'Accepta tot',
+      acceptNecessaryBtn: 'Respinge optionalele',
+      showPreferencesBtn: 'Gestioneaza preferintele',
+    },
+    preferencesModal: {
+      title: 'Preferinte cookie',
+      acceptAllBtn: 'Accepta tot',
+      acceptNecessaryBtn: 'Respinge optionalele',
+      savePreferencesBtn: 'Salveaza preferintele',
+      closeIconLabel: 'Inchide',
+      sections: [
+        { title: 'Cookie-uri esentiale', description: 'Aceste cookie-uri sunt necesare pentru functionarea aplicatiei, de exemplu pentru a salva CV-ul local. Ele nu pot fi dezactivate.', linkedCategory: 'necessary' },
+        { title: 'Cookie-uri de analiza', description: 'Aceste cookie-uri ne ajuta sa intelegem ce functionalitati sunt folosite si unde putem imbunatati produsul. Nu se vand date personale.', linkedCategory: 'analytics' },
+      ],
+    },
+  },
 };
 
 // PostHog async loader snippet (official)
@@ -299,7 +320,7 @@ function renderLanguageOptions(activeCode) {
   return LOCALES.map((locale) => {
     const href = locale.path ? `/${locale.path}/` : '/';
     const selected = locale.code === activeCode ? ' selected' : '';
-    return `<option value="${href}" lang="${locale.code}"${selected}>${locale.nativeLabel}</option>`;
+    return `<option value="${href}" lang="${locale.code}"${selected}>${locale.nativeLabel} (${locale.code.toUpperCase()})</option>`;
   }).join('');
 }
 
@@ -435,6 +456,8 @@ ${jsonLd}
         <a href="/" class="cv-toolbar__logo" title="MyCeeVee">My<span class="cv-toolbar__logo-c">C</span><span class="cv-toolbar__logo-ee">ee</span><span class="cv-toolbar__logo-v">V</span><span class="cv-toolbar__logo-ee">ee</span></a>
         <div class="landing-toolbar__right">
           <label class="cv-toolbar__language landing-language-dropdown" title="Language selector">
+            <span aria-hidden="true" class="landing-language-dropdown__icon"><svg viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M160 0c17.7 0 32 14.3 32 32l0 32 128 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-9.6 0-8.4 23.1c-16.4 45.2-41.1 86.5-72.2 122 14.2 8.8 29 16.6 44.4 23.5l50.4 22.4 62.2-140c5.1-11.6 16.6-19 29.2-19s24.1 7.4 29.2 19l128 288c7.2 16.2-.1 35.1-16.2 42.2s-35.1-.1-42.2-16.2l-20-45-157.5 0-20 45c-7.2 16.2-26.1 23.4-42.2 16.2s-23.4-26.1-16.2-42.2l39.8-89.5-50.4-22.4c-23-10.2-45-22.4-65.8-36.4-21.3 17.2-44.6 32.2-69.5 44.7L78.3 380.6c-15.8 7.9-35 1.5-42.9-14.3s-1.5-35 14.3-42.9l34.5-17.3c16.3-8.2 31.8-17.7 46.4-28.3-13.8-12.7-26.8-26.4-38.9-40.9L81.6 224.7c-11.3-13.6-9.5-33.8 4.1-45.1s33.8-9.5 45.1 4.1l10.2 12.2c11.5 13.9 24.1 26.8 37.4 38.7 27.5-30.4 49.2-66.1 63.5-105.4l.5-1.2-210.3 0C14.3 128 0 113.7 0 96S14.3 64 32 64l96 0 0-32c0-17.7 14.3-32 32-32zM416 270.8L365.7 384 466.3 384 416 270.8z"/></svg></span>
+            <span aria-hidden="true" class="landing-language-dropdown__value">${locale.code.toUpperCase()}</span>
             <select class="cv-toolbar__language-select landing-language-dropdown__select" aria-label="Language selector" onchange="window.location.href=this.value">
               ${renderLanguageOptions(locale.code)}
             </select>

@@ -117,11 +117,11 @@
     "heroTitle": "Crea tu CV sin necesidad de registrarte.",
     "heroLead": "MyCeeVee te ayuda a preparar un CV moderno y fácil de leer en pocos minutos. Puedes elegir un diseño de una sola columna optimizado para ATS, editar el resumen, la experiencia, las habilidades, los idiomas y las certificaciones directamente en la vista previa, y luego ajustar el documento para imprimirlo o exportarlo a PDF.",
     "trust": {
-      "fast": "Rápido para empezar y fácil de terminar",
-      "noAccount": "No necesitas cuenta para la versión gratuita",
-      "multilang": "Editor y landing page multilingües",
-      "ats": "Opción de una columna compatible con ATS",
-      "school": "Útil para estudiantes, escuelas y el primer CV"
+      "fast": "Completamente gratis",
+      "noAccount": "Sin registro ni inicio de sesión",
+      "multilang": "Editor multilingüe y flexible",
+      "ats": "Diseños simples compatibles con ATS",
+      "school": "Útil para estudiantes, escuelas y para crear el primer CV"
     },
     "preview": {
       "classicBadge": "Diseño clásico",
